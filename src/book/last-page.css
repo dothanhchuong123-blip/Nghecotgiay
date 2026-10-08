@@ -1,0 +1,85 @@
+/* Final spread styles (LastPage.tsx) */
+
+.last-page-left {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.last-page-photo-wrap {
+  position: relative;
+  width: 86%;
+  transform: rotate(-2deg) translateZ(0.3px);
+  border: 10px solid #ffffff;
+  box-shadow: var(--thick), var(--lift);
+  background-color: #ffffff;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.last-page-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.last-page-tape-tl {
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  z-index: 2;
+}
+
+.last-page-tape-tr {
+  position: absolute;
+  top: -8px;
+  right: 14px;
+  z-index: 2;
+}
+
+.last-page-right {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.last-page-title-card {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 66px 44px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.last-page-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0 0 18px 0;
+  letter-spacing: -0.02em;
+}
+
+.last-page-line {
+  font-family: var(--font-ui);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+  max-width: 38ch;
+}
+
+.last-page-chip-wrap {
+  position: absolute;
+  right: 28px;
+  bottom: 22px;
+  z-index: 4;
+}

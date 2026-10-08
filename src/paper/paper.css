@@ -1,0 +1,94 @@
+.paper {
+  border-radius: 3px 5px 4px 6px;
+  box-shadow: var(--thick);
+}
+
+.paper.paper-lifted {
+  box-shadow: var(--thick), var(--lift);
+}
+
+.paper-tone-card {
+  background-color: var(--card);
+  color: var(--ink);
+}
+
+.paper-tone-do {
+  background-color: var(--do);
+  color: var(--ink);
+}
+
+.paper-tone-do2 {
+  background-color: var(--do-2);
+  color: var(--ink);
+}
+
+.paper-tone-son {
+  background-color: var(--son);
+  color: #fff;
+}
+
+.paper-tone-cham {
+  background-color: var(--cham);
+  color: #fff;
+}
+
+.paper-die-cut {
+  display: inline-block;
+  filter: var(--die);
+}
+
+.paper-tape {
+  position: absolute;
+  width: 110px;
+  height: 26px;
+  background-color: rgba(233, 215, 170, 0.75);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.paper-stamp {
+  display: inline-block;
+  border: 2px dashed var(--son);
+  color: var(--son);
+  font: 700 12px/1 var(--font-ui);
+  padding: 7px 10px;
+  border-radius: 4px;
+  transform: rotate(-3deg);
+  letter-spacing: 0.5px;
+}
+
+.paper-torn-edge {
+  position: relative;
+}
+
+.paper-chip {
+  background-color: var(--card);
+  padding: 9px 18px;
+  border-radius: 999px;
+  font: 600 15px var(--font-ui);
+  color: var(--ink-2);
+  box-shadow: var(--thick);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, color 120ms ease;
+}
+
+.paper-chip:hover {
+  filter: brightness(0.98);
+}
+
+.paper-chip.paper-chip-active {
+  background-color: var(--son);
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 0 -3px rgba(42, 33, 27, 0.25);
+}
+
+.paper-chip:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}

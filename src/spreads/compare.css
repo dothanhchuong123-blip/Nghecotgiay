@@ -1,0 +1,424 @@
+/* Compare spread styles (spread 3) */
+
+.compare-page {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+}
+
+.compare-floor {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.compare-casts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.compare-die-cut {
+  display: block;
+  filter: var(--die);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------
+   Left Page: Easel & Pull Tab (P1, P2, P5)
+---------------------------------------------------- */
+
+.compare-easel-stand {
+  transform-style: preserve-3d;
+}
+
+.compare-easel-card {
+  width: 100%;
+  height: 100%;
+  background-color: #FBF7EE;
+  box-shadow: inset 0 0 0 1px rgba(42, 33, 27, 0.12), 0 2px 0 rgba(42, 33, 27, 0.2);
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 4px;
+}
+
+/* Strut behind easel (P5) */
+.compare-easel-strut {
+  position: absolute;
+  width: 120px;
+  left: 50%;
+  margin-left: -60px;
+  top: 38%;
+  height: 260px;
+  transform-origin: 50% 0;
+  transform: translateZ(-2px) rotateX(-38deg);
+  background-color: #B98E5E;
+  clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+/* Window */
+.compare-easel-window {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  top: 26px;
+  bottom: 44px;
+  background-color: #EFE6D5;
+  box-shadow: inset 0 2px 6px rgba(42, 33, 27, 0.25);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+/* Dark slot line under window */
+.compare-easel-slot-line {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  bottom: 22px;
+  height: 5px;
+  background-color: #3A2A20;
+  border-radius: 2px;
+}
+
+/* Labels in the window */
+.compare-label-viet {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font: 800 15px/1 var(--font-head);
+  color: #ffffff;
+  background-color: #2F5A2B;
+  padding: 4px 10px;
+  border-radius: 3px;
+  transform: rotate(-3deg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.compare-label-other {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font: 800 15px/1 var(--font-head);
+  color: #ffffff;
+  background-color: var(--son);
+  padding: 4px 10px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.compare-stamp-not-viet {
+  position: absolute;
+  top: 44px;
+  right: 14px;
+  font: 700 11px/1.2 var(--font-ui);
+  color: #4A3E39;
+  background-color: #E2DCD2;
+  border: 1.5px solid #888888;
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 20;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.compare-other-note {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 500 12px/1.3 var(--font-ui);
+  color: var(--ink-2);
+  background-color: rgba(251, 247, 238, 0.9);
+  padding: 3px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* Slat transformation (Venetian blind) */
+.compare-slat {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+  transition: width 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+  box-shadow: 1px 0 0 rgba(42, 33, 27, 0.08);
+}
+
+.compare-slat.is-dragging {
+  transition: none !important;
+}
+
+/* Page edge cut slot (P2) */
+.compare-page-slot {
+  position: absolute;
+  width: 8px;
+  background-color: #2A1E16;
+  border-radius: 4px;
+  transform: translateZ(0.4px);
+  pointer-events: none;
+}
+
+/* Pull-tab lying flat outside page (P2) */
+.compare-pull-tab {
+  position: absolute;
+  background: url(/book/mech/pull-tab.webp) 100% 100% no-repeat;
+  color: #ffffff;
+  font: 800 24px/84px var(--font-head);
+  padding-left: 26px;
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.25));
+  border: none;
+  cursor: grab;
+  text-align: left;
+  box-sizing: border-box;
+  touch-action: none;
+  border-radius: 4px 0 0 4px;
+  user-select: none;
+  transition: transform 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+
+.compare-pull-tab.is-dragging {
+  cursor: grabbing;
+  transition: none !important;
+}
+
+.compare-pull-tab:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* ----------------------------------------------------
+   Right Page: Red Frame, Title Card, LiftFlaps Row
+---------------------------------------------------- */
+
+.compare-right-page {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+  --up: 1;
+}
+
+.compare-red-frame {
+  position: absolute;
+  inset: 18px;
+  border: 2px solid rgba(180, 48, 43, 0.55);
+  outline: 1px solid rgba(180, 48, 43, 0.35);
+  outline-offset: 5px;
+  transform: translateZ(0.3px);
+  pointer-events: none;
+}
+
+/* Card */
+.compare-title-card {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 66px 40px 30px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: var(--thick);
+}
+
+.compare-eyebrow {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--son);
+}
+
+.compare-title-row {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 8px 0 4px;
+}
+
+.compare-diff-sym {
+  font-weight: 600;
+  color: var(--ink-2);
+  margin: 0 4px;
+}
+
+.compare-aka-note {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--ink-2);
+  margin-top: 4px;
+}
+
+.compare-diff-heading {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--son);
+  margin: 14px 0 6px;
+}
+
+.compare-diff-text {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Flaps Card */
+.compare-flaps-card {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 34px 14px 12px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: var(--thick);
+  border-radius: 4px;
+}
+
+.compare-lift-badge {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #ffffff;
+  background-color: var(--ink);
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+
+.compare-flaps-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.compare-cell {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.compare-cell-top {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #FBF7EE;
+  border: 1px solid rgba(42, 33, 27, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.compare-cell-base {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #EADFCB;
+  border: 1px solid rgba(42, 33, 27, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.compare-cell-title-top {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--son);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.compare-cell-title-base {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.compare-cell-viewport {
+  position: relative;
+  width: 100%;
+  height: 118px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: #EFE6D5;
+}
+
+.compare-cell-viewport-base {
+  background-color: #E2D7C3;
+}
+
+.compare-cell-desc {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compare-slat,
+  .compare-pull-tab {
+    transition: none !important;
+  }
+}
+
+:root[data-reduced="1"] .compare-slat,
+:root[data-reduced="1"] .compare-pull-tab {
+  transition: none !important;
+}

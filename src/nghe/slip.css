@@ -1,0 +1,193 @@
+/* Paper Key Slip */
+
+.slip-dialog {
+  position: absolute;
+  left: 150px;
+  top: 300px;
+  width: 360px;
+  z-index: 6;
+  background-color: #fbf7ee;
+  padding: 20px 22px 28px;
+  transform: rotate(-2deg);
+  box-shadow: 0 18px 40px -10px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* Torn bottom edge: CSS mask of 6px half-circles along the bottom */
+  -webkit-mask-image: linear-gradient(#000, #000), radial-gradient(circle at 6px 0px, transparent 6px, #000 6.5px);
+  -webkit-mask-size: 100% calc(100% - 6px), 12px 6px;
+  -webkit-mask-position: top, bottom;
+  -webkit-mask-repeat: no-repeat, repeat-x;
+  mask-image: linear-gradient(#000, #000), radial-gradient(circle at 6px 0px, transparent 6px, #000 6.5px);
+  mask-size: 100% calc(100% - 6px), 12px 6px;
+  mask-position: top, bottom;
+  mask-repeat: no-repeat, repeat-x;
+}
+
+.slip-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.slip-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--son);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.slip-close-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 2px 6px;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.slip-close-btn:hover {
+  color: var(--son);
+}
+
+.slip-close-btn:focus-visible {
+  outline: 2px solid var(--son);
+}
+
+.slip-reason {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--son);
+  margin: 0;
+  font-weight: 500;
+}
+
+.slip-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.slip-label {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.slip-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1.5px solid var(--ink);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 120ms ease;
+}
+
+.slip-input:focus {
+  border-color: var(--son);
+}
+
+.slip-input::placeholder {
+  color: rgba(42, 33, 27, 0.4);
+}
+
+.slip-status {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 12px;
+  color: #2f5a2b;
+  margin: 0;
+}
+
+.slip-note {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.slip-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.slip-use-btn {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+  background-color: var(--son);
+  border: none;
+  border-radius: 999px;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.slip-use-btn:hover {
+  transform: translateY(-1px);
+}
+
+.slip-use-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slip-use-btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.slip-remove-btn {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--ink-2);
+  background: transparent;
+  border: 1px solid var(--ink-2);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.slip-remove-btn:hover {
+  background: rgba(42, 33, 27, 0.08);
+  color: var(--ink);
+}
+
+.slip-remove-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .slip-dialog {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 120px;
+    width: auto;
+    transform: none;
+    z-index: 30;
+  }
+}

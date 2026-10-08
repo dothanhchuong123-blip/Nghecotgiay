@@ -1,0 +1,2757 @@
+{
+ "OCCASIONS": [
+  {
+   "id": "tet",
+   "name": "Tết",
+   "short": "Tết",
+   "formality": 60,
+   "sacred": false,
+   "hint_vi": "Sắc may mắn, chụp ảnh gia đình, chúc Tết, du xuân."
+  },
+  {
+   "id": "ky-yeu",
+   "name": "Chụp kỷ yếu",
+   "short": "Kỷ yếu",
+   "formality": 45,
+   "sacred": false,
+   "hint_vi": "Lên ảnh đẹp, phối theo nhóm bạn, dễ vận động."
+  },
+  {
+   "id": "cuoi-hoi",
+   "name": "Cưới hỏi",
+   "short": "Cưới hỏi",
+   "formality": 80,
+   "sacred": false,
+   "hint_vi": "Trang trọng, hợp nghi lễ gia đình, màu tươi sáng."
+  },
+  {
+   "id": "le-hoi-dinh-chua",
+   "name": "Lễ hội / đình chùa",
+   "short": "Đình chùa",
+   "formality": 85,
+   "sacred": true,
+   "hint_vi": "Kín đáo, tôn nghiêm, đi lại thoải mái trong sân đình."
+  },
+  {
+   "id": "dao-pho",
+   "name": "Dạo phố",
+   "short": "Dạo phố",
+   "formality": 20,
+   "sacred": false,
+   "hint_vi": "Thoải mái, cá tính, phối tự do với đồ hiện đại."
+  },
+  {
+   "id": "trung-thu",
+   "name": "Trung thu",
+   "short": "Trung thu",
+   "formality": 35,
+   "sacred": false,
+   "hint_vi": "Vui tươi, hợp đèn ông sao và không khí hội trăng."
+  }
+ ],
+ "REGIONS": [
+  {
+   "id": "Bắc",
+   "name": "Miền Bắc",
+   "sub": "Kinh Bắc, Thăng Long"
+  },
+  {
+   "id": "Trung",
+   "name": "Miền Trung",
+   "sub": "Huế, Thuận Hoá"
+  },
+  {
+   "id": "Nam",
+   "name": "Miền Nam",
+   "sub": "Đồng bằng Nam Bộ"
+  }
+ ],
+ "GARMENTS": [
+  {
+   "id": "ao-dai",
+   "name": "Áo dài",
+   "aliases": [
+    "áo dài tân thời",
+    "áo dài Lemur",
+    "áo dài Raglan"
+   ],
+   "period": "Từ thập niên 1930 đến nay",
+   "region": "all",
+   "gender": "cả hai",
+   "formality": 60,
+   "must_show": [
+    "collar",
+    "ta",
+    "sleeves"
+   ],
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "structure": {
+    "collar": "Cổ đứng cao khoảng 2–3 cm (biến thể cổ thuyền, cổ tròn ở áo cách tân)",
+    "closure": "Khuy bấm hoặc cúc chạy chéo từ cổ sang nách phải rồi xuống sườn",
+    "sleeves": "Tay dài, hẹp, thường may kiểu raglan",
+    "hem": "Hai tà trước sau dài đến bắp chân, xẻ tà từ eo",
+    "worn_with": [
+     "Quần ống rộng lụa hoặc satin",
+     "Khăn vấn (nữ) hoặc khăn xếp (nam)"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.47,
+     "y": 0.33
+    },
+    {
+     "key": "sleeves",
+     "x": 0.32,
+     "y": 0.44
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.72
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.88
+    }
+   ],
+   "timeline": [
+    {
+     "year": "1934",
+     "title_vi": "Áo dài Lemur (Cát Tường)",
+     "text_vi": "Hoạ sĩ Cát Tường cải cách áo ngũ thân thành áo dài tân thời hai tà trên báo Phong Hoá. Phom áo ôm sát ngực, cổ bẻ hoặc viền ren, vạt dài chấm đất.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu",
+      "src:btls-tphcm"
+     ]
+    },
+    {
+     "year": "1950",
+     "title_vi": "Áo dài cổ cao truyền thống",
+     "text_vi": "Các nhà may tại Hà Nội và Sài Gòn định hình cổ đứng cao 2–3 cm kín đáo, giữ nguyên hai tà bay. Áo trở thành trang phục nữ sinh và công sở thanh lịch.",
+     "source_ids": [
+      "src:btls-tphcm"
+     ]
+    },
+    {
+     "year": "1960",
+     "title_vi": "Cải tiến tay raglan (nhà may Dung)",
+     "text_vi": "Nhà may Dung ở Đa Kao (Sài Gòn) sáng tạo kiểu ráp tay raglan nối từ cổ chéo xuống nách. Cải tiến này giúp nách áo phẳng phiu, không nhăn nhúm và cử động tự nhiên.",
+     "source_ids": [
+      "src:btls-tphcm"
+     ]
+    },
+    {
+     "year": "1989",
+     "title_vi": "Phục hưng và áo dài cách tân",
+     "text_vi": "Cuộc thi Hoa hậu Áo dài 1989 đánh dấu sự trở lại mạnh mẽ của áo dài trong đời sống đô thị. Về sau, áo dài cách tân phối cùng quần âu, chân váy tiếp tục mở rộng sức sống di sản.",
+     "source_ids": [
+      "src:btls-tphcm"
+     ]
+    }
+   ],
+   "summary_vi": "Áo dài hai tà hiện đại định hình từ thập niên 1930 (cải cách của hoạ sĩ Cát Tường) và ôm dáng hơn vào thập niên 1960 với tay raglan. Là trang phục phổ biến nhất cho lễ Tết, cưới hỏi, kỷ yếu và cả đời sống thường ngày.",
+   "history_vi": "Áo dài tân thời kế thừa áo ngũ thân thời Nguyễn nhưng thu hẹp phom, giảm còn hai tà. Từ thập niên 1930 trở đi, áo dài liên tục thay đổi theo thẩm mỹ từng thời kỳ.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Lựa chọn kinh điển; ưu tiên đỏ son, vàng hoàng yến."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Áo dài trắng hoặc pastel là hình ảnh kỷ yếu quen thuộc."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Hợp cả cô dâu lẫn khách mời; tránh trắng nếu bạn là khách."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Kín đáo, đoan trang; chọn vải không quá mỏng."
+    },
+    "dao-pho": {
+     "status": "ok",
+     "note_vi": "Áo dài cách tân với quần bò hoặc chân váy là cách phối quen thuộc."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Hợp màu tươi và phụ kiện đèn lồng."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-bo-ong-rong",
+     "quan-tay",
+     "chan-vay-xep-ly",
+     "ao-len-cai-cuc",
+     "giay-luoi",
+     "bot-co-cao",
+     "ao-vest",
+     "giay-cao-co",
+     "giay-bup-be",
+     "ao-mang-to",
+     "so-mi-oversize",
+     "ao-co-lo",
+     "that-lung-ban-to",
+     "tui-deo-cheo"
+    ],
+    "caution": [
+     "ao-khoac-bo",
+     "ao-ni-mu",
+     "mu-luoi-trai",
+     "mu-tai-beo",
+     "ao-thun-trang",
+     "ao-bomber",
+     "ao-khoac-da",
+     "ao-varsity",
+     "quan-cargo",
+     "giay-de-tho",
+     "balo",
+     "mu-len"
+    ],
+    "conflict": [
+     "ao-croptop"
+    ]
+   },
+   "colors_classic": [
+    "do-son",
+    "trang-nga",
+    "tim-hue",
+    "vang-hoang-yen",
+    "hong-dao",
+    "xanh-thien-thanh"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Sườn xám (Trung Quốc)",
+     "how_vi": "Sườn xám ôm sát, không mặc với quần, xẻ tà cao ở đùi; áo dài luôn đi với quần ống rộng và xẻ từ eo."
+    }
+   ],
+   "sources": [
+    "src:ngan-nam-ao-mu",
+    "src:btls-tphcm"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Vai trò chính xác của Cát Tường và Lê Phổ trong cải cách 1934–1935 vẫn được bàn luận."
+   ]
+  },
+  {
+   "id": "ao-ngu-than",
+   "name": "Áo ngũ thân",
+   "aliases": [
+    "áo ngũ thân tay chẽn",
+    "áo dài ngũ thân"
+   ],
+   "period": "Thế kỷ 18 – đầu thế kỷ 20 (thời Nguyễn)",
+   "region": "all",
+   "gender": "cả hai",
+   "formality": 65,
+   "must_show": [
+    "collar",
+    "closure",
+    "hem"
+   ],
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "structure": {
+    "collar": "Cổ đứng (lập lĩnh), bên trong thường lộ viền cổ áo lót trắng",
+    "closure": "Năm khuy cài từ cổ, qua ngực sang nách phải rồi xuống sườn phải",
+    "sleeves": "Tay chẽn (hẹp, vừa cổ tay)",
+    "hem": "Dáng suông, hơi xoè, dài quá gối",
+    "worn_with": [
+     "Quần ống rộng màu trắng",
+     "Khăn vấn hoặc khăn xếp",
+     "Áo lót trắng bên trong"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.46,
+     "y": 0.35
+    },
+    {
+     "key": "sleeves",
+     "x": 0.32,
+     "y": 0.45
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.7
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.88
+    }
+   ],
+   "timeline": [
+    {
+     "year": "1744",
+     "title_vi": "Cải cách y phục chúa Nguyễn Phúc Khoát",
+     "text_vi": "Chúa Nguyễn Phúc Khoát ban sắc dụ định chế y phục xứ Đàng Trong, quy định áo ngũ thân cài năm khuy và mặc cùng quần hai ống. Đây là mốc mở đầu cho phom dáng tiền thân của áo dài.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "1836",
+     "title_vi": "Thống nhất y phục triều vua Minh Mạng",
+     "text_vi": "Vua Minh Mạng ban lệnh thống nhất trang phục cả nước theo lối áo cổ đứng cài khuy và quần dài. Áo ngũ thân tay chẽn trở thành quốc phục phổ biến từ dân gian tới quan trường triều Nguyễn.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Đầu TK 20",
+     "title_vi": "Giao thời và biến thể thường nhật",
+     "text_vi": "Áo ngũ thân đi cùng khăn vấn và dù tây xuất hiện nhiều trong ảnh tư liệu Hà Nội, Huế, Sài Gòn đầu thế kỷ 20. Áo may bằng lụa, the, gấm cho nhiều tầng lớp xã hội.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu",
+      "src:y-van-hien"
+     ]
+    },
+    {
+     "year": "2020",
+     "title_vi": "Phong trào phục dựng trong giới trẻ",
+     "text_vi": "Nhiều hội nhóm văn hoá cổ phong phục dựng áo ngũ thân tay chẽn cho nam và nữ. Trang phục được đưa trở lại công sở, lễ hội và đời sống đương đại.",
+     "source_ids": [
+      "src:y-van-hien",
+      "src:vietnam-centre"
+     ]
+    }
+   ],
+   "summary_vi": "Áo may từ năm thân vải: hai thân trước, hai thân sau và một thân con giấu bên trong vạt phải, cổ đứng, cài khuy bên phải. Dáng suông, kín đáo, mặc được cả nam lẫn nữ; là tiền thân trực tiếp của áo dài hiện đại.",
+   "history_vi": "Áo ngũ thân phổ biến rộng rãi thời Nguyễn và thường được gắn với cuộc cải cách y phục ở Đàng Trong dưới thời chúa Nguyễn Phúc Khoát (1744). Phong trào phục dựng những năm gần đây đưa ngũ thân trở lại đời sống trẻ.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Rất hợp; đỏ son, vàng nghệ hoặc xanh chàm đều đẹp."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Lên ảnh nhóm rất đều; phối giày thể thao trắng để dễ di chuyển."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Hợp cả nhà trai lẫn nhà gái, nhất là bản tay chẽn màu tươi."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Kín đáo, đúng tinh thần lễ; nên đi guốc mộc hoặc hài."
+    },
+    "dao-pho": {
+     "status": "ok",
+     "note_vi": "Phối áo khoác hoặc giày thể thao là cách trẻ hoá quen thuộc."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Chọn màu tươi, thêm quạt giấy hoặc đèn lồng."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-bo-ong-rong",
+     "quan-tay",
+     "giay-luoi",
+     "bot-co-cao",
+     "ao-len-cai-cuc",
+     "ao-vest",
+     "ao-khoac-bo",
+     "ao-mang-to",
+     "so-mi-oversize",
+     "ao-co-lo",
+     "giay-bup-be",
+     "that-lung-ban-to"
+    ],
+    "caution": [
+     "ao-ni-mu",
+     "mu-luoi-trai",
+     "mu-tai-beo",
+     "ao-thun-trang",
+     "chan-vay-xep-ly",
+     "ao-bomber",
+     "ao-khoac-da",
+     "ao-varsity",
+     "giay-cao-co",
+     "giay-de-tho",
+     "tui-deo-cheo",
+     "balo",
+     "quan-ong-loe"
+    ],
+    "conflict": [
+     "ao-croptop"
+    ]
+   },
+   "colors_classic": [
+    "do-son",
+    "xanh-cham",
+    "vang-nghe",
+    "nau-song",
+    "xanh-luc-ngoc",
+    "tim-hue"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Áo tấc",
+     "how_vi": "Áo tấc cùng kết cấu năm thân nhưng tay thụng rộng, dùng làm lễ phục."
+    },
+    {
+     "name": "Trường sam / sườn xám",
+     "how_vi": "Sườn xám ôm sát, xẻ tà cao; ngũ thân suông và luôn mặc với quần."
+    }
+   ],
+   "sources": [
+    "src:ngan-nam-ao-mu",
+    "src:y-van-hien",
+    "src:vietnam-centre"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Cách giải thích “năm thân tượng trưng tứ thân phụ mẫu và người mặc” hay “năm khuy là ngũ thường” là diễn giải dân gian, chưa có văn bản gốc xác nhận."
+   ]
+  },
+  {
+   "id": "ao-tac",
+   "name": "Áo tấc",
+   "aliases": [
+    "áo ngũ thân tay thụng",
+    "áo lễ"
+   ],
+   "period": "Thời Nguyễn (thế kỷ 19 – đầu thế kỷ 20)",
+   "region": "all",
+   "gender": "cả hai",
+   "formality": 85,
+   "must_show": [
+    "collar",
+    "sleeves",
+    "hem"
+   ],
+   "levels": [
+    1,
+    2
+   ],
+   "structure": {
+    "collar": "Cổ đứng, mặc ngoài áo lót trắng",
+    "closure": "Năm khuy cài bên phải như áo ngũ thân",
+    "sleeves": "Tay thụng rộng, dài quá bàn tay",
+    "hem": "Dài, rộng hơn ngũ thân tay chẽn",
+    "worn_with": [
+     "Quần trắng ống rộng",
+     "Khăn xếp hoặc khăn vấn",
+     "Hài thêu"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.46,
+     "y": 0.35
+    },
+    {
+     "key": "sleeves",
+     "x": 0.28,
+     "y": 0.46
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.76
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.88
+    }
+   ],
+   "timeline": [
+    {
+     "year": "1802",
+     "title_vi": "Quy chế lễ phục thời Nguyễn",
+     "text_vi": "Nhà Nguyễn định hình áo tấc (áo ngũ thân tay thụng) làm thường lễ phục cho hoàng tộc, quan viên và sĩ dân. Áo có tay thụng rộng, dài quá bàn tay, mang tính nghi lễ trang nghiêm.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Cuối TK 19",
+     "title_vi": "Trang phục cưới hỏi và cúng tế",
+     "text_vi": "Áo tấc trở thành trang phục bắt buộc trong các nghi lễ gia tiên, cúng bái và hôn lễ khắp các miền. Người mặc luôn đội khăn vấn hoặc khăn xếp, đi kèm hài vải.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu",
+      "src:y-van-hien"
+     ]
+    },
+    {
+     "year": "Hiện nay",
+     "title_vi": "Áo tấc trong ngày cưới đương đại",
+     "text_vi": "Áo tấc trở thành lựa chọn hàng đầu của cô dâu chú rể trong lễ cưới truyền thống Việt Nam. Các dự án phục dựng đưa chuẩn may tay thụng và nẹp cổ áo tấc trở lại đúng quy chuẩn.",
+     "source_ids": [
+      "src:vietnam-centre",
+      "src:y-van-hien"
+     ]
+    }
+   ],
+   "summary_vi": "Áo tấc là dạng lễ phục của áo ngũ thân với tay thụng rộng, dùng trong lễ tết, cưới hỏi, cúng giỗ ở thời Nguyễn. Ngày nay được phục dựng nhiều cho lễ cưới và chụp ảnh.",
+   "history_vi": "Áo tấc được mặc rộng rãi từ thường dân đến quan lại trong các dịp lễ nghi. Tên gọi “áo tấc” được cho là bắt nguồn từ chiều rộng viền cổ áo khoảng một tấc.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Đẹp và trang trọng cho chúc Tết, chụp ảnh gia đình."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Lên ảnh đẹp; tay thụng hơi vướng khi chạy nhảy."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Lễ phục kinh điển cho cô dâu, chú rể và họ hàng."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Đúng tinh thần lễ nghi."
+    },
+    "dao-pho": {
+     "status": "caution",
+     "note_vi": "Là lễ phục nên hơi trang trọng cho dạo phố; nếu vẫn thích, gắn nhãn phối giao thoa và đi giày thoải mái."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Hợp chụp ảnh hội trăng."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-tay",
+     "giay-luoi",
+     "bot-co-cao",
+     "ao-co-lo"
+    ],
+    "caution": [
+     "quan-bo-ong-rong",
+     "ao-vest",
+     "ao-len-cai-cuc",
+     "ao-khoac-bo",
+     "ao-mang-to",
+     "giay-bup-be"
+    ],
+    "conflict": [
+     "ao-ni-mu",
+     "mu-tai-beo",
+     "mu-luoi-trai",
+     "ao-thun-trang",
+     "ao-croptop",
+     "quan-ong-loe",
+     "quan-cargo",
+     "tui-bao-tu",
+     "tai-nghe"
+    ]
+   },
+   "colors_classic": [
+    "do-son",
+    "xanh-cham",
+    "tim-hue",
+    "vang-nghe",
+    "xanh-luc-ngoc"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Áo giao lĩnh",
+     "how_vi": "Giao lĩnh có cổ chéo, không cài khuy; áo tấc cổ đứng, cài khuy bên phải."
+    }
+   ],
+   "sources": [
+    "src:ngan-nam-ao-mu",
+    "src:vietnam-centre",
+    "src:y-van-hien"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Nguồn gốc tên gọi “áo tấc” có nhiều cách giải thích."
+   ]
+  },
+  {
+   "id": "ao-tu-than",
+   "name": "Áo tứ thân",
+   "aliases": [
+    "áo tứ thân Kinh Bắc",
+    "mớ ba mớ bảy"
+   ],
+   "period": "Thế kỷ 17 – đầu thế kỷ 20, Bắc Bộ",
+   "region": [
+    "Bắc"
+   ],
+   "gender": "nữ",
+   "formality": 50,
+   "must_show": [
+    "closure",
+    "inner",
+    "waist"
+   ],
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "structure": {
+    "collar": "Cổ mở, không cài; hai vạt trước buông",
+    "closure": "Không khuy; hai vạt trước có thể buộc lỏng trước bụng",
+    "sleeves": "Tay dài, hẹp vừa",
+    "hem": "Dài đến bắp chân; bên trong là váy đụp đen dài",
+    "worn_with": [
+     "Yếm",
+     "Váy đụp đen",
+     "Thắt lưng lụa màu",
+     "Khăn mỏ quạ",
+     "Nón quai thao"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.5,
+     "y": 0.46
+    },
+    {
+     "key": "sleeves",
+     "x": 0.32,
+     "y": 0.44
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.68
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.86
+    }
+   ],
+   "timeline": [
+    {
+     "year": "Thế kỷ 17",
+     "title_vi": "Trang phục thôn quê Bắc Bộ",
+     "text_vi": "Áo tứ thân bốn vạt buông bay trở thành y phục lao động và hội hè của phụ nữ vùng đồng bằng sông Hồng. Hai thân sau khâu liền sống lưng, hai thân trước thả tự do thuận tiện cho công việc đồng áng.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu",
+      "src:bt-phu-nu-vn"
+     ]
+    },
+    {
+     "year": "Thế kỷ 19",
+     "title_vi": "Mớ ba mớ bảy hội làng",
+     "text_vi": "Trong hội xuân và hát quan họ, các liền chị mặc lồng nhiều lớp áo tứ thân màu sắc rực rỡ bên ngoài yếm đào. Đi kèm là nón quai thao và thắt lưng lụa màu bay bổng.",
+     "source_ids": [
+      "src:bt-phu-nu-vn"
+     ]
+    },
+    {
+     "year": "Thập niên 1930",
+     "title_vi": "Chuyển đổi sang áo dài thành thị",
+     "text_vi": "Tại các đô thị lớn, áo tứ thân dần nhường chỗ cho áo dài tân thời gọn gàng hơn. Dù vậy, tứ thân vẫn được gìn giữ bền bỉ trong lễ hội đình chùa và sinh hoạt làng quê Bắc Bộ.",
+     "source_ids": [
+      "src:bt-phu-nu-vn",
+      "src:tu-dien"
+     ]
+    },
+    {
+     "year": "Hiện nay",
+     "title_vi": "Di sản diễn xướng và biểu tượng văn hoá",
+     "text_vi": "Áo tứ thân là biểu tượng thị giác của dân ca quan họ Bắc Ninh — di sản văn hoá phi vật thể nhân loại. Trang phục thường xuyên xuất hiện trên các sân khấu nghệ thuật dân gian.",
+     "source_ids": [
+      "src:bt-phu-nu-vn"
+     ]
+    }
+   ],
+   "summary_vi": "Áo bốn thân: hai thân sau khâu liền, hai thân trước buông tự do hoặc buộc lỏng, mặc ngoài yếm và váy đen, thắt lưng lụa màu. Là hình ảnh tiêu biểu của phụ nữ Bắc Bộ và liền chị quan họ.",
+   "history_vi": "Áo tứ thân gắn với đời sống nông thôn Bắc Bộ; ở hội hè, phụ nữ mặc lồng nhiều lớp áo màu (mớ ba mớ bảy) cùng nón quai thao. Đầu thế kỷ 20, áo dần được thay bằng áo dài tân thời ở thành thị.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Hợp chụp ảnh xuân với nón quai thao và thắt lưng màu."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Đẹp theo nhóm; lưu ý váy đụp khi di chuyển."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Hợp chụp ảnh cưới phong cách dân gian; ít dùng cho lễ gia tiên hiện đại."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Đúng chất hội làng; nhớ mặc đủ áo ngoài, không mặc yếm trần."
+    },
+    "dao-pho": {
+     "status": "ok",
+     "note_vi": "Cần phối khéo: áo ngoài buộc vạt cùng quần bò là hướng thử nghiệm."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Vui tươi, hợp không khí hội."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-bo-ong-rong",
+     "chan-vay-xep-ly",
+     "bot-co-cao",
+     "giay-luoi",
+     "chan-vay-bo",
+     "giay-bup-be",
+     "mu-beret"
+    ],
+    "caution": [
+     "ao-khoac-bo",
+     "ao-thun-trang",
+     "mu-tai-beo",
+     "quan-tay",
+     "ao-len-cai-cuc",
+     "so-mi-oversize",
+     "giay-cao-co",
+     "tui-deo-cheo"
+    ],
+    "conflict": [
+     "ao-vest",
+     "ao-ni-mu",
+     "mu-luoi-trai",
+     "ao-croptop"
+    ]
+   },
+   "colors_classic": [
+    "nau-song",
+    "do-son",
+    "vang-nghe",
+    "xanh-luc-ngoc",
+    "hong-dao"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Áo ngũ thân",
+     "how_vi": "Ngũ thân có cổ đứng cài khuy; tứ thân cổ mở, vạt buông, mặc với yếm và váy."
+    }
+   ],
+   "sources": [
+    "src:bt-phu-nu-vn",
+    "src:tu-dien",
+    "src:ngan-nam-ao-mu"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Diễn giải “bốn thân tượng trưng tứ thân phụ mẫu” là cách hiểu dân gian."
+   ]
+  },
+  {
+   "id": "ao-ba-ba",
+   "name": "Áo bà ba",
+   "aliases": [
+    "áo bà ba Nam Bộ"
+   ],
+   "period": "Cuối thế kỷ 19 đến nay, Nam Bộ",
+   "region": [
+    "Nam"
+   ],
+   "gender": "cả hai",
+   "formality": 35,
+   "must_show": [
+    "collar",
+    "closure",
+    "hem"
+   ],
+   "levels": [
+    1,
+    2,
+    3
+   ],
+   "structure": {
+    "collar": "Không cổ; cổ tròn hoặc cổ tim",
+    "closure": "Cúc cài thẳng giữa thân trước",
+    "sleeves": "Tay dài, vừa",
+    "hem": "Ngang hông, xẻ tà hai bên; hai túi ở vạt trước",
+    "worn_with": [
+     "Quần đen ống rộng",
+     "Khăn rằn",
+     "Nón lá"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.27
+    },
+    {
+     "key": "closure",
+     "x": 0.5,
+     "y": 0.37
+    },
+    {
+     "key": "sleeves",
+     "x": 0.32,
+     "y": 0.43
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.52
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.86
+    }
+   ],
+   "timeline": [
+    {
+     "year": "Cuối TK 19",
+     "title_vi": "Xuất hiện tại Nam Bộ",
+     "text_vi": "Áo bà ba cánh ngắn xẻ tà hai bên hông du nhập và phổ biến nhanh chóng tại đồng bằng sông Cửu Long. Áo nhuộm màu nâu hoặc đen bằng vỏ cây cóc, cây bàng để tiện lao động sông nước.",
+     "source_ids": [
+      "src:btls-tphcm",
+      "src:tu-dien"
+     ]
+    },
+    {
+     "year": "Thập niên 1950",
+     "title_vi": "Cải tiến cổ và chít eo",
+     "text_vi": "Phụ nữ thành thị Nam Bộ cải tiến áo bà ba may chít eo tôn dáng, cổ tim hoặc cổ lá sen, dùng vải hoa nhiều màu. Áo đi cùng quần lụa đen hoặc trắng và đôi guốc gỗ.",
+     "source_ids": [
+      "src:btls-tphcm"
+     ]
+    },
+    {
+     "year": "Hiện nay",
+     "title_vi": "Hồn quê phương Nam",
+     "text_vi": "Áo bà ba cùng chiếc khăn rằn và nón lá trở thành biểu tượng thân thương của văn hoá Nam Bộ. Du khách khắp nơi tìm mặc áo bà ba khi ghé thăm các miệt vườn và chợ nổi.",
+     "source_ids": [
+      "src:btls-tphcm"
+     ]
+    }
+   ],
+   "summary_vi": "Áo cánh không cổ, cài cúc giữa, xẻ tà hông và có hai túi trước, mặc với quần đen ống rộng. Trang phục lao động và thường ngày quen thuộc của Nam Bộ, mộc mạc và mát.",
+   "history_vi": "Áo bà ba phổ biến ở Nam Bộ từ cuối thế kỷ 19; nguồn gốc tên gọi có nhiều giả thuyết. Ngày nay áo bà ba xuất hiện nhiều trong du lịch miệt vườn và ảnh chợ nổi.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Hợp Tết miền Tây, nhất là màu tươi với khăn rằn."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Chụp theo nhóm ở bối cảnh sông nước rất hợp."
+    },
+    "cuoi-hoi": {
+     "status": "caution",
+     "note_vi": "Là trang phục thường ngày; cho lễ gia tiên nên chọn áo dài hoặc áo tấc."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Kín đáo, nhẹ nhàng; chọn màu trầm."
+    },
+    "dao-pho": {
+     "status": "ok",
+     "note_vi": "Rất hợp dạo phố, phối giày thể thao hoặc giày lười."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Vui, dễ vận động."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-bo-ong-rong",
+     "quan-tay",
+     "giay-luoi",
+     "bot-co-cao",
+     "ao-khoac-bo",
+     "ao-len-cai-cuc",
+     "mu-tai-beo",
+     "chan-vay-bo",
+     "quan-ong-loe",
+     "quan-cargo",
+     "giay-cao-co",
+     "giay-de-tho",
+     "ao-bomber",
+     "tui-bao-tu",
+     "tui-deo-cheo",
+     "mu-len",
+     "tai-nghe"
+    ],
+    "caution": [
+     "ao-vest",
+     "chan-vay-xep-ly",
+     "mu-luoi-trai",
+     "ao-varsity",
+     "ao-ni-mu",
+     "balo"
+    ],
+    "conflict": []
+   },
+   "colors_classic": [
+    "xanh-thien-thanh",
+    "hong-dao",
+    "nau-song",
+    "xanh-cham",
+    "vang-nghe",
+    "den-tuyen"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Áo cánh Bắc Bộ",
+     "how_vi": "Áo cánh cũng ngắn, cài cúc giữa nhưng thường không có túi và xẻ tà ngắn hơn."
+    }
+   ],
+   "sources": [
+    "src:btls-tphcm",
+    "src:tu-dien"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Nguồn gốc tên gọi “bà ba” (từ người Bà-ba ở Penang hay cách gọi khác) chưa thống nhất."
+   ]
+  },
+  {
+   "id": "ao-nhat-binh",
+   "name": "Áo Nhật Bình",
+   "aliases": [
+    "Nhật Bình",
+    "áo cung đình Huế"
+   ],
+   "period": "Triều Nguyễn (1802–1945)",
+   "region": [
+    "Trung"
+   ],
+   "gender": "nữ",
+   "formality": 95,
+   "must_show": [
+    "collar",
+    "sleeves",
+    "hem"
+   ],
+   "levels": [
+    1,
+    2
+   ],
+   "structure": {
+    "collar": "Hai vạt trước gặp nhau tạo cổ áo hình chữ nhật lớn trước ngực (nên gọi “Nhật Bình”)",
+    "closure": "Buộc dây, không cài khuy",
+    "sleeves": "Tay thụng rộng, cửa tay có dải ngũ sắc",
+    "hem": "Dài đến gót; mặc ngoài áo dài và váy",
+    "worn_with": [
+     "Áo dài lót",
+     "Váy hoặc quần",
+     "Khăn vành",
+     "Hài thêu"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.5,
+     "y": 0.33
+    },
+    {
+     "key": "sleeves",
+     "x": 0.28,
+     "y": 0.46
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.78
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.88
+    }
+   ],
+   "timeline": [
+    {
+     "year": "1807",
+     "title_vi": "Định chế phẩm phục triều Gia Long",
+     "text_vi": "Nhà Nguyễn quy định áo Nhật Bình làm thường phục cho hoàng hậu, công chúa và thường triều phục cho các cung tần, mệnh phụ. Điểm đặc trưng là cổ áo to bản thêu hoa văn ghép thành hình chữ nhật trước ngực.",
+     "source_ids": [
+      "src:hoi-dien",
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "1836",
+     "title_vi": "Chuẩn hoá hoa văn theo phẩm cấp",
+     "text_vi": "Đại Nam hội điển sự lệ quy định chi tiết màu sắc áo Nhật Bình theo thứ bậc: hoàng hậu dùng màu vàng chính sắc hoặc cam, công chúa màu đỏ, cung tần màu tím than và lục. Tay áo viền dải ngũ sắc rực rỡ.",
+     "source_ids": [
+      "src:hoi-dien",
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Sau 1945",
+     "title_vi": "Từ chốn cung cấm ra đời sống",
+     "text_vi": "Sau khi triều Nguyễn thoái vị, áo Nhật Bình được các gia đình quý tộc xứ Huế giữ gìn làm áo cưới truyền thống. Hiện vật lưu giữ tại Bảo tàng Cổ vật Cung đình Huế là nguồn tư liệu quý báu.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu",
+      "src:y-van-hien"
+     ]
+    },
+    {
+     "year": "2018",
+     "title_vi": "Phục hưng trang phục cung đình",
+     "text_vi": "Các dự án cổ phong tái hiện quy chuẩn thêu tay hoa văn cúc mẫu đơn và loan phượng trên áo Nhật Bình. Trang phục nhanh chóng trở thành hiện tượng trong giới trẻ khi chụp ảnh cưới và kỷ yếu.",
+     "source_ids": [
+      "src:y-van-hien"
+     ]
+    }
+   ],
+   "summary_vi": "Lễ phục của nữ giới hoàng tộc và mệnh phụ triều Nguyễn, nhận ra ngay nhờ viền cổ hình chữ nhật thêu hoa văn và dải ngũ sắc ở cửa tay. Nay được ưa chuộng trong lễ cưới và chụp ảnh.",
+   "history_vi": "Nhật Bình được quy định trong điển chế triều Nguyễn, phân cấp theo màu sắc và hoa văn cho từng phẩm bậc. Từ sau 1945, áo trở thành di sản trưng bày và được phục dựng lại trong hai thập niên gần đây.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Hợp chụp ảnh Tết trang trọng."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Lên ảnh rất nổi bật; tay thụng cần bối cảnh rộng."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Lựa chọn quen thuộc cho cô dâu trong lễ cưới truyền thống."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Trang trọng; phù hợp lễ lớn hơn là đi lễ thường."
+    },
+    "dao-pho": {
+     "status": "caution",
+     "note_vi": "Là lễ phục cung đình; mặc dạo phố nên gọi rõ là phối giao thoa, tránh đi cùng phụ kiện quá xuề xoà."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Hợp sân khấu, chụp ảnh."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-tay",
+     "giay-luoi"
+    ],
+    "caution": [
+     "bot-co-cao",
+     "chan-vay-xep-ly",
+     "ao-vest",
+     "mu-luoi-trai",
+     "mu-tai-beo",
+     "ao-co-lo",
+     "giay-bup-be"
+    ],
+    "conflict": [
+     "ao-ni-mu",
+     "ao-thun-trang",
+     "ao-khoac-bo",
+     "quan-bo-ong-rong",
+     "ao-bomber",
+     "ao-varsity",
+     "ao-khoac-da",
+     "ao-mang-to",
+     "so-mi-oversize",
+     "ao-croptop",
+     "quan-cargo",
+     "quan-ong-loe",
+     "chan-vay-bo",
+     "giay-cao-co",
+     "giay-de-tho",
+     "mu-len",
+     "tai-nghe",
+     "tui-bao-tu",
+     "tui-deo-cheo",
+     "balo",
+     "that-lung-ban-to"
+    ]
+   },
+   "colors_classic": [
+    "do-son",
+    "tim-hue",
+    "vang-hoang-yen",
+    "xanh-luc-ngoc",
+    "xanh-cham"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Áo giao lĩnh",
+     "how_vi": "Giao lĩnh cổ chéo chữ y; Nhật Bình cổ vuông chữ nhật trước ngực."
+    }
+   ],
+   "sources": [
+    "src:hoi-dien",
+    "src:ngan-nam-ao-mu",
+    "src:y-van-hien"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Các mô tả “Nhật Bình là thường phục” cần hiểu theo nghĩa điển chế (thường phục của hậu phi so với đại triều phục), không phải đồ mặc hằng ngày."
+   ]
+  },
+  {
+   "id": "ao-giao-linh",
+   "name": "Áo giao lĩnh",
+   "aliases": [
+    "áo cổ chéo",
+    "giao lĩnh"
+   ],
+   "period": "Thời Lý – Trần – Lê (thế kỷ 11–18)",
+   "region": "all",
+   "gender": "cả hai",
+   "formality": 75,
+   "must_show": [
+    "collar",
+    "waist",
+    "sleeves"
+   ],
+   "levels": [
+    1,
+    2
+   ],
+   "structure": {
+    "collar": "Cổ chéo: vạt trái đè lên vạt phải tạo hình chữ y trước ngực",
+    "closure": "Không khuy; giữ bằng thắt lưng vải",
+    "sleeves": "Tay thụng rộng",
+    "hem": "Dài đến gót, mặc ngoài váy hoặc quần",
+    "worn_with": [
+     "Thắt lưng vải",
+     "Váy dài (thường)",
+     "Áo lót cổ chéo",
+     "Hài"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.48,
+     "y": 0.34
+    },
+    {
+     "key": "sleeves",
+     "x": 0.28,
+     "y": 0.46
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.78
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.88
+    }
+   ],
+   "timeline": [
+    {
+     "year": "Thế kỷ 11",
+     "title_vi": "Trang phục thời Lý – Trần",
+     "text_vi": "Áo cổ chéo (giao lĩnh) là dạng y phục căn bản của người Việt qua các triều đại Lý, Trần, thể hiện rõ trên các tượng đá và tranh vẽ cổ. Áo dài vạt đè chéo trước ngực, buộc dây ngang hông.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Thế kỷ 15",
+     "title_vi": "Điển chế triều Lê sơ",
+     "text_vi": "Triều vua Lê Thánh Tông ban bố quy định cụ thể về kích thước, màu sắc và tay áo giao lĩnh cho sĩ thứ. Áo thường mặc ngoài váy quây hoặc quần lụa, tay thụng rộng rãi phong thái nho nhã.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Thế kỷ 18",
+     "title_vi": "Chuyển giao sang thời Nguyễn",
+     "text_vi": "Sang thế kỷ 18–19, sau các cuộc cải cách y phục của chúa Nguyễn và vua Minh Mạng, áo cổ chéo dần thu hẹp phạm vi và nhường chỗ cho áo cổ đứng năm thân. Giao lĩnh chỉ còn giữ lại trong đạo phục và trang phục tế tự.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Hiện nay",
+     "title_vi": "Phục dựng cổ phong",
+     "text_vi": "Dự án “Dệt nên triều đại” và các nhóm phục dựng tái hiện thành công áo giao lĩnh thời Lê sơ. Trang phục mang lại góc nhìn chân thực về bề dày lịch sử ngàn năm áo mũ Đại Việt.",
+     "source_ids": [
+      "src:vietnam-centre"
+     ]
+    }
+   ],
+   "summary_vi": "Áo cổ chéo phổ biến suốt thời Lý, Trần, Lê: hai vạt trước vắt chéo, buộc bằng thắt lưng, tay rộng. Là kiểu áo nền của nhiều trang phục Đông Á nhưng mang tỉ lệ, hoa văn và cách phối riêng của Đại Việt.",
+   "history_vi": "Giao lĩnh xuất hiện trên tượng, tranh thời Lý – Trần và trong quy định triều Lê. Sang thời Nguyễn, áo cổ chéo dần nhường chỗ cho áo cổ đứng cài khuy.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Đẹp khi chụp ảnh xuân theo phong cách cổ."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Nổi bật, nên chọn bối cảnh di tích."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Hợp lễ cưới phục dựng phong cách Lê."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Rất hợp lễ hội truyền thống."
+    },
+    "dao-pho": {
+     "status": "caution",
+     "note_vi": "Tay thụng và vạt dài vướng khi đi phố; nếu phối hiện đại nhiều, gắn nhãn giao thoa."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Hợp diễn tích, rước đèn."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-tay",
+     "giay-luoi",
+     "bot-co-cao",
+     "that-lung-ban-to"
+    ],
+    "caution": [
+     "quan-bo-ong-rong",
+     "ao-vest",
+     "chan-vay-xep-ly",
+     "ao-co-lo",
+     "giay-bup-be"
+    ],
+    "conflict": [
+     "ao-ni-mu",
+     "mu-tai-beo",
+     "mu-luoi-trai",
+     "ao-thun-trang",
+     "ao-khoac-bo",
+     "ao-len-cai-cuc",
+     "ao-bomber",
+     "ao-varsity",
+     "ao-khoac-da",
+     "ao-mang-to",
+     "so-mi-oversize",
+     "ao-croptop",
+     "quan-cargo",
+     "quan-ong-loe",
+     "giay-de-tho",
+     "tui-bao-tu"
+    ]
+   },
+   "colors_classic": [
+    "xanh-luc-ngoc",
+    "do-son",
+    "vang-nghe",
+    "xanh-cham",
+    "trang-nga"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Hán phục / kimono",
+     "how_vi": "Cùng là áo cổ chéo nhưng khác tỉ lệ, chất liệu, hoa văn và phụ kiện; không dùng phụ kiện của trang phục khác rồi gọi là Việt phục."
+    }
+   ],
+   "sources": [
+    "src:ngan-nam-ao-mu",
+    "src:vietnam-centre"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Chi tiết hoa văn và màu sắc từng thời kỳ dựa phần lớn trên tượng, tranh nên còn nhiều phỏng đoán."
+   ]
+  },
+  {
+   "id": "ao-the",
+   "name": "Áo the",
+   "aliases": [
+    "áo the hoa",
+    "áo the đen",
+    "áo ngũ thân the"
+   ],
+   "period": "Thời Nguyễn đến đầu thế kỷ 20",
+   "region": "all",
+   "gender": "nam",
+   "formality": 75,
+   "must_show": [
+    "collar",
+    "closure",
+    "inner"
+   ],
+   "levels": [
+    1,
+    2
+   ],
+   "structure": {
+    "collar": "Cổ đứng (lập lĩnh), lót bên trong áo trắng",
+    "closure": "Năm khuy cài bên sườn phải",
+    "sleeves": "Tay chẽn hoặc hơi rộng",
+    "hem": "Dáng suông dài quá gối, may bằng vải the/sa dệt thưa thấu quang",
+    "worn_with": [
+     "Quần lụa trắng",
+     "Áo lót trắng",
+     "Khăn xếp"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.46,
+     "y": 0.35
+    },
+    {
+     "key": "sleeves",
+     "x": 0.32,
+     "y": 0.45
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.7
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.88
+    }
+   ],
+   "timeline": [
+    {
+     "year": "Thế kỷ 19",
+     "title_vi": "Y phục tao nhã thời Nguyễn",
+     "text_vi": "Áo the nam may theo kết cấu ngũ thân bằng chất liệu the hoặc sa dệt thưa, mỏng nhẹ. Áo đen khoác ngoài lớp áo lót trắng tạo nên hiệu ứng thị giác tầng lớp mực thước của bậc văn nhân.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Thập niên 1920",
+     "title_vi": "Hình bóng phố cổ Hà Nội",
+     "text_vi": "Các túc nho, quan viên và nhân sĩ Bắc Kỳ mặc áo the đen cùng khăn xếp gọn ghẽ khi ra phố hoặc tiếp khách quý. Hình ảnh này xuất hiện nhiều trên các bưu thiếp và ảnh tư liệu đầu thế kỷ 20.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu",
+      "src:btls-tphcm"
+     ]
+    },
+    {
+     "year": "Hiện nay",
+     "title_vi": "Lễ nghi đình làng và di sản văn hoá",
+     "text_vi": "Áo the khăn xếp tiếp tục được các bô lão và nam giới mặc trong các dịp tế lễ thành hoàng, việc họ và mừng thọ. Trang phục được phục dựng rộng rãi trong các nghi lễ trang trọng ngày nay.",
+     "source_ids": [
+      "src:btls-tphcm"
+     ]
+    }
+   ],
+   "summary_vi": "Áo ngũ thân may bằng chất liệu the hoặc sa đen mỏng nhẹ, mặc ngoài áo lót trắng tạo hiệu ứng mờ ảo trang nhã; là lễ phục và thường phục trang trọng của nam giới thời Nguyễn và đầu thế kỷ 20.",
+   "history_vi": "Áo the là biến thể của áo ngũ thân nam thời Nguyễn, may bằng vải the mỏng nhuộm đen. Đi cùng khăn xếp và quần trắng, áo the là hình ảnh quen thuộc của các bậc túc nho, quan lại và nam giới Bắc Bộ trong các dịp hội hè, lễ Tết.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Kinh điển cho nam giới chúc Tết, đi lễ đầu năm cùng khăn xếp."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Lên ảnh trang trọng, phong thái nho nhã."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Rất hợp cho chú rể, hai họ và quan viên."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Đúng tinh thần tôn nghiêm sân đình, việc họ."
+    },
+    "dao-pho": {
+     "status": "caution",
+     "note_vi": "Trang phục trang trọng; mặc dạo phố nên phối nhẹ nhàng với giày lười hoặc sneaker."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Hợp không khí hoài cổ, rước đèn."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-tay",
+     "giay-luoi",
+     "ao-len-cai-cuc",
+     "ao-vest",
+     "bot-co-cao"
+    ],
+    "caution": [
+     "quan-bo-ong-rong",
+     "giay-cao-co",
+     "ao-khoac-bo",
+     "ao-mang-to",
+     "so-mi-oversize",
+     "ao-co-lo"
+    ],
+    "conflict": [
+     "ao-ni-mu",
+     "mu-luoi-trai",
+     "mu-tai-beo",
+     "ao-thun-trang",
+     "ao-croptop",
+     "quan-cargo",
+     "quan-ong-loe",
+     "giay-de-tho",
+     "tui-bao-tu",
+     "tai-nghe",
+     "chan-vay-xep-ly",
+     "chan-vay-bo"
+    ]
+   },
+   "colors_classic": [
+    "den-tuyen",
+    "xanh-cham",
+    "nau-song"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Áo tấc",
+     "how_vi": "Áo the tay hẹp hoặc vừa, bằng vải sa/the mỏng; áo tấc tay thụng rất rộng, may bằng lụa dày hơn."
+    },
+    {
+     "name": "Áo the nữ",
+     "how_vi": "Áo the nam dài quá gối, kết cấu ngũ thân cổ đứng cài 5 khuy bên phải; áo the nữ thường là tứ thân hoặc biến thể mặc ngoài yếm."
+    }
+   ],
+   "sources": [
+    "src:ngan-nam-ao-mu",
+    "src:btls-tphcm"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Tên gọi vải the, sa, xuyến có sự phân biệt chi tiết về độ dệt thưa và hoa văn chìm theo từng làng nghề."
+   ]
+  },
+  {
+   "id": "ao-vien-linh",
+   "name": "Áo viên lĩnh",
+   "aliases": [
+    "viên lĩnh",
+    "áo cổ tròn",
+    "đoàn lĩnh"
+   ],
+   "period": "Thời Lý – Trần – Lê sơ (thế kỷ 11–15)",
+   "region": "all",
+   "gender": "nam",
+   "formality": 90,
+   "must_show": [
+    "collar",
+    "hem"
+   ],
+   "levels": [
+    1,
+    2
+   ],
+   "structure": {
+    "collar": "Cổ tròn khoét sát chân cổ, khép kín bằng cúc bên vai phải",
+    "closure": "Cài khuy bên cổ và vai phải, vạt trong vạt ngoài khép kín",
+    "sleeves": "Tay thụng rộng (hoặc tay chẽn tuỳ thời kỳ)",
+    "hem": "Vạt dài chạm mắt cá chân, xẻ tà hoặc may nẹp",
+    "worn_with": [
+     "Quần lụa",
+     "Khăn xếp hoặc mũ phác đầu",
+     "Hài"
+    ]
+   },
+   "parts": [
+    {
+     "key": "collar",
+     "x": 0.5,
+     "y": 0.26
+    },
+    {
+     "key": "closure",
+     "x": 0.52,
+     "y": 0.28
+    },
+    {
+     "key": "sleeves",
+     "x": 0.28,
+     "y": 0.46
+    },
+    {
+     "key": "hem",
+     "x": 0.5,
+     "y": 0.76
+    },
+    {
+     "key": "worn_with",
+     "x": 0.5,
+     "y": 0.88
+    }
+   ],
+   "timeline": [
+    {
+     "year": "Thế kỷ 11",
+     "title_vi": "Khởi nguồn triều Lý – Trần",
+     "text_vi": "Áo cổ tròn (viên lĩnh, đoàn lĩnh) được ghi nhận trong quy chế triều phục và thường triều phục quan lại thời Lý – Trần. Áo khép kín cổ mang vẻ trang nghiêm, mực thước chốn vương triều.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu"
+     ]
+    },
+    {
+     "year": "Thế kỷ 15",
+     "title_vi": "Phẩm phục quan lại triều Lê sơ",
+     "text_vi": "Thời Lê Thánh Tông, viên lĩnh trở thành phẩm phục chuẩn mực của quan lại văn võ khi vào chầu. Áo dài quá gối, cài khuy bên vai phải, dùng đai thắt ngang eo và mang hài cong.",
+     "source_ids": [
+      "src:ngan-nam-ao-mu",
+      "src:vietnam-centre"
+     ]
+    },
+    {
+     "year": "Hiện nay",
+     "title_vi": "Phục dựng phẩm phục cung đình",
+     "text_vi": "Các đơn vị nghiên cứu cổ phục Đại Việt phục dựng mẫu áo viên lĩnh Lê sơ dựa trên tượng thờ tại Văn Miếu và hiện vật khảo cổ. Trang phục giúp công chúng hình dung rõ nét về phẩm phục quan trường xưa.",
+     "source_ids": [
+      "src:vietnam-centre"
+     ]
+    }
+   ],
+   "summary_vi": "Áo cổ tròn khép kín cài khuy bên vai phải, vạt dài quá gối hoặc chấm chân. Là trang phục phổ biến của hoàng gia và quan viên thời Lý, Trần, Lê; mang vẻ trang nghiêm, mực thước.",
+   "history_vi": "Viên lĩnh (đoàn lĩnh) xuất hiện sớm trong lịch sử y phục Đại Việt, được ghi nhận qua tượng và thư tịch từ thời Lý, Trần đến Lê sơ như một dạng phẩm phục quan lại. Sang thời Nguyễn, viên lĩnh ít dùng hơn và nhường chỗ cho áo giao lĩnh, bổ phục và áo tấc.",
+   "occasion_rules": {
+    "tet": {
+     "status": "ok",
+     "note_vi": "Trang trọng cho dịp lễ hội và chụp ảnh cổ phục."
+    },
+    "ky-yeu": {
+     "status": "ok",
+     "note_vi": "Nổi bật trong bối cảnh kiến trúc cổ, Văn Miếu, Hoàng thành."
+    },
+    "cuoi-hoi": {
+     "status": "ok",
+     "note_vi": "Rất hợp cho chú rể trong lễ cưới phục dựng phong cách Lê."
+    },
+    "le-hoi-dinh-chua": {
+     "status": "ok",
+     "note_vi": "Đúng tinh thần tôn nghiêm, nghi lễ di tích."
+    },
+    "dao-pho": {
+     "status": "caution",
+     "note_vi": "Là cổ phục trang trọng; mặc dạo phố nên xếp vào phong cách giao thoa."
+    },
+    "trung-thu": {
+     "status": "ok",
+     "note_vi": "Hợp biểu diễn văn hoá và sự kiện truyền thống."
+    }
+   },
+   "remix": {
+    "ok": [
+     "quan-tay",
+     "giay-luoi",
+     "bot-co-cao"
+    ],
+    "caution": [
+     "quan-bo-ong-rong",
+     "ao-vest",
+     "ao-co-lo",
+     "ao-khoac-bo"
+    ],
+    "conflict": [
+     "ao-ni-mu",
+     "mu-tai-beo",
+     "mu-luoi-trai",
+     "ao-thun-trang",
+     "ao-bomber",
+     "ao-varsity",
+     "ao-khoac-da",
+     "ao-mang-to",
+     "so-mi-oversize",
+     "ao-croptop",
+     "quan-cargo",
+     "quan-ong-loe",
+     "giay-cao-co",
+     "giay-de-tho",
+     "mu-len",
+     "tai-nghe",
+     "tui-bao-tu",
+     "tui-deo-cheo",
+     "balo",
+     "that-lung-ban-to",
+     "chan-vay-xep-ly",
+     "chan-vay-bo"
+    ]
+   },
+   "colors_classic": [
+    "xanh-cham",
+    "do-son",
+    "xanh-luc-ngoc",
+    "vang-nghe"
+   ],
+   "dont_confuse_with": [
+    {
+     "name": "Áo giao lĩnh",
+     "how_vi": "Giao lĩnh cổ chéo chữ y; viên lĩnh cổ tròn khoét kín, cài khuy bên vai phải."
+    },
+    {
+     "name": "Áo tấc",
+     "how_vi": "Áo tấc thời Nguyễn có cổ đứng (lập lĩnh) cài 5 khuy; viên lĩnh cổ tròn."
+    }
+   ],
+   "sources": [
+    "src:ngan-nam-ao-mu",
+    "src:vietnam-centre"
+   ],
+   "verified": false,
+   "contested_vi": [
+    "Quy định chính xác về hoa văn bổ tử và chất liệu vải của viên lĩnh thời Lê sơ chủ yếu dựa vào tranh tượng và ghi chép tản mát."
+   ]
+  }
+ ],
+ "COLORS": [
+  {
+   "id": "do-son",
+   "name": "Đỏ son",
+   "hex": "#B4302B",
+   "element": "Hoả",
+   "meaning_vi": "Màu cát tường của lễ Tết và cưới hỏi; rực rỡ, trang trọng.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "vang-hoang-yen",
+   "name": "Vàng hoàng yến",
+   "hex": "#E2B93B",
+   "element": "Thổ",
+   "meaning_vi": "Sắc vàng tươi của mai, cúc ngày xuân; ấm áp, sang.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "vang-nghe",
+   "name": "Vàng nghệ",
+   "hex": "#C99A3A",
+   "element": "Thổ",
+   "meaning_vi": "Vàng đất, trầm hơn hoàng yến; hợp chất lụa mộc.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "xanh-cham",
+   "name": "Xanh chàm",
+   "hex": "#2E4A6B",
+   "element": "Thuỷ",
+   "meaning_vi": "Màu chàm nhuộm thủ công của vùng cao và làng nghề Bắc Bộ.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "xanh-luc-ngoc",
+   "name": "Xanh lục ngọc",
+   "hex": "#4F7F6A",
+   "element": "Mộc",
+   "meaning_vi": "Xanh ngọc điềm đạm, dễ phối với vàng nghệ và trắng ngà.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "tim-hue",
+   "name": "Tím Huế",
+   "hex": "#6B4C9A",
+   "element": "Thuỷ",
+   "meaning_vi": "Sắc tím gắn với hình ảnh áo dài nữ sinh xứ Huế; đoan trang.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "hong-dao",
+   "name": "Hồng đào",
+   "hex": "#E39BA3",
+   "element": "Hoả",
+   "meaning_vi": "Hồng phấn tươi tắn của hoa đào; trẻ trung, hợp ảnh.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "xanh-thien-thanh",
+   "name": "Xanh thiên thanh",
+   "hex": "#7FA6C9",
+   "element": "Thuỷ",
+   "meaning_vi": "Xanh trời nhẹ; mát mắt, hợp trưa hè và kỷ yếu ngoài trời.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "nau-song",
+   "name": "Nâu sồng",
+   "hex": "#5C4033",
+   "element": "Thổ",
+   "meaning_vi": "Nâu nhuộm củ nâu, mộc mạc, đậm hồn quê Bắc Bộ.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "hong-sen",
+   "name": "Hồng sen",
+   "hex": "#D96A8C",
+   "element": "Hoả",
+   "meaning_vi": "Hồng đậm của cánh sen mùa hạ; tươi mà vẫn nền nã.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "cam-dat",
+   "name": "Cam đất",
+   "hex": "#C4622D",
+   "element": "Hoả",
+   "meaning_vi": "Cam gạch nung của tường vôi, ngói cũ; ấm và mộc.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "xanh-reu",
+   "name": "Xanh rêu",
+   "hex": "#55603C",
+   "element": "Mộc",
+   "meaning_vi": "Xanh rêu trầm phủ mái đình; hợp vải đũi, lụa mộc.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "xanh-co-vit",
+   "name": "Xanh cổ vịt",
+   "hex": "#2F6D6A",
+   "element": "Thuỷ",
+   "meaning_vi": "Xanh pha lục sâu như men gốm cổ; sang, lên ảnh rất ăn.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "tim-than",
+   "name": "Tím than",
+   "hex": "#3A3555",
+   "element": "Thuỷ",
+   "meaning_vi": "Tím ngả than, trầm và tĩnh; nền tốt cho phụ kiện bạc.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "be-moc",
+   "name": "Be mộc",
+   "hex": "#D9C7A8",
+   "element": "Thổ",
+   "light": true,
+   "meaning_vi": "Màu vải đũi chưa nhuộm; nhẹ, trung tính, dễ phối nhất bảng.",
+   "occasion_notes": {}
+  },
+  {
+   "id": "trang-nga",
+   "name": "Trắng ngà",
+   "hex": "#F3EDE0",
+   "element": "Kim",
+   "light": true,
+   "meaning_vi": "Trắng lụa tơ tằm; thanh sạch, là màu áo dài nữ sinh quen thuộc.",
+   "occasion_notes": {
+    "tet": {
+     "status": "caution",
+     "note_vi": "Theo quan niệm xưa, trắng gắn với tang lễ nên ngày Tết thường tránh làm màu chủ đạo; phối thêm điểm đỏ hoặc vàng sẽ ổn."
+    },
+    "cuoi-hoi": {
+     "status": "caution",
+     "note_vi": "Trắng ngà rất hợp cô dâu; với khách dự tiệc nên tránh trắng toàn thân để không lẫn với cô dâu."
+    }
+   }
+  },
+  {
+   "id": "den-tuyen",
+   "name": "Đen tuyền",
+   "hex": "#1B1A17",
+   "element": "Thuỷ",
+   "meaning_vi": "Đen sâu, sang trọng, tương phản mạnh với phụ kiện kim loại.",
+   "occasion_notes": {
+    "tet": {
+     "status": "caution",
+     "note_vi": "Dân gian kiêng mặc đen toàn thân ngày đầu năm; nếu chọn đen, thêm điểm nhấn đỏ son hoặc vàng."
+    },
+    "cuoi-hoi": {
+     "status": "caution",
+     "note_vi": "Đen toàn thân dễ bị xem là kém may mắn trong đám cưới truyền thống; dùng làm màu phụ thì ổn."
+    }
+   }
+  }
+ ],
+ "COLOR_FACTS": [
+  {
+   "id": "mo-ba",
+   "text_vi": "Lối mặc áo mớ ba, mớ bảy xưa: nhiều lớp áo chồng lên nhau, lớp ngoài màu trầm như nâu, đen, lớp trong màu tươi như vàng mỡ gà, hồng đào, xanh hồ thuỷ hé ra ở cổ.",
+   "color_ids": [
+    "nau-song",
+    "den-tuyen",
+    "vang-hoang-yen",
+    "hong-dao",
+    "xanh-luc-ngoc"
+   ],
+   "source_ids": [
+    "src:ttvh-mo-ba",
+    "src:vusta-phu-nu-xua"
+   ],
+   "verified": false
+  },
+  {
+   "id": "sac-vui",
+   "text_vi": "Đỏ, vàng, hồng là những sắc vui, hợp dịp Tết, cưới hỏi, mừng thọ.",
+   "color_ids": [
+    "do-son",
+    "vang-hoang-yen",
+    "vang-nghe",
+    "hong-dao",
+    "hong-sen"
+   ],
+   "source_ids": [
+    "src:scov-mau-sac"
+   ],
+   "verified": false
+  },
+  {
+   "id": "mau-tang",
+   "text_vi": "Trắng, đen, xanh, tím từng là màu tang; vì vậy toàn trắng hoặc trắng đen làm cả bộ cho Tết, cưới hỏi nên cân nhắc. Áo dài trắng nữ sinh vẫn là hình ảnh quen thuộc, không có gì kiêng.",
+   "color_ids": [
+    "trang-nga",
+    "den-tuyen",
+    "xanh-cham",
+    "tim-hue",
+    "tim-than"
+   ],
+   "source_ids": [
+    "src:scov-mau-sac"
+   ],
+   "verified": false
+  },
+  {
+   "id": "dinh-chua",
+   "text_vi": "Đi đình chùa hợp màu nâu, chàm và các sắc trầm; màu quá rực nên tiết chế.",
+   "color_ids": [
+    "nau-song",
+    "xanh-cham",
+    "xanh-reu",
+    "tim-than"
+   ],
+   "source_ids": [
+    "src:scov-mau-sac"
+   ],
+   "verified": false
+  },
+  {
+   "id": "vang-le-phuc",
+   "text_vi": "Màu vàng tươi trên lễ phục dễ gợi tới hoàng bào của vua.",
+   "color_ids": [
+    "vang-hoang-yen"
+   ],
+   "source_ids": [
+    "src:scov-mau-sac"
+   ],
+   "verified": false
+  },
+  {
+   "id": "dong-ho",
+   "text_vi": "Tranh Đông Hồ dùng năm màu lấy từ tự nhiên: đỏ son, vàng hoè, xanh chàm, trắng điệp, đen than.",
+   "color_ids": [
+    "do-son",
+    "vang-hoang-yen",
+    "xanh-co-vit",
+    "trang-nga",
+    "den-tuyen"
+   ],
+   "source_ids": [
+    "src:artnam-dong-ho",
+    "src:dsvh-dong-ho"
+   ],
+   "verified": false
+  }
+ ],
+ "DONG_HO_FIVE": [
+  "do-son",
+  "vang-hoang-yen",
+  "xanh-co-vit",
+  "trang-nga",
+  "den-tuyen"
+ ],
+ "ACCESSORIES": [
+  {
+   "id": "khan-van",
+   "name": "Khăn vấn",
+   "category": "Đầu",
+   "formality": 75,
+   "classic_with": [
+    "ao-dai",
+    "ao-ngu-than",
+    "ao-tac",
+    "ao-nhat-binh"
+   ],
+   "note_vi": "Khăn vấn tròn của phụ nữ thời Nguyễn, đi cùng áo ngũ thân và áo dài.",
+   "hex": "#6B4C9A"
+  },
+  {
+   "id": "khan-xep",
+   "name": "Khăn xếp",
+   "category": "Đầu",
+   "formality": 80,
+   "classic_with": [
+    "ao-ngu-than",
+    "ao-tac"
+   ],
+   "note_vi": "Khăn xếp của nam giới, đi cùng áo ngũ thân và áo tấc trong lễ.",
+   "hex": "#1B1A17"
+  },
+  {
+   "id": "non-la",
+   "name": "Nón lá",
+   "category": "Đầu",
+   "formality": 40,
+   "classic_with": [
+    "ao-dai",
+    "ao-ba-ba",
+    "ao-tu-than"
+   ],
+   "note_vi": "Nón lá phổ biến khắp ba miền; hợp ảnh ngoài trời.",
+   "hex": "#E8D9B0"
+  },
+  {
+   "id": "non-quai-thao",
+   "name": "Nón quai thao",
+   "category": "Đầu",
+   "formality": 60,
+   "classic_with": [
+    "ao-tu-than"
+   ],
+   "note_vi": "Nón quai thao gắn với liền chị quan họ Kinh Bắc và áo tứ thân.",
+   "hex": "#C9B37E"
+  },
+  {
+   "id": "khan-mo-qua",
+   "name": "Khăn mỏ quạ",
+   "category": "Đầu",
+   "formality": 50,
+   "classic_with": [
+    "ao-tu-than"
+   ],
+   "note_vi": "Khăn vuông đen chít thành hình mỏ quạ, đi cùng áo tứ thân Bắc Bộ.",
+   "hex": "#1B1A17"
+  },
+  {
+   "id": "khan-ran",
+   "name": "Khăn rằn",
+   "category": "Đầu",
+   "formality": 25,
+   "classic_with": [
+    "ao-ba-ba"
+   ],
+   "note_vi": "Khăn ca-rô đen trắng Nam Bộ, đi cùng áo bà ba.",
+   "hex": "#2A2A2A"
+  },
+  {
+   "id": "guoc-moc",
+   "name": "Guốc mộc",
+   "category": "Chân",
+   "formality": 55,
+   "classic_with": [
+    "ao-dai",
+    "ao-tu-than",
+    "ao-ba-ba",
+    "ao-ngu-than"
+   ],
+   "note_vi": "Guốc gỗ quai da hoặc quai vải; hợp áo dài và tứ thân.",
+   "hex": "#A8743C"
+  },
+  {
+   "id": "hai-theu",
+   "name": "Hài thêu",
+   "category": "Chân",
+   "formality": 85,
+   "classic_with": [
+    "ao-nhat-binh",
+    "ao-tac",
+    "ao-giao-linh"
+   ],
+   "note_vi": "Hài mũi cong thêu hoa văn, đi với lễ phục và áo cung đình.",
+   "hex": "#C99A3A"
+  },
+  {
+   "id": "giay-the-thao",
+   "name": "Giày thể thao",
+   "category": "Chân",
+   "formality": 15,
+   "classic_with": [],
+   "note_vi": "Giày thể thao trắng là cách phối hiện đại quen thuộc với áo dài, ngũ thân.",
+   "hex": "#EAE5D9"
+  },
+  {
+   "id": "tui-vai",
+   "name": "Túi vải",
+   "category": "Túi",
+   "formality": 20,
+   "classic_with": [],
+   "note_vi": "Túi vải đeo vai, tiện đi học, đi chơi.",
+   "hex": "#D9CDB4"
+  },
+  {
+   "id": "kinh-mat",
+   "name": "Kính mắt",
+   "category": "Trang sức",
+   "formality": 30,
+   "classic_with": [],
+   "note_vi": "Kính gọng tròn mảnh tạo nét hoài cổ; kính râm hợp dạo phố.",
+   "hex": "#1B1A17"
+  },
+  {
+   "id": "vong-co",
+   "name": "Vòng cổ ngọc / bạc",
+   "category": "Trang sức",
+   "formality": 65,
+   "classic_with": [
+    "ao-dai",
+    "ao-ngu-than",
+    "ao-nhat-binh"
+   ],
+   "note_vi": "Kiềng bạc hoặc chuỗi ngọc, điểm nhấn cổ áo.",
+   "hex": "#B8C4B0"
+  },
+  {
+   "id": "quat-giay",
+   "name": "Quạt giấy",
+   "category": "Cầm tay",
+   "formality": 50,
+   "classic_with": [
+    "ao-dai",
+    "ao-tu-than",
+    "ao-giao-linh",
+    "ao-tac"
+   ],
+   "note_vi": "Quạt giấy hoặc quạt lụa; đạo cụ chụp ảnh đẹp.",
+   "hex": "#E8D9B0"
+  },
+  {
+   "id": "tram-cai-toc",
+   "name": "Trâm cài tóc",
+   "category": "Đầu",
+   "formality": 70,
+   "classic_with": [
+    "ao-dai",
+    "ao-ngu-than",
+    "ao-nhat-binh",
+    "ao-giao-linh"
+   ],
+   "note_vi": "Trâm bạc hoặc trâm ngọc cài búi tóc; gọn mà vẫn ra lễ.",
+   "hex": "#C0C6BE"
+  },
+  {
+   "id": "khuyen-ngoc",
+   "name": "Khuyên ngọc",
+   "category": "Trang sức",
+   "formality": 55,
+   "classic_with": [
+    "ao-dai",
+    "ao-ngu-than",
+    "ao-nhat-binh"
+   ],
+   "note_vi": "Khuyên tai ngọc hoặc bạc, điểm sáng nhỏ cạnh gương mặt.",
+   "hex": "#8FB39B"
+  },
+  {
+   "id": "vong-tay-bac",
+   "name": "Vòng tay bạc",
+   "category": "Trang sức",
+   "formality": 45,
+   "classic_with": [
+    "ao-dai",
+    "ao-tu-than",
+    "ao-ba-ba"
+   ],
+   "note_vi": "Vòng bạc trơn hoặc chạm; hợp cả lối truyền thống lẫn hiện đại.",
+   "hex": "#B9C2BC"
+  },
+  {
+   "id": "thao-dai",
+   "name": "Thao đai",
+   "category": "Trang sức",
+   "formality": 80,
+   "classic_with": [
+    "ao-tac",
+    "ao-giao-linh",
+    "ao-ngu-than"
+   ],
+   "note_vi": "Dải đai lụa thắt ngang eo của lễ phục; buộc múi thả xuống trước.",
+   "hex": "#C99A3A"
+  },
+  {
+   "id": "o-giay",
+   "name": "Ô giấy",
+   "category": "Cầm tay",
+   "formality": 45,
+   "classic_with": [
+    "ao-dai",
+    "ao-tu-than",
+    "ao-ngu-than"
+   ],
+   "note_vi": "Ô giấy dầu che nắng; khung hình rất hợp ảnh ngoài trời.",
+   "hex": "#D8785F"
+  }
+ ],
+ "MODERN_PIECES": [
+  {
+   "id": "ao-khoac-bo",
+   "name": "Áo khoác bò",
+   "category": "Khoác",
+   "formality": 25,
+   "layer": "over",
+   "hex": "#7A93B5",
+   "hex2": "#E2C77A",
+   "bulk": 0.6,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "short",
+   "note_vi": "Khoác bò cổ bẻ, chỉ vàng — cách phối giao thoa quen thuộc nhất."
+  },
+  {
+   "id": "ao-vest",
+   "name": "Áo vest",
+   "category": "Khoác",
+   "formality": 70,
+   "layer": "over",
+   "hex": "#2E2E33",
+   "hex2": "#C9C4B8",
+   "bulk": 0.55,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "short",
+   "note_vi": "Vest ve chữ V, dáng suông; nâng độ trang trọng cho áo dài, ngũ thân."
+  },
+  {
+   "id": "ao-ni-mu",
+   "name": "Áo nỉ có mũ",
+   "category": "Khoác",
+   "formality": 10,
+   "layer": "over",
+   "hex": "#8A8F98",
+   "hex2": "#6E727A",
+   "bulk": 0.8,
+   "covers": [
+    "collar",
+    "closure",
+    "sleeves"
+   ],
+   "length": "short",
+   "note_vi": "Hoodie trùm mũ; phá phom mạnh, chỉ hợp dịp thật thoải mái."
+  },
+  {
+   "id": "ao-len-cai-cuc",
+   "name": "Áo len cài cúc",
+   "category": "Khoác",
+   "formality": 45,
+   "layer": "over",
+   "hex": "#B9A47E",
+   "hex2": "#8E7B58",
+   "bulk": 0.5,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "short",
+   "note_vi": "Cardigan len mỏng, buông dài — lớp khoác dịu nhất cho Việt phục."
+  },
+  {
+   "id": "ao-bomber",
+   "name": "Áo bomber",
+   "category": "Khoác",
+   "formality": 20,
+   "layer": "over",
+   "hex": "#3C4A3E",
+   "hex2": "#C7A24A",
+   "bulk": 0.7,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "short",
+   "note_vi": "Bomber bo gấu, khoá kéo; dáng ngắn nên giữ được tà áo phía dưới."
+  },
+  {
+   "id": "ao-varsity",
+   "name": "Áo khoác bóng chày",
+   "category": "Khoác",
+   "formality": 15,
+   "layer": "over",
+   "hex": "#3B3A44",
+   "hex2": "#E8E2D4",
+   "bulk": 0.7,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "short",
+   "note_vi": "Varsity tay khác màu, bo cổ kẻ sọc; chất Gen Z rõ nhất."
+  },
+  {
+   "id": "ao-khoac-da",
+   "name": "Áo khoác da",
+   "category": "Khoác",
+   "formality": 30,
+   "layer": "over",
+   "hex": "#2B2724",
+   "hex2": "#9A9188",
+   "bulk": 0.65,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "short",
+   "note_vi": "Khoác da cổ vát, khoá lệch; tương phản mạnh với lụa."
+  },
+  {
+   "id": "ao-mang-to",
+   "name": "Áo măng tô dài",
+   "category": "Khoác",
+   "formality": 55,
+   "layer": "over",
+   "hex": "#9C8E76",
+   "hex2": "#6F6555",
+   "bulk": 0.75,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "long",
+   "note_vi": "Măng tô dáng dài phủ quá gối; giữ được đường dọc của áo dài."
+  },
+  {
+   "id": "so-mi-oversize",
+   "name": "Sơ mi oversize",
+   "category": "Khoác",
+   "formality": 40,
+   "layer": "over",
+   "hex": "#D8DEE6",
+   "hex2": "#A9B4C0",
+   "bulk": 0.55,
+   "covers": [
+    "sleeves"
+   ],
+   "length": "mid",
+   "note_vi": "Sơ mi rộng mặc mở, coi như lớp khoác nhẹ; dễ phối, dễ cởi."
+  },
+  {
+   "id": "ao-thun-trang",
+   "name": "Áo thun trắng",
+   "category": "Áo",
+   "formality": 20,
+   "layer": "under",
+   "hex": "#F3EDE0",
+   "bulk": 0.15,
+   "covers": [],
+   "note_vi": "Áo thun cổ tròn lót trong, hở ở cổ áo — mẹo phối phổ biến với áo dài."
+  },
+  {
+   "id": "ao-co-lo",
+   "name": "Áo cổ lọ",
+   "category": "Áo",
+   "formality": 40,
+   "layer": "under",
+   "hex": "#2C2A28",
+   "bulk": 0.2,
+   "covers": [
+    "collar"
+   ],
+   "note_vi": "Cổ lọ mỏng mặc trong, kín cổ; hợp trời lạnh và không gian tôn nghiêm."
+  },
+  {
+   "id": "ao-croptop",
+   "name": "Áo croptop",
+   "category": "Áo",
+   "formality": 10,
+   "layer": "under",
+   "hex": "#E7DFD2",
+   "bulk": 0.15,
+   "covers": [],
+   "note_vi": "Croptop mặc trong áo dài xẻ tà cao; táo bạo, chỉ hợp dạo phố."
+  },
+  {
+   "id": "quan-bo-ong-rong",
+   "name": "Quần bò ống rộng",
+   "category": "Quần / váy",
+   "formality": 25,
+   "layer": "swap",
+   "hex": "#5A6E8C",
+   "hex2": "#E2C77A",
+   "bulk": 0.6,
+   "covers": [],
+   "note_vi": "Quần bò ống rộng thay quần lụa — phom vẫn dọc nên ít phá dáng."
+  },
+  {
+   "id": "quan-tay",
+   "name": "Quần tây",
+   "category": "Quần / váy",
+   "formality": 60,
+   "layer": "swap",
+   "hex": "#3B3A37",
+   "bulk": 0.5,
+   "covers": [],
+   "note_vi": "Quần tây ly giữa, ống đứng; thay quần lụa mà vẫn giữ nét chỉn chu."
+  },
+  {
+   "id": "chan-vay-xep-ly",
+   "name": "Chân váy xếp ly",
+   "category": "Quần / váy",
+   "formality": 45,
+   "layer": "swap",
+   "hex": "#8C6D4F",
+   "bulk": 0.55,
+   "covers": [],
+   "note_vi": "Váy xếp ly dài qua gối; gần với váy đụp nên ăn nhập với áo tứ thân."
+  },
+  {
+   "id": "quan-cargo",
+   "name": "Quần túi hộp",
+   "category": "Quần / váy",
+   "formality": 15,
+   "layer": "swap",
+   "hex": "#6B6A55",
+   "hex2": "#4E4D3E",
+   "bulk": 0.65,
+   "covers": [],
+   "note_vi": "Cargo túi hộp hai bên; chất đường phố, phá phom nhiều nhất trong nhóm quần."
+  },
+  {
+   "id": "chan-vay-bo",
+   "name": "Chân váy bò",
+   "category": "Quần / váy",
+   "formality": 20,
+   "layer": "swap",
+   "hex": "#6982A3",
+   "hex2": "#E2C77A",
+   "bulk": 0.5,
+   "covers": [],
+   "note_vi": "Váy bò dáng chữ A ngang gối; trẻ, hợp áo bà ba và áo cánh."
+  },
+  {
+   "id": "quan-ong-loe",
+   "name": "Quần ống loe",
+   "category": "Quần / váy",
+   "formality": 30,
+   "layer": "swap",
+   "hex": "#5C5470",
+   "bulk": 0.6,
+   "covers": [],
+   "note_vi": "Ống loe từ gối xuống; dáng dọc kéo người cao, chất retro rất ăn ảnh."
+  },
+  {
+   "id": "giay-luoi",
+   "name": "Giày lười",
+   "category": "Giày",
+   "formality": 55,
+   "layer": "feet",
+   "hex": "#5C4033",
+   "hex2": "#C99A3A",
+   "bulk": 0.2,
+   "covers": [],
+   "note_vi": "Loafer da, mũi tròn; an toàn cho gần như mọi dáng áo."
+  },
+  {
+   "id": "bot-co-cao",
+   "name": "Bốt cổ cao",
+   "category": "Giày",
+   "formality": 40,
+   "layer": "feet",
+   "hex": "#3E2F25",
+   "hex2": "#2A2019",
+   "bulk": 0.35,
+   "covers": [],
+   "note_vi": "Bốt ôm cổ chân; ăn ý với tà áo dài và váy xếp ly."
+  },
+  {
+   "id": "giay-cao-co",
+   "name": "Giày cao cổ",
+   "category": "Giày",
+   "formality": 20,
+   "layer": "feet",
+   "hex": "#E8E3D7",
+   "hex2": "#B4302B",
+   "bulk": 0.3,
+   "covers": [],
+   "note_vi": "Sneaker cao cổ buộc dây; lối phối kinh điển của học sinh với áo dài."
+  },
+  {
+   "id": "giay-de-tho",
+   "name": "Giày đế thô",
+   "category": "Giày",
+   "formality": 15,
+   "layer": "feet",
+   "hex": "#EDE7DA",
+   "hex2": "#3B3A37",
+   "bulk": 0.35,
+   "covers": [],
+   "note_vi": "Sneaker đế dày; tôn dáng nhưng làm gấu áo trông ngắn lại."
+  },
+  {
+   "id": "giay-bup-be",
+   "name": "Giày búp bê",
+   "category": "Giày",
+   "formality": 45,
+   "layer": "feet",
+   "hex": "#8C2F3A",
+   "hex2": "#E8D9B0",
+   "bulk": 0.15,
+   "covers": [],
+   "note_vi": "Búp bê quai ngang, gót thấp; nhẹ nhàng, hợp kỷ yếu và Tết."
+  },
+  {
+   "id": "mu-luoi-trai",
+   "name": "Mũ lưỡi trai",
+   "category": "Mũ",
+   "formality": 10,
+   "layer": "head",
+   "hex": "#2E4A6B",
+   "bulk": 0.3,
+   "covers": [],
+   "note_vi": "Mũ lưỡi trai; nên bỏ ra khi vào đình, chùa hoặc khi làm lễ."
+  },
+  {
+   "id": "mu-tai-beo",
+   "name": "Mũ tai bèo",
+   "category": "Mũ",
+   "formality": 10,
+   "layer": "head",
+   "hex": "#8C8C7A",
+   "bulk": 0.3,
+   "covers": [],
+   "note_vi": "Bucket vành mềm; che nắng tốt, chất đường phố."
+  },
+  {
+   "id": "mu-beret",
+   "name": "Mũ nồi",
+   "category": "Mũ",
+   "formality": 40,
+   "layer": "head",
+   "hex": "#6B2F35",
+   "bulk": 0.2,
+   "covers": [],
+   "note_vi": "Mũ nồi lệch đầu; gợi không khí Hà Nội đầu thế kỷ 20."
+  },
+  {
+   "id": "mu-len",
+   "name": "Mũ len",
+   "category": "Mũ",
+   "formality": 15,
+   "layer": "head",
+   "hex": "#5C6B7A",
+   "bulk": 0.25,
+   "covers": [],
+   "note_vi": "Mũ len trùm; ấm, hợp Tết miền Bắc và buổi tối."
+  },
+  {
+   "id": "tai-nghe",
+   "name": "Tai nghe chụp tai",
+   "category": "Mũ",
+   "formality": 5,
+   "layer": "head",
+   "hex": "#33363B",
+   "hex2": "#C9C4B8",
+   "bulk": 0.2,
+   "covers": [],
+   "note_vi": "Tai nghe đeo cổ hoặc chụp tai; chi tiết đời thường làm bộ phối bớt cứng."
+  },
+  {
+   "id": "tui-deo-cheo",
+   "name": "Túi đeo chéo",
+   "category": "Túi",
+   "formality": 25,
+   "layer": "carry",
+   "hex": "#4A4640",
+   "hex2": "#B9A47E",
+   "bulk": 0.2,
+   "covers": [],
+   "note_vi": "Túi nhỏ đeo chéo ngực; gọn, không vướng tà áo."
+  },
+  {
+   "id": "balo",
+   "name": "Ba lô",
+   "category": "Túi",
+   "formality": 15,
+   "layer": "carry",
+   "hex": "#3E4A52",
+   "hex2": "#C9B37E",
+   "bulk": 0.4,
+   "covers": [],
+   "note_vi": "Ba lô hai quai; tiện đi học nhưng che mất lưng áo."
+  },
+  {
+   "id": "tui-bao-tu",
+   "name": "Túi bao tử",
+   "category": "Túi",
+   "formality": 10,
+   "layer": "carry",
+   "hex": "#7A4E3B",
+   "bulk": 0.2,
+   "covers": [
+    "waist"
+   ],
+   "note_vi": "Túi bao tử thắt ngang hông; rất đường phố, hợp mức biến tấu cao."
+  },
+  {
+   "id": "that-lung-ban-to",
+   "name": "Thắt lưng bản to",
+   "category": "Thắt lưng",
+   "formality": 35,
+   "layer": "waist",
+   "hex": "#3A3330",
+   "hex2": "#C9A24A",
+   "bulk": 0.15,
+   "covers": [
+    "waist"
+   ],
+   "note_vi": "Đai bản to siết eo; định lại phom cho áo suông như ngũ thân, giao lĩnh."
+  }
+ ],
+ "VIBES": [
+  {
+   "id": "duong-pho",
+   "name": "Đường phố",
+   "desc": "Năng động, phóng khoáng, phối tự do với giày thể thao và áo khoác.",
+   "affinity": [
+    "giay-the-thao",
+    "ao-ni-mu",
+    "ao-khoac-bo",
+    "ao-bomber",
+    "ao-varsity",
+    "mu-luoi-trai",
+    "mu-tai-beo",
+    "tai-nghe",
+    "quan-bo-ong-rong",
+    "quan-cargo",
+    "giay-cao-co",
+    "giay-de-tho",
+    "tui-bao-tu",
+    "tui-deo-cheo",
+    "tui-vai",
+    "kinh-mat"
+   ],
+   "tone": 1,
+   "prefers_monochrome": false
+  },
+  {
+   "id": "toi-gian",
+   "name": "Tối giản",
+   "desc": "Ít chi tiết, một hai màu, đường nét thanh thoát.",
+   "affinity": [
+    "giay-luoi",
+    "quan-tay",
+    "vong-co",
+    "ao-thun-trang",
+    "ao-co-lo",
+    "ao-mang-to",
+    "khuyen-ngoc"
+   ],
+   "tone": 0,
+   "prefers_monochrome": true
+  },
+  {
+   "id": "hoai-co",
+   "name": "Hoài cổ Hà Nội",
+   "desc": "Nét phố cổ đầu thế kỷ 20: khăn vấn, guốc mộc, kính tròn.",
+   "affinity": [
+    "khan-van",
+    "guoc-moc",
+    "kinh-mat",
+    "quat-giay",
+    "non-la",
+    "o-giay",
+    "tram-cai-toc",
+    "ao-len-cai-cuc",
+    "mu-beret",
+    "giay-bup-be"
+   ],
+   "tone": -1,
+   "prefers_monochrome": false
+  },
+  {
+   "id": "hoc-duong",
+   "name": "Học đường thanh lịch",
+   "desc": "Nhã nhặn, gọn gàng, hợp sân trường và lễ tổng kết.",
+   "affinity": [
+    "ao-vest",
+    "giay-luoi",
+    "tui-vai",
+    "balo",
+    "ao-len-cai-cuc",
+    "chan-vay-xep-ly",
+    "quan-tay",
+    "so-mi-oversize",
+    "giay-bup-be"
+   ],
+   "tone": 0,
+   "prefers_monochrome": false
+  },
+  {
+   "id": "le-hoi",
+   "name": "Lễ hội rực rỡ",
+   "desc": "Màu tươi, phụ kiện nổi, đứng giữa đám đông là nhận ra ngay.",
+   "affinity": [
+    "khan-van",
+    "non-quai-thao",
+    "hai-theu",
+    "vong-co",
+    "quat-giay",
+    "thao-dai",
+    "khuyen-ngoc",
+    "o-giay"
+   ],
+   "tone": 1,
+   "prefers_monochrome": false
+  },
+  {
+   "id": "moc-mac",
+   "name": "Mộc mạc thôn quê",
+   "desc": "Vải mộc, màu đất, phụ kiện đồng quê; ấm và gần gũi.",
+   "affinity": [
+    "non-la",
+    "khan-ran",
+    "khan-mo-qua",
+    "guoc-moc",
+    "tui-vai",
+    "vong-tay-bac",
+    "chan-vay-xep-ly"
+   ],
+   "tone": -1,
+   "prefers_monochrome": false
+  }
+ ],
+ "SOURCES": [
+  {
+   "id": "src:ngan-nam-ao-mu",
+   "title": "Trần Quang Đức — Ngàn năm áo mũ (Nhã Nam, 2013)",
+   "kind": "sách",
+   "note_vi": "Khảo cứu trang phục Việt Nam từ Lý đến Nguyễn; nguồn chính cho giao lĩnh, viên lĩnh, ngũ thân."
+  },
+  {
+   "id": "src:hoi-dien",
+   "title": "Khâm định Đại Nam hội điển sự lệ (Nội các triều Nguyễn)",
+   "kind": "sách",
+   "note_vi": "Điển chế triều Nguyễn; quy định phẩm phục, trong đó có áo Nhật Bình."
+  },
+  {
+   "id": "src:vietnam-centre",
+   "title": "Vietnam Centre — dự án “Dệt nên triều đại”",
+   "kind": "dự án phục dựng",
+   "note_vi": "Phục dựng trang phục Lê sơ – Nguyễn; ảnh tham chiếu kết cấu áo."
+  },
+  {
+   "id": "src:y-van-hien",
+   "title": "Ỷ Vân Hiên — phục dựng cổ phục",
+   "kind": "dự án phục dựng",
+   "note_vi": "Đơn vị phục dựng áo ngũ thân, Nhật Bình, giao lĩnh; ảnh tham chiếu."
+  },
+  {
+   "id": "src:btls-tphcm",
+   "title": "Bảo tàng Lịch sử TP.HCM / Bảo tàng Phụ nữ Nam Bộ",
+   "kind": "bảo tàng",
+   "note_vi": "Hiện vật áo bà ba, áo dài đầu thế kỷ 20."
+  },
+  {
+   "id": "src:bt-phu-nu-vn",
+   "title": "Bảo tàng Phụ nữ Việt Nam (Hà Nội)",
+   "kind": "bảo tàng",
+   "note_vi": "Trưng bày áo tứ thân, yếm, khăn mỏ quạ, nón quai thao."
+  },
+  {
+   "id": "src:tu-dien",
+   "title": "Từ điển tiếng Việt (Hoàng Phê chủ biên)",
+   "kind": "từ điển",
+   "note_vi": "Định nghĩa các từ: yếm, tứ thân, ngũ thân, giao lĩnh…"
+  },
+  {
+   "id": "src:vnn-tet-2026",
+   "title": "VietNamNet — Tranh cãi về áo dài Tết: ranh giới mỏng manh giữa cách tân và xâm lấn văn hoá",
+   "kind": "bài báo",
+   "note_vi": "Nhận diện áo dài nằm ở phom dáng và cách may; tranh luận về khuy thắt nút.",
+   "url": "https://vietnamnet.vn/tranh-cai-ve-ao-dai-tet-ranh-gioi-mong-manh-giua-cach-tan-va-xam-lan-van-hoa-2486770.html"
+  },
+  {
+   "id": "src:vov-cach-tan",
+   "title": "VOV — Áo dài cách tân: sáng tạo nhưng phải có chừng mực",
+   "kind": "bài báo",
+   "note_vi": "Ý kiến ThS. Bùi Thị Kim Phương và NTK Đức Hùng về giới hạn cách tân.",
+   "url": "https://vov.gov.vn/ao-dai-cach-tan-sang-tao-nhung-phai-co-chung-muc-dtnew-184863"
+  },
+  {
+   "id": "src:dantri-xe-nguc",
+   "title": "Dân Trí — Áo dài cách tân xẻ ngực bị cộng đồng phản ứng (2025)",
+   "kind": "bài báo",
+   "note_vi": "Phản ứng của công chúng với áo dài mở khuy khoe nội y.",
+   "url": "https://dantri.com.vn/giai-tri/ao-dai-cach-tan-xe-nguc-vi-sao-sang-tao-lai-bi-cong-dong-nem-da-20251225091015721.htm"
+  },
+  {
+   "id": "src:ttvh-mo-ba",
+   "title": "Thể thao & Văn hoá — Quần áo mớ bảy mớ ba thời xưa",
+   "kind": "bài báo",
+   "note_vi": "Cách mặc nhiều lớp áo, lớp ngoài trầm, lớp trong tươi.",
+   "url": "https://thethaovanhoa.vn/quan-ao-mo-bay-mo-ba-thoi-xua-20120513033913573.htm"
+  },
+  {
+   "id": "src:vusta-phu-nu-xua",
+   "title": "VUSTA — Trang phục phụ nữ xưa",
+   "kind": "bài báo",
+   "note_vi": "Trang phục và màu sắc của phụ nữ Việt xưa.",
+   "url": "https://vusta.vn/trang-phuc-phu-nu-xua-p74661.html"
+  },
+  {
+   "id": "src:scov-mau-sac",
+   "title": "scov.gov.vn — Màu sắc với truyền thống văn hoá dân tộc",
+   "kind": "bài báo",
+   "note_vi": "Ý nghĩa màu sắc trong văn hoá Việt: sắc vui, màu tang, màu nơi thờ tự.",
+   "url": "https://scov.gov.vn/ban-sac-van-hoa/tu-dien-van-hoa/mau-sac-voi-truyen-thong-van-hoa-dan-toc.html"
+  },
+  {
+   "id": "src:artnam-dong-ho",
+   "title": "Artnam — Màu sắc trong tranh dân gian Đông Hồ",
+   "kind": "bài báo",
+   "note_vi": "Năm màu tự nhiên của tranh Đông Hồ.",
+   "url": "https://artnam.vn/mau-sac-trong-tranh-dan-gian-dong-ho/"
+  },
+  {
+   "id": "src:dsvh-dong-ho",
+   "title": "Cục Di sản văn hoá — Tranh dân gian Đông Hồ",
+   "kind": "bài báo",
+   "note_vi": "Giới thiệu nghề làm tranh Đông Hồ.",
+   "url": "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151"
+  }
+ ],
+ "PART_LABELS_VI": {
+  "collar": "Cổ áo",
+  "closure": "Khuy / Cài",
+  "sleeves": "Tay áo",
+  "hem": "Tà áo",
+  "worn_with": "Mặc cùng"
+ }
+}

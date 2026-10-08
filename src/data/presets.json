@@ -1,0 +1,542 @@
+[
+  {
+    "id": "nu-ao-tu-than-l1",
+    "side": "nu",
+    "garment_id": "ao-tu-than",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "vay-den",
+      "yem",
+      "that-lung",
+      "khan-mo-qua"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 91.8
+  },
+  {
+    "id": "nu-ao-tu-than-l2",
+    "side": "nu",
+    "garment_id": "ao-tu-than",
+    "level": 2,
+    "pieceIds": [
+      "chan-vay-xep-ly",
+      "giay-luoi"
+    ],
+    "companions": [
+      "vay-den",
+      "yem",
+      "that-lung",
+      "khan-mo-qua"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 91.8
+  },
+  {
+    "id": "nu-ao-tu-than-l3",
+    "side": "nu",
+    "garment_id": "ao-tu-than",
+    "level": 3,
+    "pieceIds": null,
+    "companions": [
+      "vay-den",
+      "yem",
+      "that-lung",
+      "khan-mo-qua"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": null
+  },
+  {
+    "id": "nu-ao-dai-l1",
+    "side": "nu",
+    "garment_id": "ao-dai",
+    "level": 1,
+    "pieceIds": [],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "do-son",
+    "score": 93
+  },
+  {
+    "id": "nu-ao-dai-l2",
+    "side": "nu",
+    "garment_id": "ao-dai",
+    "level": 2,
+    "pieceIds": [
+      "giay-luoi",
+      "quan-tay"
+    ],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "do-son",
+    "score": 95
+  },
+  {
+    "id": "nu-ao-dai-l3",
+    "side": "nu",
+    "garment_id": "ao-dai",
+    "level": 3,
+    "pieceIds": [
+      "giay-cao-co",
+      "quan-bo-ong-rong"
+    ],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "do-son",
+    "score": 90.3
+  },
+  {
+    "id": "nu-ao-ngu-than-l1",
+    "side": "nu",
+    "garment_id": "ao-ngu-than",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-van"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 91.8
+  },
+  {
+    "id": "nu-ao-ngu-than-l2",
+    "side": "nu",
+    "garment_id": "ao-ngu-than",
+    "level": 2,
+    "pieceIds": [
+      "ao-len-cai-cuc",
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-van"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 92.8
+  },
+  {
+    "id": "nu-ao-ngu-than-l3",
+    "side": "nu",
+    "garment_id": "ao-ngu-than",
+    "level": 3,
+    "pieceIds": [
+      "giay-luoi",
+      "quan-tay"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-van"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 86.7
+  },
+  {
+    "id": "nu-ao-tac-l1",
+    "side": "nu",
+    "garment_id": "ao-tac",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-van"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 90.8
+  },
+  {
+    "id": "nu-ao-tac-l2",
+    "side": "nu",
+    "garment_id": "ao-tac",
+    "level": 2,
+    "pieceIds": [
+      "ao-thun-trang",
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-van"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 76.6
+  },
+  {
+    "id": "nu-ao-ba-ba-l1",
+    "side": "nu",
+    "garment_id": "ao-ba-ba",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-den",
+      "khan-ran"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 92.6
+  },
+  {
+    "id": "nu-ao-ba-ba-l2",
+    "side": "nu",
+    "garment_id": "ao-ba-ba",
+    "level": 2,
+    "pieceIds": [
+      "giay-luoi",
+      "so-mi-oversize"
+    ],
+    "companions": [
+      "quan-den",
+      "khan-ran"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 92.4
+  },
+  {
+    "id": "nu-ao-ba-ba-l3",
+    "side": "nu",
+    "garment_id": "ao-ba-ba",
+    "level": 3,
+    "pieceIds": [
+      "chan-vay-xep-ly",
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-den",
+      "khan-ran"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 84.8
+  },
+  {
+    "id": "nu-ao-nhat-binh-l1",
+    "side": "nu",
+    "garment_id": "ao-nhat-binh",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "xiem",
+      "ao-dai-lot",
+      "khan-vanh"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 89.6
+  },
+  {
+    "id": "nu-ao-nhat-binh-l2",
+    "side": "nu",
+    "garment_id": "ao-nhat-binh",
+    "level": 2,
+    "pieceIds": [
+      "ao-thun-trang",
+      "giay-luoi"
+    ],
+    "companions": [
+      "xiem",
+      "ao-dai-lot",
+      "khan-vanh"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 75.2
+  },
+  {
+    "id": "nu-ao-giao-linh-l1",
+    "side": "nu",
+    "garment_id": "ao-giao-linh",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "xiem",
+      "ao-lot-giao"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 91.8
+  },
+  {
+    "id": "nu-ao-giao-linh-l2",
+    "side": "nu",
+    "garment_id": "ao-giao-linh",
+    "level": 2,
+    "pieceIds": [
+      "ao-thun-trang",
+      "giay-luoi"
+    ],
+    "companions": [
+      "xiem",
+      "ao-lot-giao"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 77.6
+  },
+  {
+    "id": "nam-ao-dai-l1",
+    "side": "nam",
+    "garment_id": "ao-dai",
+    "level": 1,
+    "pieceIds": [],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "do-son",
+    "score": 93
+  },
+  {
+    "id": "nam-ao-dai-l2",
+    "side": "nam",
+    "garment_id": "ao-dai",
+    "level": 2,
+    "pieceIds": [
+      "giay-luoi",
+      "quan-tay"
+    ],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "do-son",
+    "score": 95
+  },
+  {
+    "id": "nam-ao-dai-l3",
+    "side": "nam",
+    "garment_id": "ao-dai",
+    "level": 3,
+    "pieceIds": [
+      "giay-cao-co",
+      "quan-bo-ong-rong"
+    ],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "do-son",
+    "score": 90.3
+  },
+  {
+    "id": "nam-ao-ngu-than-l1",
+    "side": "nam",
+    "garment_id": "ao-ngu-than",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-xep"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 91.8
+  },
+  {
+    "id": "nam-ao-ngu-than-l2",
+    "side": "nam",
+    "garment_id": "ao-ngu-than",
+    "level": 2,
+    "pieceIds": [
+      "ao-len-cai-cuc",
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-xep"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 92.8
+  },
+  {
+    "id": "nam-ao-ngu-than-l3",
+    "side": "nam",
+    "garment_id": "ao-ngu-than",
+    "level": 3,
+    "pieceIds": [
+      "giay-luoi",
+      "quan-tay"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-xep"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 86.7
+  },
+  {
+    "id": "nam-ao-the-l1",
+    "side": "nam",
+    "garment_id": "ao-the",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "ao-lot-trang",
+      "khan-xep"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 91.8
+  },
+  {
+    "id": "nam-ao-the-l2",
+    "side": "nam",
+    "garment_id": "ao-the",
+    "level": 2,
+    "pieceIds": [
+      "ao-vest"
+    ],
+    "companions": [
+      "quan-lua",
+      "ao-lot-trang",
+      "khan-xep"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 89.6
+  },
+  {
+    "id": "nam-ao-tac-l1",
+    "side": "nam",
+    "garment_id": "ao-tac",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-xep"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 90.8
+  },
+  {
+    "id": "nam-ao-tac-l2",
+    "side": "nam",
+    "garment_id": "ao-tac",
+    "level": 2,
+    "pieceIds": [
+      "ao-thun-trang",
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "khan-xep"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 76.6
+  },
+  {
+    "id": "nam-ao-ba-ba-l1",
+    "side": "nam",
+    "garment_id": "ao-ba-ba",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-den",
+      "khan-ran"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 92.6
+  },
+  {
+    "id": "nam-ao-ba-ba-l2",
+    "side": "nam",
+    "garment_id": "ao-ba-ba",
+    "level": 2,
+    "pieceIds": [
+      "giay-luoi",
+      "so-mi-oversize"
+    ],
+    "companions": [
+      "quan-den",
+      "khan-ran"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 92.4
+  },
+  {
+    "id": "nam-ao-ba-ba-l3",
+    "side": "nam",
+    "garment_id": "ao-ba-ba",
+    "level": 3,
+    "pieceIds": [
+      "giay-cao-co",
+      "quan-bo-ong-rong"
+    ],
+    "companions": [
+      "quan-den",
+      "khan-ran"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 88.2
+  },
+  {
+    "id": "nam-ao-giao-linh-l1",
+    "side": "nam",
+    "garment_id": "ao-giao-linh",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "ao-lot-giao"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 91.8
+  },
+  {
+    "id": "nam-ao-giao-linh-l2",
+    "side": "nam",
+    "garment_id": "ao-giao-linh",
+    "level": 2,
+    "pieceIds": [
+      "ao-thun-trang",
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua",
+      "ao-lot-giao"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 77.6
+  },
+  {
+    "id": "nam-ao-vien-linh-l1",
+    "side": "nam",
+    "garment_id": "ao-vien-linh",
+    "level": 1,
+    "pieceIds": [
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 90.2
+  },
+  {
+    "id": "nam-ao-vien-linh-l2",
+    "side": "nam",
+    "garment_id": "ao-vien-linh",
+    "level": 2,
+    "pieceIds": [
+      "ao-thun-trang",
+      "giay-luoi"
+    ],
+    "companions": [
+      "quan-lua"
+    ],
+    "base_color_id": "xanh-luc-ngoc",
+    "score": 76
+  }
+]

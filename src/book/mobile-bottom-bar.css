@@ -1,0 +1,162 @@
+/* Mobile Bottom Bar (hidden on desktop >= 768px) */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-bottom-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(64px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: var(--card);
+    background-image: var(--page-img, url("/book/tex/giay-do.webp"));
+    background-size: 256px;
+    box-shadow: 0 -2px 10px rgba(42, 33, 27, 0.15);
+    border-top: 1px solid rgba(42, 33, 27, 0.12);
+    z-index: 10;
+    box-sizing: border-box;
+  }
+
+  .mobile-spread-tabs-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex: 1;
+    min-width: 0;
+    touch-action: pan-x;
+    padding: 2px 0;
+  }
+
+  .mobile-spread-tabs-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-spread-tab {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: transparent;
+    border: none;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--ink-2);
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .mobile-spread-tab:hover {
+    color: var(--ink);
+  }
+
+  .mobile-spread-tab.active {
+    background-color: var(--son);
+    color: #ffffff;
+    box-shadow: 0 2px 0 rgba(42, 33, 27, 0.18);
+  }
+
+  .mobile-spread-tab:focus-visible {
+    outline: 2px solid var(--son);
+    outline-offset: 2px;
+  }
+
+  .mobile-step-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .mobile-step-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid rgba(42, 33, 27, 0.12);
+    box-shadow: var(--thick);
+    color: var(--ink);
+    font-size: 20px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 120ms ease, opacity 150ms ease;
+  }
+
+  .mobile-step-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+
+  .mobile-step-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .mobile-step-btn:focus-visible {
+    outline: 2px solid var(--son);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mobile-step-btn {
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  :root[data-reduced="1"] .mobile-step-btn {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .mobile-step-badge {
+    height: 44px;
+    min-width: 44px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: var(--card);
+    border: 1px solid rgba(42, 33, 27, 0.12);
+    box-shadow: var(--thick);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .mobile-step-badge:focus-visible {
+    outline: 2px solid var(--son);
+    outline-offset: 2px;
+  }
+}

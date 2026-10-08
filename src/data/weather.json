@@ -1,0 +1,593 @@
+{
+ "source_vi": "Thời tiết: Open-Meteo (open-meteo.com, miễn phí, không cần khoá). Âm lịch: thuật toán Hồ Ngọc Đức, múi giờ UTC+7.",
+ "api": {
+  "url": "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current=temperature_2m,weather_code,precipitation&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FBangkok&forecast_days=1",
+  "timeout_ms": 6000,
+  "cache_minutes": 30,
+  "rain_codes": [
+   51,
+   53,
+   55,
+   56,
+   57,
+   61,
+   63,
+   65,
+   66,
+   67,
+   80,
+   81,
+   82,
+   95,
+   96,
+   99
+  ],
+  "rain_probability": 60
+ },
+ "cities": [
+  {
+   "id": "ha-noi",
+   "name": "Hà Nội",
+   "lat": 21.03,
+   "lon": 105.85,
+   "region": "Bắc"
+  },
+  {
+   "id": "hue",
+   "name": "Huế",
+   "lat": 16.46,
+   "lon": 107.59,
+   "region": "Trung"
+  },
+  {
+   "id": "da-nang",
+   "name": "Đà Nẵng",
+   "lat": 16.05,
+   "lon": 108.2,
+   "region": "Trung"
+  },
+  {
+   "id": "tp-hcm",
+   "name": "TP.HCM",
+   "lat": 10.78,
+   "lon": 106.7,
+   "region": "Nam"
+  }
+ ],
+ "default_city": "ha-noi",
+ "bands": [
+  {
+   "id": "nong",
+   "name": "Nóng",
+   "icon": "nong",
+   "min": 32,
+   "max": 99,
+   "lean_garments": [
+    "ao-ba-ba",
+    "ao-dai",
+    "ao-giao-linh"
+   ],
+   "max_bulk": 0.3,
+   "avoid": [
+    "ao-ni-mu",
+    "ao-varsity",
+    "ao-khoac-da",
+    "ao-mang-to",
+    "ao-bomber",
+    "ao-vest",
+    "ao-co-lo",
+    "bot-co-cao",
+    "mu-len",
+    "quan-cargo"
+   ],
+   "extras": [
+    "non-la",
+    "quat-giay",
+    "o-giay",
+    "mu-tai-beo"
+   ],
+   "say_vi": "Nắng {t}°C: bỏ áo khoác, chọn vải mỏng, nhớ che nắng."
+  },
+  {
+   "id": "am",
+   "name": "Ấm",
+   "icon": "am",
+   "min": 24,
+   "max": 31.99,
+   "lean_garments": [],
+   "max_bulk": 0.6,
+   "avoid": [
+    "ao-ni-mu",
+    "ao-khoac-da",
+    "ao-mang-to",
+    "mu-len",
+    "bot-co-cao"
+   ],
+   "extras": [
+    "mu-tai-beo",
+    "kinh-mat",
+    "tui-vai",
+    "mu-luoi-trai"
+   ],
+   "say_vi": "{t}°C dễ chịu: một lớp khoác mỏng là vừa."
+  },
+  {
+   "id": "mat",
+   "name": "Mát",
+   "icon": "mat",
+   "min": 18,
+   "max": 23.99,
+   "lean_garments": [
+    "ao-dai",
+    "ao-ngu-than",
+    "ao-tac",
+    "ao-giao-linh"
+   ],
+   "max_bulk": 0.8,
+   "avoid": [
+    "ao-croptop"
+   ],
+   "extras": [
+    "ao-len-cai-cuc",
+    "ao-mang-to",
+    "so-mi-oversize",
+    "mu-beret",
+    "khan-van",
+    "giay-bup-be"
+   ],
+   "say_vi": "Trời mát {t}°C: thêm một lớp len hoặc măng tô cho đẹp dáng."
+  },
+  {
+   "id": "lanh",
+   "name": "Lạnh",
+   "icon": "lanh",
+   "min": -50,
+   "max": 17.99,
+   "lean_garments": [
+    "ao-ngu-than",
+    "ao-tac",
+    "ao-dai"
+   ],
+   "max_bulk": 1,
+   "avoid": [
+    "ao-croptop",
+    "guoc-moc",
+    "hai-theu",
+    "giay-bup-be",
+    "quat-giay"
+   ],
+   "extras": [
+    "ao-co-lo",
+    "ao-mang-to",
+    "ao-len-cai-cuc",
+    "bot-co-cao",
+    "mu-len",
+    "khan-van"
+   ],
+   "say_vi": "Lạnh {t}°C: cổ lọ bên trong, khoác dài bên ngoài, đi bốt."
+  }
+ ],
+ "rain": {
+  "id": "mua",
+  "name": "Mưa",
+  "icon": "mua",
+  "avoid": [
+   "hai-theu",
+   "giay-bup-be",
+   "giay-luoi",
+   "thao-dai",
+   "quat-giay",
+   "non-quai-thao"
+  ],
+  "extras": [
+   "o-giay",
+   "bot-co-cao",
+   "giay-de-tho"
+  ],
+  "say_vi": "Có mưa: mang ô, chọn giày không sợ ướt, tà áo gọn."
+ },
+ "manual_chips": [
+  "nong",
+  "mat",
+  "lanh",
+  "mua"
+ ],
+ "icons": {
+  "nong": "/book/calendar/wx/nong.webp",
+  "am": "/book/calendar/wx/am.webp",
+  "mat": "/book/calendar/wx/mat.webp",
+  "lanh": "/book/calendar/wx/lanh.webp",
+  "mua": "/book/calendar/wx/mua.webp",
+  "dong": "/book/calendar/wx/dong.webp"
+ },
+ "storm_codes": [
+  95,
+  96,
+  99
+ ],
+ "manual_temp": {
+  "nong": 34,
+  "am": 28,
+  "mat": 21,
+  "lanh": 14,
+  "mua": 26
+ },
+ "days": {
+  "weekday": {
+   "vibes": [
+    "hoc-duong",
+    "toi-gian"
+   ],
+   "occasion": "dao-pho",
+   "say_vi": "Ngày thường: gọn gàng, đi học đi làm vẫn đẹp."
+  },
+  "weekend": {
+   "vibes": [
+    "duong-pho",
+    "hoai-co"
+   ],
+   "occasion": "dao-pho",
+   "say_vi": "Cuối tuần: đi phố, chụp ảnh, phối mạnh tay hơn."
+  },
+  "holiday": {
+   "say_vi": "Hôm nay là {name}: {note}"
+  },
+  "upcoming_days": 30,
+  "countdown_vi": "Còn {n} ngày nữa là {name}",
+  "today_vi": "Hôm nay là {name}!"
+ },
+ "weekday_vi": [
+  "Thứ Hai",
+  "Thứ Ba",
+  "Thứ Tư",
+  "Thứ Năm",
+  "Thứ Sáu",
+  "Thứ Bảy",
+  "Chủ nhật"
+ ],
+ "holidays": [
+  {
+   "date": "2026-01-01",
+   "name": "Tết Dương lịch",
+   "occasion": "dao-pho",
+   "note_vi": "Năm mới dương lịch, đi chơi, chụp ảnh.",
+   "lunar": false
+  },
+  {
+   "date": "2026-02-14",
+   "name": "Lễ Tình nhân",
+   "occasion": "dao-pho",
+   "note_vi": "Hẹn hò: một điểm đỏ là đủ.",
+   "lunar": false
+  },
+  {
+   "date": "2026-03-08",
+   "name": "Quốc tế Phụ nữ",
+   "occasion": "dao-pho",
+   "note_vi": "Tặng hoa, chụp ảnh áo dài.",
+   "lunar": false
+  },
+  {
+   "date": "2026-04-30",
+   "name": "Giải phóng miền Nam",
+   "occasion": "dao-pho",
+   "note_vi": "Nghỉ lễ dài, đi chơi xa.",
+   "lunar": false
+  },
+  {
+   "date": "2026-05-01",
+   "name": "Quốc tế Lao động",
+   "occasion": "dao-pho",
+   "note_vi": "Nghỉ lễ, du lịch.",
+   "lunar": false
+  },
+  {
+   "date": "2026-06-01",
+   "name": "Quốc tế Thiếu nhi",
+   "occasion": "dao-pho",
+   "note_vi": "Vui chơi, màu tươi.",
+   "lunar": false
+  },
+  {
+   "date": "2026-09-02",
+   "name": "Quốc khánh",
+   "occasion": "dao-pho",
+   "note_vi": "Phố treo cờ, áo dài đỏ rất được ưa chuộng.",
+   "lunar": false
+  },
+  {
+   "date": "2026-09-25",
+   "name": "Tết Trung thu",
+   "occasion": "trung-thu",
+   "note_vi": "Rước đèn, phá cỗ.",
+   "lunar": true,
+   "lunar_date": "15/8"
+  },
+  {
+   "date": "2026-10-20",
+   "name": "Ngày Phụ nữ Việt Nam",
+   "occasion": "dao-pho",
+   "note_vi": "Áo dài, hoa, ảnh cùng mẹ và bạn bè.",
+   "lunar": false
+  },
+  {
+   "date": "2026-11-20",
+   "name": "Ngày Nhà giáo Việt Nam",
+   "occasion": "ky-yeu",
+   "note_vi": "Áo dài đến trường, tặng hoa thầy cô.",
+   "lunar": false
+  },
+  {
+   "date": "2026-12-24",
+   "name": "Đêm Giáng sinh",
+   "occasion": "dao-pho",
+   "note_vi": "Đi phố đêm, trời lạnh miền Bắc: nhớ khoác ngoài.",
+   "lunar": false
+  },
+  {
+   "date": "2027-01-01",
+   "name": "Tết Dương lịch",
+   "occasion": "dao-pho",
+   "note_vi": "Năm mới dương lịch, đi chơi, chụp ảnh.",
+   "lunar": false
+  },
+  {
+   "date": "2027-01-30",
+   "name": "Ông Công ông Táo",
+   "occasion": "tet",
+   "note_vi": "Tiễn Táo quân, bắt đầu không khí Tết.",
+   "lunar": true,
+   "lunar_date": "23/12"
+  },
+  {
+   "date": "2027-02-06",
+   "name": "Tết Nguyên đán",
+   "occasion": "tet",
+   "note_vi": "Mùng Một: chúc Tết, sắc may mắn.",
+   "lunar": true,
+   "lunar_date": "1/1"
+  },
+  {
+   "date": "2027-02-14",
+   "name": "Lễ Tình nhân",
+   "occasion": "dao-pho",
+   "note_vi": "Hẹn hò: một điểm đỏ là đủ.",
+   "lunar": false
+  },
+  {
+   "date": "2027-02-20",
+   "name": "Rằm tháng Giêng",
+   "occasion": "le-hoi-dinh-chua",
+   "note_vi": "Đi chùa đầu năm: kín đáo, trang nhã.",
+   "lunar": true,
+   "lunar_date": "15/1"
+  },
+  {
+   "date": "2027-03-08",
+   "name": "Quốc tế Phụ nữ",
+   "occasion": "dao-pho",
+   "note_vi": "Tặng hoa, chụp ảnh áo dài.",
+   "lunar": false
+  },
+  {
+   "date": "2027-04-16",
+   "name": "Giỗ Tổ Hùng Vương",
+   "occasion": "le-hoi-dinh-chua",
+   "note_vi": "Lễ hội đền Hùng.",
+   "lunar": true,
+   "lunar_date": "10/3"
+  },
+  {
+   "date": "2027-04-30",
+   "name": "Giải phóng miền Nam",
+   "occasion": "dao-pho",
+   "note_vi": "Nghỉ lễ dài, đi chơi xa.",
+   "lunar": false
+  },
+  {
+   "date": "2027-05-01",
+   "name": "Quốc tế Lao động",
+   "occasion": "dao-pho",
+   "note_vi": "Nghỉ lễ, du lịch.",
+   "lunar": false
+  },
+  {
+   "date": "2027-06-01",
+   "name": "Quốc tế Thiếu nhi",
+   "occasion": "dao-pho",
+   "note_vi": "Vui chơi, màu tươi.",
+   "lunar": false
+  },
+  {
+   "date": "2027-08-16",
+   "name": "Lễ Vu Lan",
+   "occasion": "le-hoi-dinh-chua",
+   "note_vi": "Báo hiếu, đi chùa.",
+   "lunar": true,
+   "lunar_date": "15/7"
+  },
+  {
+   "date": "2027-09-02",
+   "name": "Quốc khánh",
+   "occasion": "dao-pho",
+   "note_vi": "Phố treo cờ, áo dài đỏ rất được ưa chuộng.",
+   "lunar": false
+  },
+  {
+   "date": "2027-09-15",
+   "name": "Tết Trung thu",
+   "occasion": "trung-thu",
+   "note_vi": "Rước đèn, phá cỗ.",
+   "lunar": true,
+   "lunar_date": "15/8"
+  },
+  {
+   "date": "2027-10-20",
+   "name": "Ngày Phụ nữ Việt Nam",
+   "occasion": "dao-pho",
+   "note_vi": "Áo dài, hoa, ảnh cùng mẹ và bạn bè.",
+   "lunar": false
+  },
+  {
+   "date": "2027-11-20",
+   "name": "Ngày Nhà giáo Việt Nam",
+   "occasion": "ky-yeu",
+   "note_vi": "Áo dài đến trường, tặng hoa thầy cô.",
+   "lunar": false
+  },
+  {
+   "date": "2027-12-24",
+   "name": "Đêm Giáng sinh",
+   "occasion": "dao-pho",
+   "note_vi": "Đi phố đêm, trời lạnh miền Bắc: nhớ khoác ngoài.",
+   "lunar": false
+  }
+ ],
+ "lunar": [
+  {
+   "start": "2026-09-01",
+   "day1": 20,
+   "month": 7,
+   "leap": false,
+   "year": 2026,
+   "year_vi": "Bính Ngọ"
+  },
+  {
+   "start": "2026-09-11",
+   "day1": 1,
+   "month": 8,
+   "leap": false,
+   "year": 2026,
+   "year_vi": "Bính Ngọ"
+  },
+  {
+   "start": "2026-10-10",
+   "day1": 1,
+   "month": 9,
+   "leap": false,
+   "year": 2026,
+   "year_vi": "Bính Ngọ"
+  },
+  {
+   "start": "2026-11-09",
+   "day1": 1,
+   "month": 10,
+   "leap": false,
+   "year": 2026,
+   "year_vi": "Bính Ngọ"
+  },
+  {
+   "start": "2026-12-09",
+   "day1": 1,
+   "month": 11,
+   "leap": false,
+   "year": 2026,
+   "year_vi": "Bính Ngọ"
+  },
+  {
+   "start": "2027-01-08",
+   "day1": 1,
+   "month": 12,
+   "leap": false,
+   "year": 2026,
+   "year_vi": "Bính Ngọ"
+  },
+  {
+   "start": "2027-02-06",
+   "day1": 1,
+   "month": 1,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-03-08",
+   "day1": 1,
+   "month": 2,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-04-07",
+   "day1": 1,
+   "month": 3,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-05-06",
+   "day1": 1,
+   "month": 4,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-06-05",
+   "day1": 1,
+   "month": 5,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-07-04",
+   "day1": 1,
+   "month": 6,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-08-02",
+   "day1": 1,
+   "month": 7,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-09-01",
+   "day1": 1,
+   "month": 8,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-09-30",
+   "day1": 1,
+   "month": 9,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-10-29",
+   "day1": 1,
+   "month": 10,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-11-28",
+   "day1": 1,
+   "month": 11,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  },
+  {
+   "start": "2027-12-28",
+   "day1": 1,
+   "month": 12,
+   "leap": false,
+   "year": 2027,
+   "year_vi": "Đinh Mùi"
+  }
+ ],
+ "pick_rule_vi": "1) Ngày lễ hôm nay -> dịp của lễ đó; không thì ngày thường/cuối tuần -> gu. 2) Chọn áo hợp vùng của thành phố và dịp (kb occasion_rules), ưu tiên lean_garments của dải nhiệt. 3) Lấy món theo gu (affinity) có ảnh, bỏ món trong avoid và món có bulk > max_bulk, thêm 1 món trong extras. 4) Mưa: áp thêm rain.avoid và rain.extras. 5) Chấm điểm bằng luật phối có sẵn; xé tờ = chọn lại với hạt giống khác."
+}

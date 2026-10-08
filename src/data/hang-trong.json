@@ -1,0 +1,437 @@
+{
+ "note": "Hàng Trống papers behind the book. Motifs are original drawings in the spirit of Hàng Trống prints, not copies of any artwork. byChapter = the paper for each chapter; byVibe = the paper in Phối đồ once a gu is picked (no gu = the chapter paper).",
+ "papers": {
+  "ht-may-luc": {
+   "label": "Mây hồng nền lục (in tay)",
+   "src": "/book/tex/ht-may-luc.webp",
+   "mode": "cover",
+   "tile": null,
+   "base": "#4CA292",
+   "light": false,
+   "made": "banana"
+  },
+  "ht-may-hong": {
+   "label": "Mây lục nền hồng (in tay)",
+   "src": "/book/tex/ht-may-hong.webp",
+   "mode": "cover",
+   "tile": null,
+   "base": "#DE425B",
+   "light": false,
+   "made": "banana"
+  },
+  "ht-tho-son": {
+   "label": "Thọ vàng nền son (in tay)",
+   "src": "/book/tex/ht-tho-son.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#981E16",
+   "light": false,
+   "made": "banana"
+  },
+  "ht-tho-cham": {
+   "label": "Chuỗi Thọ nền chàm (in tay)",
+   "src": "/book/tex/ht-tho-cham.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#85404B",
+   "light": false,
+   "made": "banana"
+  },
+  "ht-xoay-cam": {
+   "label": "Xoáy nền cam (in tay)",
+   "src": "/book/tex/ht-xoay-cam.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#EA801F",
+   "light": false,
+   "made": "banana"
+  },
+  "ht-song-tim": {
+   "label": "Sóng nền tím than (in tay)",
+   "src": "/book/tex/ht-song-tim.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#211A44",
+   "light": false,
+   "made": "banana"
+  },
+  "ht-ca-chep": {
+   "label": "Cá chép trông trăng (in tay)",
+   "src": "/book/tex/ht-ca-chep.webp",
+   "mode": "cover",
+   "tile": null,
+   "base": "#08556C",
+   "light": false,
+   "made": "banana"
+  },
+  "ht-hoa-hong": {
+   "label": "Sen, mẫu đơn nền hồng (in tay)",
+   "src": "/book/tex/ht-hoa-hong.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#DB8885",
+   "light": true,
+   "made": "banana"
+  },
+  "ht-ho-vang": {
+   "label": "Hổ con nền vàng (in tay)",
+   "src": "/book/tex/ht-ho-vang.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#E9AB21",
+   "light": true,
+   "made": "banana"
+  },
+  "ht-hac-cham": {
+   "label": "Hạc và mây nền chàm (in tay)",
+   "src": "/book/tex/ht-hac-cham.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#2B4B68",
+   "light": false,
+   "made": "banana"
+  },
+  "htc-may-luc": {
+   "label": "Mây hồng nền lục",
+   "src": "/book/tex/htc-may-luc.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#3C9D8D",
+   "light": false,
+   "made": "code"
+  },
+  "htc-may-hong": {
+   "label": "Mây lục nền hồng",
+   "src": "/book/tex/htc-may-hong.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#E0536B",
+   "light": false,
+   "made": "code"
+  },
+  "htc-may-cham": {
+   "label": "Mây kem nền chàm",
+   "src": "/book/tex/htc-may-cham.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#3A5A8B",
+   "light": false,
+   "made": "code"
+  },
+  "htc-tho-son": {
+   "label": "Thọ vàng nền son",
+   "src": "/book/tex/htc-tho-son.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#A1221E",
+   "light": false,
+   "made": "code"
+  },
+  "htc-tho-cham": {
+   "label": "Chuỗi Thọ nền chàm",
+   "src": "/book/tex/htc-tho-cham.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#242A65",
+   "light": false,
+   "made": "code"
+  },
+  "htc-tho-luc": {
+   "label": "Thọ tròn nền lục",
+   "src": "/book/tex/htc-tho-luc.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#1D795A",
+   "light": false,
+   "made": "code"
+  },
+  "htc-xoay-cam": {
+   "label": "Xoáy nền cam",
+   "src": "/book/tex/htc-xoay-cam.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#EB6A1E",
+   "light": false,
+   "made": "code"
+  },
+  "htc-xoay-tim": {
+   "label": "Hoa xoáy nền tím",
+   "src": "/book/tex/htc-xoay-tim.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#392457",
+   "light": false,
+   "made": "code"
+  },
+  "htc-song-tim": {
+   "label": "Sóng nền tím than",
+   "src": "/book/tex/htc-song-tim.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#857B8D",
+   "light": false,
+   "made": "code"
+  },
+  "htc-ca-chep": {
+   "label": "Cá chép trông trăng",
+   "src": "/book/tex/htc-ca-chep.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#3D9D8D",
+   "light": false,
+   "made": "code"
+  },
+  "htc-sen-phan": {
+   "label": "Sen nền hồng phấn",
+   "src": "/book/tex/htc-sen-phan.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#EAAAA3",
+   "light": true,
+   "made": "code"
+  },
+  "htc-hoa-do": {
+   "label": "Hoa nền đỏ",
+   "src": "/book/tex/htc-hoa-do.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#C7342D",
+   "light": false,
+   "made": "code"
+  },
+  "htc-ho-vang": {
+   "label": "Hổ con nền vàng",
+   "src": "/book/tex/htc-ho-vang.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#F3B728",
+   "light": true,
+   "made": "code"
+  },
+  "htc-hac-cham": {
+   "label": "Hạc và mây nền chàm",
+   "src": "/book/tex/htc-hac-cham.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#3A5A8B",
+   "light": false,
+   "made": "code"
+  },
+  "htc-qua-hong": {
+   "label": "Quả lành",
+   "src": "/book/tex/htc-qua-hong.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#9DD0C2",
+   "light": true,
+   "made": "code"
+  },
+  "htc-rong-son": {
+   "label": "Rồng thời Lý nền son",
+   "src": "/book/tex/htc-rong-son.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#A2231E",
+   "light": false,
+   "made": "code"
+  },
+  "htc-gam-hong": {
+   "label": "Gấm nhỏ nền hồng",
+   "src": "/book/tex/htc-gam-hong.webp",
+   "mode": "tile",
+   "tile": 760,
+   "base": "#E1536B",
+   "light": false,
+   "made": "code"
+  }
+ },
+ "byChapter": {
+  "ao-giao-linh": "htc-rong-son",
+  "ao-ngu-than": "htc-tho-cham",
+  "ao-dai": "ht-may-luc",
+  "ao-tac": "htc-tho-luc",
+  "ao-tu-than": "ht-ca-chep",
+  "ao-ba-ba": "htc-sen-phan",
+  "ao-nhat-binh": "ht-hac-cham"
+ },
+ "byVibe": {
+  "duong-pho": "htc-ho-vang",
+  "toi-gian": "htc-may-cham",
+  "hoai-co": "ht-tho-son",
+  "hoc-duong": "htc-xoay-tim",
+  "le-hoi": "ht-xoay-cam",
+  "moc-mac": "htc-qua-hong"
+ },
+ "gam": [
+  {
+   "id": "tho-cuc",
+   "label": "Thọ & cúc",
+   "src": "/book/tex/gam-tho-cuc.webp"
+  },
+  {
+   "id": "doi-tho",
+   "label": "Dơi & Thọ",
+   "src": "/book/tex/gam-doi-tho.webp"
+  },
+  {
+   "id": "trien",
+   "label": "Triện",
+   "src": "/book/tex/gam-trien.webp"
+  },
+  {
+   "id": "may",
+   "label": "Mây",
+   "src": "/book/tex/gam-may.webp"
+  }
+ ],
+ "copy": {
+  "paperTag": "Giấy lót: {name}",
+  "paperFrom": "hoạ tiết theo lối tranh Hàng Trống",
+  "paperAuto": "tự đổi",
+  "paperPick": "giấy",
+  "material": "Chất liệu",
+  "plain": "Trơn",
+  "gamSay": "Gấm hoa văn chìm: hoa văn cùng màu với vải, chỉ hiện ra khi ánh sáng lướt qua. Rê chuột quanh áo xem nhé!",
+  "weaveBtn": "Đan khăn rằn",
+  "weaveTitle": "Đan khăn rằn",
+  "weaveNote": "Khăn rằn Nam Bộ có ô caro, thường đen và trắng. Ở đây mình đan bằng nan giấy: chọn màu nan, bấm vào một hàng để luồn nan vào.",
+  "weaveOne": "Nong mốt",
+  "weaveTwo": "Nong đôi",
+  "weaveClear": "Gỡ hết nan",
+  "weaveWear": "Đeo khăn",
+  "weaveClose": "Cất khung",
+  "weaveSay": "Khăn tự đan đây! Ô caro hiện ra từ chỗ nan nằm trên và nằm dưới tấm khung.",
+  "strips": {
+   "den": "đen",
+   "trang": "trắng",
+   "cham": "chàm",
+   "son": "đỏ son",
+   "luc": "lục",
+   "vang": "vàng",
+   "hong": "hồng",
+   "kraft": "nâu giấy"
+  }
+ },
+ "weave": {
+  "card": "/book/weave/card.webp",
+  "strips": [
+   {
+    "id": "den",
+    "src": "/book/weave/strips/den.webp",
+    "rgb": [
+     36,
+     43,
+     51
+    ]
+   },
+   {
+    "id": "trang",
+    "src": "/book/weave/strips/trang.webp",
+    "rgb": [
+     234,
+     231,
+     224
+    ]
+   },
+   {
+    "id": "cham",
+    "src": "/book/weave/strips/cham.webp",
+    "rgb": [
+     44,
+     109,
+     151
+    ]
+   },
+   {
+    "id": "son",
+    "src": "/book/weave/strips/son.webp",
+    "rgb": [
+     184,
+     67,
+     54
+    ]
+   },
+   {
+    "id": "luc",
+    "src": "/book/weave/strips/luc.webp",
+    "rgb": [
+     147,
+     175,
+     135
+    ]
+   },
+   {
+    "id": "vang",
+    "src": "/book/weave/strips/vang.webp",
+    "rgb": [
+     229,
+     176,
+     60
+    ]
+   },
+   {
+    "id": "hong",
+    "src": "/book/weave/strips/hong.webp",
+    "rgb": [
+     187,
+     84,
+     100
+    ]
+   },
+   {
+    "id": "kraft",
+    "src": "/book/weave/strips/kraft.webp",
+    "rgb": [
+     167,
+     130,
+     97
+    ]
+   }
+  ],
+  "target": "khan-ran",
+  "geo": {
+   "size": 860,
+   "slits": [
+    [
+     92,
+     112
+    ],
+    [
+     173,
+     195
+    ],
+    [
+     256,
+     277
+    ],
+    [
+     339,
+     359
+    ],
+    [
+     420,
+     441
+    ],
+    [
+     501,
+     522
+    ],
+    [
+     583,
+     604
+    ],
+    [
+     666,
+     687
+    ],
+    [
+     748,
+     770
+    ]
+   ],
+   "top": 100,
+   "bottom": 762,
+   "rows": 9
+  }
+ }
+}

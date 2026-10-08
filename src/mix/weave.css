@@ -1,0 +1,196 @@
+/* WeaveCard styles */
+@keyframes weavePaperLay {
+  from {
+    opacity: 0;
+    transform: translate(30px, -60px) rotate(-1deg);
+    box-shadow: 0 -30px 60px rgba(0, 0, 0, 0.35);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(1.2deg);
+    box-shadow: var(--thick), 0 26px 50px -12px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.weave-card {
+  position: absolute;
+  right: 120px;
+  top: 120px;
+  width: 470px;
+  z-index: 7;
+  background-color: var(--card);
+  padding: 16px 18px 14px;
+  transform: rotate(1.2deg);
+  box-shadow: var(--thick), 0 26px 50px -12px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  box-sizing: border-box;
+  animation: weavePaperLay 500ms cubic-bezier(0.2, 0.8, 0.25, 1) forwards;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .weave-card {
+    animation: none;
+    transform: rotate(1.2deg);
+    opacity: 1;
+  }
+}
+
+:root[data-reduced="1"] .weave-card {
+  animation: none;
+  transform: rotate(1.2deg);
+  opacity: 1;
+}
+
+.weave-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weave-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0;
+}
+
+.weave-close-btn {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 3px 8px;
+  border: none;
+  background: #EFE6D2;
+  box-shadow: 0 0 0 1px #ffffff, var(--thick);
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--ink);
+  transition: transform 0.1s ease;
+}
+
+.weave-close-btn:hover {
+  transform: translateY(-1px);
+}
+
+.weave-close-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.weave-note {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin: 6px 0 12px;
+}
+
+.weave-canvas-wrap {
+  width: 430px;
+  height: 430px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weave-canvas {
+  width: 430px;
+  height: 430px;
+  display: block;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.weave-canvas:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.weave-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weave-strips-row {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weave-strip-btn {
+  width: 46px;
+  height: 18px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  transition: transform 0.1s ease;
+}
+
+.weave-strip-btn:hover {
+  transform: scale(1.04);
+}
+
+.weave-strip-btn.chosen {
+  outline: 3px solid var(--son);
+  outline-offset: 2px;
+}
+
+.weave-strip-btn:focus-visible {
+  outline: 3px solid var(--son);
+  outline-offset: 2px;
+}
+
+.weave-actions-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weave-action-btn {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 3px;
+  background: #EFE6D2;
+  color: var(--ink);
+  box-shadow: 0 0 0 1px #ffffff, var(--thick);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s ease, background-color 0.1s ease, color 0.1s ease;
+}
+
+.weave-action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.weave-action-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.weave-action-btn.active-mode {
+  background: var(--cham);
+  color: #ffffff;
+}
+
+.weave-action-btn.wear-btn {
+  background: var(--son);
+  color: #ffffff;
+}

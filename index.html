@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="color-scheme" content="only light" />
+    <title>Nghê Cót · Giấy</title>
+    <meta name="description" content="Sách giấy nổi tương tác học về Cổ phục Việt Nam (Việt phục)." />
+    <meta name="theme-color" content="#A2231E" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/giay-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/giay-16.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/giay-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/giay-180.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta property="og:title" content="Nghê Cót · Giấy" />
+    <meta property="og:description" content="Sách giấy nổi tương tác học về Cổ phục Việt Nam (Việt phục)." />
+    <meta property="og:image" content="/icons/giay-512.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="/book/loading/nghe-1.webp" />
+    <link rel="preload" as="image" href="/book/loading/paper.webp" />
+    <style>
+      #boot { position: fixed; inset: 0; z-index: 5000; color: #2a211b; font-family: "Be Vietnam Pro", system-ui, sans-serif; }
+      #boot.gone { display: none; }
+      #boot .boot-paper, #boot .boot-half .face { position: absolute; inset: 0; background-color: #efe4cc;
+        background-image: radial-gradient(ellipse at 50% 46%, rgba(255,250,236,.35) 0%, rgba(255,250,236,0) 45%, rgba(110,80,40,.2) 100%), url("/book/loading/paper.webp");
+        background-size: 100% 100%, 512px 512px; }
+      @media (min-width: 768px) { #boot .boot-paper, #boot .boot-half .face { background-size: 100% 100%, 820px 820px; } }
+      #boot .boot-half { position: absolute; inset: 0; visibility: hidden; will-change: transform; --ew: 37px; --eh: 750px; --solid: 15px;
+        filter: drop-shadow(0 6px 10px rgba(42,33,27,.28)); }
+      #boot .boot-half > i { position: absolute; inset: 0; }
+      #boot .boot-half.l .piece { -webkit-mask: url("/book/loading/edge-l.webp") calc(var(--cut) - var(--solid)) 0 / var(--ew) var(--eh) repeat-y, linear-gradient(#000 0 0) 0 0 / var(--cut) 100% no-repeat;
+        mask: url("/book/loading/edge-l.webp") calc(var(--cut) - var(--solid)) 0 / var(--ew) var(--eh) repeat-y, linear-gradient(#000 0 0) 0 0 / var(--cut) 100% no-repeat; }
+      #boot .boot-half.r .piece { -webkit-mask: url("/book/loading/edge-r.webp") calc(var(--cut) - var(--ew) + var(--solid)) 0 / var(--ew) var(--eh) repeat-y, linear-gradient(#000 0 0) var(--cut) 0 / 100% 100% no-repeat;
+        mask: url("/book/loading/edge-r.webp") calc(var(--cut) - var(--ew) + var(--solid)) 0 / var(--ew) var(--eh) repeat-y, linear-gradient(#000 0 0) var(--cut) 0 / 100% 100% no-repeat; }
+      #boot .boot-half .rim { background-repeat: repeat-y; background-size: var(--ew) var(--eh); }
+      #boot .boot-half.l .rim { background-image: url("/book/loading/edge-l.webp"); background-position: calc(var(--cut) - var(--solid)) 0;
+        -webkit-mask: linear-gradient(90deg, #0000 calc(var(--cut) - var(--solid) + 6px), #000 calc(var(--cut) + 4px)); mask: linear-gradient(90deg, #0000 calc(var(--cut) - var(--solid) + 6px), #000 calc(var(--cut) + 4px)); }
+      #boot .boot-half.r .rim { background-image: url("/book/loading/edge-r.webp"); background-position: calc(var(--cut) - var(--ew) + var(--solid)) 0;
+        -webkit-mask: linear-gradient(270deg, #0000 calc(100% - var(--cut) - var(--solid) + 6px), #000 calc(100% - var(--cut) + 4px)); mask: linear-gradient(270deg, #0000 calc(100% - var(--cut) - var(--solid) + 6px), #000 calc(100% - var(--cut) + 4px)); }
+      #boot .boot-bit { position: absolute; left: 0; top: 0; filter: drop-shadow(1px 2px 1px rgba(42,33,27,.25)); }
+      #boot .boot-col { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 10px; }
+      #boot .boot-nghe { position: relative; width: 176px; height: 200px; }
+      #boot .boot-nghe img { position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
+        filter: drop-shadow(3px 4px 0 rgba(42,33,27,.22)); visibility: hidden; }
+      #boot .boot-nghe img.on { visibility: visible; }
+      #boot .boot-name { position: relative; font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 800; font-size: 26px;
+        letter-spacing: -.01em; color: #a2231e; background: #fbf6ea; padding: 4px 14px 5px; transform: rotate(-1.5deg); box-shadow: 2px 3px 0 rgba(42,33,27,.25); }
+      #boot .boot-strip { position: relative; width: 240px; height: 18px; margin-top: 8px; background: #fbf6ea; box-shadow: 2px 2px 0 rgba(42,33,27,.22); transform: rotate(.6deg); }
+      #boot .boot-strip::after { content: ""; position: absolute; left: 6px; right: 6px; top: 8px; border-top: 2px dashed rgba(42,33,27,.35); }
+      #boot .boot-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 4%; background: #a2231e; z-index: 1;
+        clip-path: polygon(0 0, 100% 0, calc(100% - 4px) 30%, 100% 55%, calc(100% - 5px) 80%, 100% 100%, 0 100%); }
+      #boot .boot-say { font-size: 14px; color: #5b4a3c; min-height: 20px; text-align: center; white-space: nowrap; }
+    </style>
+  </head>
+  <body class="overflow-hidden select-none m-0 p-0">
+    <div id="boot" role="status" aria-live="polite">
+      <div class="boot-paper"></div>
+      <div class="boot-half l"><i class="piece"><i class="face"></i></i><i class="rim"></i></div>
+      <div class="boot-half r"><i class="piece"><i class="face"></i></i><i class="rim"></i></div>
+      <div class="boot-col">
+        <div class="boot-nghe">
+          <img class="on" src="/book/loading/nghe-1.webp" alt="" /><img src="/book/loading/nghe-2.webp" alt="" />
+          <img src="/book/loading/nghe-3.webp" alt="" /><img src="/book/loading/nghe-4.webp" alt="" />
+        </div>
+        <div class="boot-name">Nghê Cót · Giấy</div>
+        <div class="boot-strip"><i class="boot-fill"></i></div>
+        <div class="boot-say">Nghê đang gấp thuyền giấy…</div>
+      </div>
+    </div>
+    <script>
+      window.__bootP = 0;
+      (function() {
+        var start = Date.now();
+        window.__bootPre = setInterval(function() {
+          var msSinceStart = Date.now() - start;
+          window.__bootP = Math.min(0.18, msSinceStart / 12000);
+          var fill = document.querySelector('#boot .boot-fill');
+          if (fill) fill.style.width = (4 + window.__bootP * 96) + '%';
+          var img = document.querySelector('#boot .boot-nghe img.on');
+          if (img) {
+            img.style.transform = 'rotate(' + (Math.random() * 2 - 1) + 'deg)';
+          }
+        }, 350);
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

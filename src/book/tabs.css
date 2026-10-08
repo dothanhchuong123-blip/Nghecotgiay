@@ -1,0 +1,139 @@
+.chapter-tabs {
+  position: absolute;
+  right: 20px;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 3;
+}
+
+.chapter-tab {
+  width: 140px;
+  height: 52px;
+  padding: 0 10px 0 22px;
+  background-color: var(--do);
+  border-radius: 0 8px 8px 0;
+  box-shadow: var(--thick), 4px 6px 10px -4px rgba(42, 33, 27, 0.35);
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2;
+  color: var(--ink);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  user-select: none;
+  transition: transform 150ms ease, background-color 150ms ease, color 150ms ease;
+}
+
+.chapter-tab:hover {
+  filter: brightness(0.98);
+}
+
+.chapter-tab.chapter-tab-active {
+  background-color: var(--son);
+  color: #fff;
+  transform: translateX(10px);
+}
+
+:root[data-reduced="1"] .chapter-tab,
+:root[data-reduced="1"] .chapter-tab.chapter-tab-active {
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chapter-tab,
+  .chapter-tab.chapter-tab-active {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.chapter-tab:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.chapter-tab-img {
+  width: 34px;
+  height: 44px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: 50% 14%;
+  border-radius: 3px;
+  background-color: var(--do-2);
+  display: block;
+}
+
+.chapter-tab-name {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .chapter-tabs {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    flex-direction: row;
+    gap: 8px;
+    padding: 4px 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    z-index: 8;
+    box-sizing: border-box;
+    touch-action: pan-x;
+  }
+
+  .chapter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chapter-tab {
+    width: 120px;
+    height: 52px;
+    flex-shrink: 0;
+    padding: 0 8px;
+    border-radius: 6px;
+    scroll-snap-align: start;
+    box-shadow: var(--thick);
+    gap: 6px;
+    transform: none;
+  }
+
+  .chapter-tab:hover {
+    filter: none;
+  }
+
+  .chapter-tab.chapter-tab-active {
+    background-color: var(--son);
+    color: #ffffff;
+    transform: none;
+  }
+
+  .chapter-tab-img {
+    width: 32px;
+    height: 42px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .chapter-tab-name {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

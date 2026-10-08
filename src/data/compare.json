@@ -1,0 +1,171 @@
+{
+  "_about": "Đừng nhầm pairs for the 3 ready chapters. 'viet' is drawn by the doll renderer; 'other' is a picture on the same body. Every text line is copied from kb.json GARMENTS[].dont_confuse_with or structure, so it keeps that garment's sources. Hotspot x/y are fractions of the 1200x1600 doll canvas, taken from kb.json parts. A side set to null has no pair yet: show the other side's pair and say so with copy.compare.otherSide. On the Nam side the chapter's garment is doll-data NAM_OF (tứ thân → áo the, nhật bình → áo viên lĩnh), so its pair and the KB line come from that garment. Áo bà ba has no pair yet (its look-alike, áo cánh Bắc Bộ, has no doll): hide the spread's chip.",
+  "pairs": {
+    "ao-giao-linh": {
+      "nu": {
+        "otherName": "Hán phục",
+        "otherImg": "/book/compare/han-phuc-nu.webp",
+        "otherIsViet": false,
+        "box": [
+          0.2358,
+          0.0387,
+          0.7642,
+          0.9619
+        ]
+      },
+      "nam": {
+        "otherName": "Hán phục",
+        "otherImg": "/book/compare/han-phuc-nam.webp",
+        "otherIsViet": false,
+        "box": [
+          0.2333,
+          0.0387,
+          0.7725,
+          0.9619
+        ]
+      },
+      "line_from_kb": "dont_confuse_with[0].how_vi",
+      "hotspots": []
+    },
+    "ao-ngu-than": {
+      "nu": {
+        "otherName": "Áo tấc",
+        "otherDoll": "ao-tac",
+        "otherIsViet": true,
+        "box": [
+          0.275,
+          0.0306,
+          0.7267,
+          0.9619
+        ]
+      },
+      "nam": {
+        "otherName": "Áo tấc",
+        "otherDoll": "ao-tac",
+        "otherIsViet": true,
+        "box": [
+          0.275,
+          0.0387,
+          0.7267,
+          0.9619
+        ]
+      },
+      "line_from_kb": "dont_confuse_with[0].how_vi",
+      "hotspots": [
+        {
+          "part": "sleeves",
+          "x": 0.28,
+          "y": 0.46,
+          "text_from_kb": "structure.sleeves"
+        }
+      ]
+    },
+    "ao-dai": {
+      "nu": {
+        "otherName": "Sườn xám",
+        "otherImg": "/book/compare/suon-xam-nu.webp",
+        "otherIsViet": false,
+        "box": [
+          0.275,
+          0.0387,
+          0.7267,
+          0.9619
+        ]
+      },
+      "nam": null,
+      "line_from_kb": "dont_confuse_with[0].how_vi",
+      "hotspots": [
+        {
+          "part": "hem",
+          "x": 0.5,
+          "y": 0.62,
+          "text_from_kb": "structure.hem"
+        },
+        {
+          "part": "worn_with",
+          "x": 0.5,
+          "y": 0.88,
+          "text_from_kb": "structure.worn_with"
+        }
+      ]
+    },
+    "ao-tac": {
+      "nu": {
+        "otherName": "Áo giao lĩnh",
+        "otherDoll": "ao-giao-linh",
+        "otherIsViet": true,
+        "box": [
+          0.275,
+          0.0262,
+          0.7267,
+          0.9619
+        ]
+      },
+      "nam": {
+        "otherName": "Áo giao lĩnh",
+        "otherDoll": "ao-giao-linh",
+        "otherIsViet": true,
+        "box": [
+          0.2392,
+          0.0387,
+          0.7625,
+          0.9619
+        ]
+      },
+      "line_from_kb": "dont_confuse_with[0].how_vi",
+      "hotspots": []
+    },
+    "ao-tu-than": {
+      "nu": {
+        "otherName": "Áo ngũ thân",
+        "otherDoll": "ao-ngu-than",
+        "otherIsViet": true,
+        "box": [
+          0.275,
+          0.03,
+          0.7267,
+          0.9619
+        ]
+      },
+      "nam": {
+        "otherName": "Áo tấc",
+        "otherDoll": "ao-tac",
+        "otherIsViet": true,
+        "box": [
+          0.275,
+          0.0387,
+          0.7267,
+          0.9619
+        ]
+      },
+      "line_from_kb": "dont_confuse_with[0].how_vi",
+      "hotspots": []
+    },
+    "ao-nhat-binh": {
+      "nu": {
+        "otherName": "Áo giao lĩnh",
+        "otherDoll": "ao-giao-linh",
+        "otherIsViet": true,
+        "box": [
+          0.2458,
+          0.0,
+          0.755,
+          0.9619
+        ]
+      },
+      "nam": {
+        "otherName": "Áo giao lĩnh",
+        "otherDoll": "ao-giao-linh",
+        "otherIsViet": true,
+        "box": [
+          0.2642,
+          0.0387,
+          0.7367,
+          0.9619
+        ]
+      },
+      "line_from_kb": "dont_confuse_with[0].how_vi",
+      "hotspots": []
+    }
+  }
+}

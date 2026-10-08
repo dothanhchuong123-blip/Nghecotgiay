@@ -1,0 +1,95 @@
+.kit-page {
+  min-height: 100vh;
+  background-color: var(--do);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  padding: 32px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.kit-title {
+  font-family: var(--font-head);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.kit-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 900px;
+}
+
+.kit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kit-section-title {
+  font-family: var(--font-head);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.kit-paper-sample {
+  padding: 16px 20px;
+  width: 150px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.kit-tape-demo-box {
+  position: relative;
+  width: 180px;
+  height: 110px;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kit-tape-pos {
+  top: -8px;
+  left: 35px;
+}
+
+.kit-torn-sample {
+  background-color: var(--card);
+  padding: 20px 24px;
+  width: 260px;
+  font-size: 13px;
+  box-shadow: var(--thick);
+}
+
+.kit-diecut-preview {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.kit-jitter-box {
+  padding: 14px 20px;
+  background-color: var(--card);
+  border-radius: 4px;
+  box-shadow: var(--thick);
+  font-family: ui-monospace, monospace;
+  font-size: 13px;
+  display: inline-block;
+}

@@ -1,0 +1,1581 @@
+{
+ "canvas": {
+  "w": 1200,
+  "h": 1600
+ },
+ "bodies": {
+  "nu": "/doll/nu/body.webp",
+  "nam": "/doll/nam/body.webp"
+ },
+ "pieces": [
+  {
+   "id": "ao-khoac-bo",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-khoac-bo.webp",
+   "box": [
+    327,
+    372,
+    546,
+    538
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "quan-bo-ong-rong",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/quan-bo-ong-rong.webp",
+   "box": [
+    383,
+    695,
+    435,
+    771
+   ],
+   "fit": 0.94,
+   "hidesShorts": true
+  },
+  {
+   "id": "giay-cao-co",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/giay-cao-co.webp",
+   "box": [
+    375,
+    1367,
+    451,
+    175
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "ao-vest",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-vest.webp",
+   "box": [
+    333,
+    382,
+    535,
+    583
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "ao-len-cai-cuc",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-len-cai-cuc.webp",
+   "box": [
+    335,
+    393,
+    531,
+    545
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "ao-bomber",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-bomber.webp",
+   "box": [
+    328,
+    367,
+    544,
+    540
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "so-mi-oversize",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/so-mi-oversize.webp",
+   "box": [
+    333,
+    381,
+    534,
+    696
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "ao-thun-trang",
+   "side": "nu",
+   "layer": "under",
+   "src": "/doll/nu/ao-thun-trang.webp",
+   "box": [
+    397,
+    404,
+    407,
+    484
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "ao-co-lo",
+   "side": "nu",
+   "layer": "under",
+   "src": "/doll/nu/ao-co-lo.webp",
+   "box": [
+    342,
+    364,
+    517,
+    529
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "quan-tay",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/quan-tay.webp",
+   "box": [
+    398,
+    797,
+    406,
+    646
+   ],
+   "fit": 0.932,
+   "hidesShorts": true
+  },
+  {
+   "id": "chan-vay-xep-ly",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/chan-vay-xep-ly.webp",
+   "box": [
+    379,
+    787,
+    448,
+    626
+   ],
+   "fit": 0.947,
+   "hidesShorts": true
+  },
+  {
+   "id": "giay-luoi",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/giay-luoi.webp",
+   "box": [
+    392,
+    1398,
+    417,
+    145
+   ],
+   "fit": 0.983
+  },
+  {
+   "id": "mu-luoi-trai",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/mu-luoi-trai.webp",
+   "box": [
+    475,
+    45,
+    251,
+    184
+   ],
+   "fit": 0.985
+  },
+  {
+   "id": "tui-deo-cheo",
+   "side": "nu",
+   "layer": "carry",
+   "src": "/doll/nu/tui-deo-cheo.webp",
+   "box": [
+    378,
+    404,
+    340,
+    543
+   ],
+   "fit": 0.982
+  },
+  {
+   "id": "ao-khoac-bo",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-khoac-bo.webp",
+   "box": [
+    319,
+    368,
+    563,
+    539
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "ao-vest",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-vest.webp",
+   "box": [
+    327,
+    371,
+    548,
+    592
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "ao-len-cai-cuc",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-len-cai-cuc.webp",
+   "box": [
+    327,
+    388,
+    547,
+    559
+   ],
+   "fit": 0.979
+  },
+  {
+   "id": "ao-bomber",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-bomber.webp",
+   "box": [
+    322,
+    357,
+    557,
+    557
+   ],
+   "fit": 0.979
+  },
+  {
+   "id": "so-mi-oversize",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/so-mi-oversize.webp",
+   "box": [
+    328,
+    361,
+    545,
+    752
+   ],
+   "fit": 0.979
+  },
+  {
+   "id": "ao-thun-trang",
+   "side": "nam",
+   "layer": "under",
+   "src": "/doll/nam/ao-thun-trang.webp",
+   "box": [
+    378,
+    414,
+    445,
+    466
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "ao-co-lo",
+   "side": "nam",
+   "layer": "under",
+   "src": "/doll/nam/ao-co-lo.webp",
+   "box": [
+    340,
+    353,
+    522,
+    562
+   ],
+   "fit": 0.978
+  },
+  {
+   "id": "quan-bo-ong-rong",
+   "side": "nam",
+   "layer": "bottom",
+   "src": "/doll/nam/quan-bo-ong-rong.webp",
+   "box": [
+    383,
+    718,
+    437,
+    698
+   ],
+   "fit": 0.947,
+   "hidesShorts": true
+  },
+  {
+   "id": "quan-tay",
+   "side": "nam",
+   "layer": "bottom",
+   "src": "/doll/nam/quan-tay.webp",
+   "box": [
+    397,
+    794,
+    407,
+    648
+   ],
+   "fit": 0.928,
+   "hidesShorts": true
+  },
+  {
+   "id": "giay-cao-co",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/giay-cao-co.webp",
+   "box": [
+    379,
+    1370,
+    443,
+    185
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "giay-luoi",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/giay-luoi.webp",
+   "box": [
+    388,
+    1418,
+    426,
+    134
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "mu-luoi-trai",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/mu-luoi-trai.webp",
+   "box": [
+    479,
+    64,
+    245,
+    161
+   ],
+   "fit": 0.985
+  },
+  {
+   "id": "tui-deo-cheo",
+   "side": "nam",
+   "layer": "carry",
+   "src": "/doll/nam/tui-deo-cheo.webp",
+   "box": [
+    480,
+    406,
+    314,
+    520
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "khan-van",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/khan-van.webp",
+   "box": [
+    413,
+    23,
+    377,
+    357
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "khan-mo-qua",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/khan-mo-qua.webp",
+   "box": [
+    420,
+    64,
+    361,
+    426
+   ],
+   "fit": 0.984
+  },
+  {
+   "id": "non-la",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/non-la.webp",
+   "box": [
+    345,
+    32,
+    513,
+    429
+   ],
+   "fit": 0.984
+  },
+  {
+   "id": "non-la",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/non-la.webp",
+   "box": [
+    352,
+    40,
+    496,
+    393
+   ],
+   "fit": 0.985
+  },
+  {
+   "id": "guoc-moc",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/guoc-moc.webp",
+   "box": [
+    382,
+    1452,
+    437,
+    131
+   ],
+   "fit": 0.983
+  },
+  {
+   "id": "guoc-moc",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/guoc-moc.webp",
+   "box": [
+    370,
+    1452,
+    461,
+    146
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "hai-theu",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/hai-theu.webp",
+   "box": [
+    382,
+    1429,
+    437,
+    118
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "vong-tay-bac",
+   "side": "nu",
+   "layer": "jewel",
+   "src": "/doll/nu/vong-tay-bac.webp",
+   "box": [
+    335,
+    804,
+    74,
+    59
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "khan-xep",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/khan-xep.webp",
+   "box": [
+    455,
+    51,
+    292,
+    180
+   ],
+   "fit": 0.985
+  },
+  {
+   "id": "hai-theu",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/hai-theu.webp",
+   "box": [
+    395,
+    1401,
+    411,
+    144
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "ao-tu-than",
+   "side": "nu",
+   "layer": "ao",
+   "src": "/doll/nu/ao-tu-than.webp",
+   "box": [
+    344,
+    382,
+    513,
+    862
+   ],
+   "fit": 0.987,
+   "dye": "/doll/nu/ao-tu-than-dye.png"
+  },
+  {
+   "id": "that-lung",
+   "side": "nu",
+   "layer": "waist",
+   "src": "/doll/nu/that-lung.webp",
+   "box": [
+    483,
+    677,
+    233,
+    544
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "yem",
+   "side": "nu",
+   "layer": "under",
+   "src": "/doll/nu/yem.webp",
+   "box": [
+    389,
+    403,
+    424,
+    419
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "vay-den",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/vay-den.webp",
+   "box": [
+    384,
+    654,
+    433,
+    813
+   ],
+   "fit": 0.902,
+   "hidesShorts": true
+  },
+  {
+   "id": "ao-dai",
+   "side": "nu",
+   "layer": "ao",
+   "src": "/doll/nu/ao-dai.webp",
+   "box": [
+    338,
+    376,
+    525,
+    989
+   ],
+   "fit": 0.986,
+   "dye": "/doll/nu/ao-dai-dye.png"
+  },
+  {
+   "id": "quan-lua",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/quan-lua.webp",
+   "box": [
+    376,
+    654,
+    447,
+    810
+   ],
+   "fit": 0.921,
+   "hidesShorts": true
+  },
+  {
+   "id": "ao-ngu-than",
+   "side": "nu",
+   "layer": "ao",
+   "src": "/doll/nu/ao-ngu-than.webp",
+   "box": [
+    342,
+    374,
+    519,
+    1026
+   ],
+   "fit": 0.987,
+   "dye": "/doll/nu/ao-ngu-than-dye.png"
+  },
+  {
+   "id": "ao-tac",
+   "side": "nu",
+   "layer": "ao",
+   "src": "/doll/nu/ao-tac.webp",
+   "box": [
+    327,
+    364,
+    547,
+    991
+   ],
+   "fit": 0.986,
+   "dye": "/doll/nu/ao-tac-dye.png"
+  },
+  {
+   "id": "khan-ran",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/khan-ran.webp",
+   "box": [
+    491,
+    364,
+    220,
+    198
+   ],
+   "fit": 0.991
+  },
+  {
+   "id": "ao-ba-ba",
+   "side": "nu",
+   "layer": "ao",
+   "src": "/doll/nu/ao-ba-ba.webp",
+   "box": [
+    330,
+    408,
+    543,
+    498
+   ],
+   "fit": 0.988,
+   "dye": "/doll/nu/ao-ba-ba-dye.png"
+  },
+  {
+   "id": "quan-den",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/quan-den.webp",
+   "box": [
+    398,
+    654,
+    406,
+    813
+   ],
+   "fit": 0.913,
+   "hidesShorts": true
+  },
+  {
+   "id": "khan-vanh",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/khan-vanh.webp",
+   "box": [
+    397,
+    0,
+    403,
+    321
+   ],
+   "fit": 0.972
+  },
+  {
+   "id": "ao-nhat-binh",
+   "side": "nu",
+   "layer": "ao",
+   "src": "/doll/nu/ao-nhat-binh.webp",
+   "box": [
+    291,
+    368,
+    618,
+    1013
+   ],
+   "fit": 0.967,
+   "dye": "/doll/nu/ao-nhat-binh-dye.png"
+  },
+  {
+   "id": "ao-dai-lot",
+   "side": "nu",
+   "layer": "under",
+   "src": "/doll/nu/ao-dai-lot.webp",
+   "box": [
+    327,
+    580,
+    547,
+    382
+   ],
+   "fit": 0.985
+  },
+  {
+   "id": "xiem",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/xiem.webp",
+   "box": [
+    364,
+    705,
+    474,
+    762
+   ],
+   "fit": 0.916,
+   "hidesShorts": true
+  },
+  {
+   "id": "ao-giao-linh",
+   "side": "nu",
+   "layer": "ao",
+   "src": "/doll/nu/ao-giao-linh.webp",
+   "box": [
+    281,
+    363,
+    639,
+    936
+   ],
+   "fit": 0.985,
+   "dye": "/doll/nu/ao-giao-linh-dye.png"
+  },
+  {
+   "id": "ao-lot-giao",
+   "side": "nu",
+   "layer": "under",
+   "src": "/doll/nu/ao-lot-giao.webp",
+   "box": [
+    285,
+    432,
+    491,
+    530
+   ],
+   "fit": 0.922
+  },
+  {
+   "id": "ao-dai",
+   "side": "nam",
+   "layer": "ao",
+   "src": "/doll/nam/ao-dai.webp",
+   "box": [
+    331,
+    362,
+    540,
+    969
+   ],
+   "fit": 0.985,
+   "dye": "/doll/nam/ao-dai-dye.png"
+  },
+  {
+   "id": "quan-lua",
+   "side": "nam",
+   "layer": "bottom",
+   "src": "/doll/nam/quan-lua.webp",
+   "box": [
+    367,
+    654,
+    468,
+    813
+   ],
+   "fit": 0.924,
+   "hidesShorts": true
+  },
+  {
+   "id": "ao-ngu-than",
+   "side": "nam",
+   "layer": "ao",
+   "src": "/doll/nam/ao-ngu-than.webp",
+   "box": [
+    331,
+    362,
+    540,
+    916
+   ],
+   "fit": 0.987,
+   "dye": "/doll/nam/ao-ngu-than-dye.png"
+  },
+  {
+   "id": "ao-the",
+   "side": "nam",
+   "layer": "ao",
+   "src": "/doll/nam/ao-the.webp",
+   "box": [
+    336,
+    370,
+    531,
+    925
+   ],
+   "fit": 0.978,
+   "dye": "/doll/nam/ao-the-dye.png"
+  },
+  {
+   "id": "ao-lot-trang",
+   "side": "nam",
+   "layer": "under",
+   "src": "/doll/nam/ao-lot-trang.webp",
+   "box": [
+    328,
+    409,
+    546,
+    488
+   ],
+   "fit": 0.961
+  },
+  {
+   "id": "ao-tac",
+   "side": "nam",
+   "layer": "ao",
+   "src": "/doll/nam/ao-tac.webp",
+   "box": [
+    284,
+    363,
+    634,
+    981
+   ],
+   "fit": 0.986,
+   "dye": "/doll/nam/ao-tac-dye.png"
+  },
+  {
+   "id": "khan-ran",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/khan-ran.webp",
+   "box": [
+    482,
+    350,
+    236,
+    212
+   ],
+   "fit": 0.99
+  },
+  {
+   "id": "ao-ba-ba",
+   "side": "nam",
+   "layer": "ao",
+   "src": "/doll/nam/ao-ba-ba.webp",
+   "box": [
+    321,
+    401,
+    558,
+    563
+   ],
+   "fit": 0.962,
+   "dye": "/doll/nam/ao-ba-ba-dye.png"
+  },
+  {
+   "id": "quan-den",
+   "side": "nam",
+   "layer": "bottom",
+   "src": "/doll/nam/quan-den.webp",
+   "box": [
+    367,
+    654,
+    439,
+    813
+   ],
+   "fit": 0.907,
+   "hidesShorts": true
+  },
+  {
+   "id": "ao-giao-linh",
+   "side": "nam",
+   "layer": "ao",
+   "src": "/doll/nam/ao-giao-linh.webp",
+   "box": [
+    277,
+    370,
+    651,
+    999
+   ],
+   "fit": 0.984,
+   "dye": "/doll/nam/ao-giao-linh-dye.png"
+  },
+  {
+   "id": "ao-lot-giao",
+   "side": "nam",
+   "layer": "under",
+   "src": "/doll/nam/ao-lot-giao.webp",
+   "box": [
+    299,
+    412,
+    608,
+    520
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "ao-vien-linh",
+   "side": "nam",
+   "layer": "ao",
+   "src": "/doll/nam/ao-vien-linh.webp",
+   "box": [
+    315,
+    365,
+    573,
+    1071
+   ],
+   "fit": 0.975,
+   "dye": "/doll/nam/ao-vien-linh-dye.png"
+  },
+  {
+   "id": "ao-ni-mu",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-ni-mu.webp",
+   "box": [
+    336,
+    353,
+    530,
+    554
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "ao-ni-mu",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-ni-mu.webp",
+   "box": [
+    328,
+    343,
+    546,
+    577
+   ],
+   "fit": 0.979
+  },
+  {
+   "id": "ao-varsity",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-varsity.webp",
+   "box": [
+    326,
+    366,
+    549,
+    529
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "ao-varsity",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-varsity.webp",
+   "box": [
+    319,
+    356,
+    563,
+    549
+   ],
+   "fit": 0.979
+  },
+  {
+   "id": "ao-khoac-da",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-khoac-da.webp",
+   "box": [
+    334,
+    371,
+    536,
+    507
+   ],
+   "fit": 0.982
+  },
+  {
+   "id": "ao-khoac-da",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-khoac-da.webp",
+   "box": [
+    333,
+    365,
+    537,
+    514
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "ao-mang-to",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/ao-mang-to.webp",
+   "box": [
+    325,
+    372,
+    550,
+    909
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "ao-mang-to",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/ao-mang-to.webp",
+   "box": [
+    322,
+    356,
+    557,
+    925
+   ],
+   "fit": 0.986
+  },
+  {
+   "id": "ao-croptop",
+   "side": "nu",
+   "layer": "under",
+   "src": "/doll/nu/ao-croptop.webp",
+   "box": [
+    382,
+    408,
+    435,
+    299
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "quan-cargo",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/quan-cargo.webp",
+   "box": [
+    398,
+    796,
+    406,
+    662
+   ],
+   "fit": 0.94,
+   "hidesShorts": true
+  },
+  {
+   "id": "quan-cargo",
+   "side": "nam",
+   "layer": "bottom",
+   "src": "/doll/nam/quan-cargo.webp",
+   "box": [
+    397,
+    797,
+    407,
+    642
+   ],
+   "fit": 0.953,
+   "hidesShorts": true
+  },
+  {
+   "id": "chan-vay-bo",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/chan-vay-bo.webp",
+   "box": [
+    390,
+    654,
+    421,
+    546
+   ],
+   "fit": 0.892,
+   "hidesShorts": false
+  },
+  {
+   "id": "quan-ong-loe",
+   "side": "nu",
+   "layer": "bottom",
+   "src": "/doll/nu/quan-ong-loe.webp",
+   "box": [
+    398,
+    654,
+    406,
+    833
+   ],
+   "fit": 0.93,
+   "hidesShorts": true
+  },
+  {
+   "id": "quan-ong-loe",
+   "side": "nam",
+   "layer": "bottom",
+   "src": "/doll/nam/quan-ong-loe.webp",
+   "box": [
+    389,
+    683,
+    423,
+    816
+   ],
+   "fit": 0.935,
+   "hidesShorts": true
+  },
+  {
+   "id": "bot-co-cao",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/bot-co-cao.webp",
+   "box": [
+    395,
+    1346,
+    411,
+    199
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "bot-co-cao",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/bot-co-cao.webp",
+   "box": [
+    384,
+    1342,
+    433,
+    206
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "giay-de-tho",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/giay-de-tho.webp",
+   "box": [
+    382,
+    1393,
+    438,
+    164
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "giay-de-tho",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/giay-de-tho.webp",
+   "box": [
+    352,
+    1346,
+    497,
+    213
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "giay-bup-be",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/giay-bup-be.webp",
+   "box": [
+    396,
+    1419,
+    409,
+    127
+   ],
+   "fit": 0.982
+  },
+  {
+   "id": "giay-bup-be",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/giay-bup-be.webp",
+   "box": [
+    396,
+    1413,
+    409,
+    135
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "giay-the-thao",
+   "side": "nu",
+   "layer": "feet",
+   "src": "/doll/nu/giay-the-thao.webp",
+   "box": [
+    397,
+    1405,
+    407,
+    141
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "giay-the-thao",
+   "side": "nam",
+   "layer": "feet",
+   "src": "/doll/nam/giay-the-thao.webp",
+   "box": [
+    393,
+    1396,
+    415,
+    152
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "mu-tai-beo",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/mu-tai-beo.webp",
+   "box": [
+    414,
+    66,
+    373,
+    221
+   ],
+   "fit": 0.989
+  },
+  {
+   "id": "mu-tai-beo",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/mu-tai-beo.webp",
+   "box": [
+    419,
+    51,
+    363,
+    239
+   ],
+   "fit": 0.985
+  },
+  {
+   "id": "mu-beret",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/mu-beret.webp",
+   "box": [
+    451,
+    45,
+    315,
+    190
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "mu-beret",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/mu-beret.webp",
+   "box": [
+    428,
+    41,
+    317,
+    185
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "mu-len",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/mu-len.webp",
+   "box": [
+    457,
+    39,
+    286,
+    201
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "mu-len",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/mu-len.webp",
+   "box": [
+    456,
+    38,
+    291,
+    237
+   ],
+   "fit": 0.983
+  },
+  {
+   "id": "tai-nghe",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/tai-nghe.webp",
+   "box": [
+    439,
+    66,
+    322,
+    253
+   ],
+   "fit": 0.989
+  },
+  {
+   "id": "tai-nghe",
+   "side": "nam",
+   "layer": "head",
+   "src": "/doll/nam/tai-nghe.webp",
+   "box": [
+    428,
+    45,
+    345,
+    284
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "balo",
+   "side": "nu",
+   "layer": "carry",
+   "src": "/doll/nu/balo.webp",
+   "box": [
+    661,
+    404,
+    268,
+    669
+   ],
+   "fit": 0.929
+  },
+  {
+   "id": "balo",
+   "side": "nam",
+   "layer": "carry",
+   "src": "/doll/nam/balo.webp",
+   "box": [
+    271,
+    405,
+    296,
+    715
+   ],
+   "fit": 0.914
+  },
+  {
+   "id": "tui-bao-tu",
+   "side": "nu",
+   "layer": "carry",
+   "src": "/doll/nu/tui-bao-tu.webp",
+   "box": [
+    426,
+    402,
+    297,
+    467
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "tui-bao-tu",
+   "side": "nam",
+   "layer": "carry",
+   "src": "/doll/nam/tui-bao-tu.webp",
+   "box": [
+    446,
+    404,
+    282,
+    358
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "that-lung-ban-to",
+   "side": "nu",
+   "layer": "over",
+   "src": "/doll/nu/that-lung-ban-to.webp",
+   "box": [
+    444,
+    693,
+    313,
+    158
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "that-lung-ban-to",
+   "side": "nam",
+   "layer": "over",
+   "src": "/doll/nam/that-lung-ban-to.webp",
+   "box": [
+    439,
+    705,
+    320,
+    171
+   ],
+   "fit": 0.976
+  },
+  {
+   "id": "non-quai-thao",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/non-quai-thao.webp",
+   "box": [
+    269,
+    38,
+    664,
+    524
+   ],
+   "fit": 0.985
+  },
+  {
+   "id": "tui-vai",
+   "side": "nu",
+   "layer": "carry",
+   "src": "/doll/nu/tui-vai.webp",
+   "box": [
+    631,
+    410,
+    210,
+    595
+   ],
+   "fit": 0.977
+  },
+  {
+   "id": "tui-vai",
+   "side": "nam",
+   "layer": "carry",
+   "src": "/doll/nam/tui-vai.webp",
+   "box": [
+    625,
+    411,
+    303,
+    657
+   ],
+   "fit": 0.957
+  },
+  {
+   "id": "kinh-mat",
+   "side": "nu",
+   "layer": "jewel",
+   "src": "/doll/nu/kinh-mat.webp",
+   "box": [
+    496,
+    206,
+    208,
+    83
+   ],
+   "fit": 0.911
+  },
+  {
+   "id": "kinh-mat",
+   "side": "nam",
+   "layer": "jewel",
+   "src": "/doll/nam/kinh-mat.webp",
+   "box": [
+    500,
+    207,
+    202,
+    75
+   ],
+   "fit": 0.923
+  },
+  {
+   "id": "vong-co",
+   "side": "nu",
+   "layer": "jewel",
+   "src": "/doll/nu/vong-co.webp",
+   "box": [
+    503,
+    381,
+    196,
+    142
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "vong-co",
+   "side": "nam",
+   "layer": "jewel",
+   "src": "/doll/nam/vong-co.webp",
+   "box": [
+    498,
+    369,
+    207,
+    158
+   ],
+   "fit": 0.98
+  },
+  {
+   "id": "quat-giay",
+   "side": "nu",
+   "layer": "carry",
+   "src": "/doll/nu/quat-giay.webp",
+   "box": [
+    399,
+    488,
+    474,
+    485
+   ],
+   "fit": 0.989
+  },
+  {
+   "id": "quat-giay",
+   "side": "nam",
+   "layer": "carry",
+   "src": "/doll/nam/quat-giay.webp",
+   "box": [
+    328,
+    494,
+    552,
+    492
+   ],
+   "fit": 0.981
+  },
+  {
+   "id": "tram-cai-toc",
+   "side": "nu",
+   "layer": "head",
+   "src": "/doll/nu/tram-cai-toc.webp",
+   "box": [
+    401,
+    287,
+    118,
+    64
+   ],
+   "fit": 0.986
+  },
+  {
+   "id": "khuyen-ngoc",
+   "side": "nu",
+   "layer": "jewel",
+   "src": "/doll/nu/khuyen-ngoc.webp",
+   "box": [
+    478,
+    283,
+    245,
+    52
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "vong-tay-bac",
+   "side": "nam",
+   "layer": "jewel",
+   "src": "/doll/nam/vong-tay-bac.webp",
+   "box": [
+    780,
+    823,
+    94,
+    52
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "thao-dai",
+   "side": "nu",
+   "layer": "jewel",
+   "src": "/doll/nu/thao-dai.webp",
+   "box": [
+    452,
+    682,
+    294,
+    468
+   ],
+   "fit": 0.988
+  },
+  {
+   "id": "thao-dai",
+   "side": "nam",
+   "layer": "jewel",
+   "src": "/doll/nam/thao-dai.webp",
+   "box": [
+    451,
+    721,
+    306,
+    444
+   ],
+   "fit": 0.987
+  },
+  {
+   "id": "o-giay",
+   "side": "nu",
+   "layer": "carry",
+   "src": "/doll/nu/o-giay.webp",
+   "box": [
+    341,
+    0,
+    696,
+    709
+   ],
+   "fit": 0.972
+  },
+  {
+   "id": "o-giay",
+   "side": "nam",
+   "layer": "carry",
+   "src": "/doll/nam/o-giay.webp",
+   "box": [
+    81,
+    0,
+    784,
+    741
+   ],
+   "fit": 0.974
+  }
+ ],
+ "bodiesLegs": {
+  "nu": "/doll/nu/body-legs.webp",
+  "nam": "/doll/nam/body-legs.webp"
+ },
+ "bodiesLegsNote": "When the worn bottom piece has hidesShorts: true, draw bodiesLegs[side] instead of bodies[side] (the cream shorts are erased so they never peek out beside slim trousers)."
+}

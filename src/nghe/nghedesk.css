@@ -1,0 +1,153 @@
+/* Desk decorations outside the book (z-index 3) */
+
+.desk-pocket-btn {
+  position: absolute;
+  left: 30px;
+  top: 360px;
+  width: 120px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 3;
+  user-select: none;
+  outline: none;
+  transition: transform 120ms ease;
+}
+
+.desk-pocket-btn:hover {
+  transform: translateY(-2px);
+}
+
+.desk-pocket-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desk-pocket-btn {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+:root[data-reduced="1"] .desk-pocket-btn {
+  transform: none !important;
+  transition: none !important;
+}
+
+.desk-pocket {
+  width: 100%;
+  display: block;
+  transform: rotate(-6deg);
+  filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.18));
+  pointer-events: none;
+  user-select: none;
+}
+
+.desk-nghe {
+  position: absolute;
+  right: 22px;
+  bottom: 92px;
+  height: 170px;
+  filter: drop-shadow(5px 8px 6px rgba(0, 0, 0, 0.4));
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.desk-bubble {
+  position: absolute;
+  right: 14px;
+  bottom: 250px;
+  width: 196px;
+  min-height: 140px;
+  padding: 16px 18px 44px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--ink);
+  z-index: 3;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.desk-bubble::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/book/ui/bubble.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.desk-bubble strong,
+.desk-bubble b {
+  font-weight: 700;
+  color: #8a4b12;
+}
+
+.desk-bubble ul,
+.desk-bubble ol {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 12px;
+  color: var(--son);
+}
+
+@media (max-width: 767px) {
+  /* Nghê 110px tall at bottom-right, above bottom bar (64px) */
+  .desk-nghe {
+    position: fixed;
+    right: 12px;
+    bottom: 68px;
+    height: 110px;
+    z-index: 5;
+  }
+
+  /* Bubble above Nghê: small, at most 4 lines */
+  .desk-bubble {
+    position: fixed;
+    right: 12px;
+    bottom: 182px;
+    width: auto;
+    max-width: 58vw;
+    min-height: auto;
+    padding: 10px 14px 22px;
+    font-size: 13.5px;
+    line-height: 1.35;
+    z-index: 6;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+
+  /* Pocket button next to Nghê at 40px */
+  .desk-pocket-btn {
+    position: fixed;
+    right: 148px;
+    bottom: 72px;
+    top: auto;
+    left: auto;
+    width: 40px;
+    height: 40px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .desk-pocket {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+}

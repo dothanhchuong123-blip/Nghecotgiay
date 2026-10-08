@@ -1,0 +1,82 @@
+{
+ "_about": "Pop-up scene layers per garment, in public/popcard/<id>/. back = backdrop 1200x900 (far layer); mid = one landmark that stands beside the doll on side `mid`; wings = two landmark halves standing either side of the doll (used instead of mid); prop = an object on the floor on side `prop`; fg = plant strip 1200x178 (nearest layer); full-nu / full-nam = the doll already dressed in this áo, 1200x1600, a ready picture for covers and thumbnails.",
+ "scenes": {
+  "ao-ba-ba": {
+   "wings": false,
+   "mid": "right",
+   "prop": "left",
+   "full": [
+    "nam",
+    "nu"
+   ]
+  },
+  "ao-dai": {
+   "wings": true,
+   "mid": null,
+   "prop": "left",
+   "full": [
+    "nam",
+    "nu"
+   ]
+  },
+  "ao-giao-linh": {
+   "wings": false,
+   "mid": "left",
+   "prop": "right",
+   "full": [
+    "nam",
+    "nu"
+   ]
+  },
+  "ao-ngu-than": {
+   "wings": false,
+   "mid": "right",
+   "prop": "left",
+   "full": [
+    "nam",
+    "nu"
+   ]
+  },
+  "ao-nhat-binh": {
+   "wings": true,
+   "mid": null,
+   "prop": "right",
+   "full": [
+    "nu"
+   ]
+  },
+  "ao-tac": {
+   "wings": true,
+   "mid": null,
+   "prop": "right",
+   "full": [
+    "nam",
+    "nu"
+   ]
+  },
+  "ao-the": {
+   "wings": true,
+   "mid": null,
+   "prop": "left",
+   "full": [
+    "nam"
+   ]
+  },
+  "ao-tu-than": {
+   "wings": true,
+   "mid": null,
+   "prop": "left",
+   "full": [
+    "nu"
+   ]
+  },
+  "ao-vien-linh": {
+   "wings": false,
+   "mid": "left",
+   "prop": "right",
+   "full": [
+    "nam"
+   ]
+  }
+ }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Nghê Cót · Giấy",
+  "description": "Sách giấy nổi tương tác học về Cổ phục Việt Nam (Việt phục)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

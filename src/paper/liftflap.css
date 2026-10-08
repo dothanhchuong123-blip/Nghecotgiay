@@ -1,0 +1,61 @@
+.lift-flap-box {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.lift-flap-base {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.lift-flap-top {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 0;
+  transform: translateZ(1.5px) rotateX(var(--lift, 0deg));
+  transition: transform 0.55s cubic-bezier(0.3, 1.4, 0.5, 1);
+  box-shadow: 0 3px 0 rgba(42, 33, 27, 0.2);
+  cursor: pointer;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+}
+
+.lift-flap-top:focus-visible,
+.lift-flap-base:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.lift-flap-top::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #E9DEC9;
+  transform: translateZ(-0.5px) rotateY(180deg);
+  backface-visibility: hidden;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 -3px 0 rgba(42, 33, 27, 0.15);
+}
+
+.lift-flap-hint {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  font: 700 11px var(--font-ui);
+  color: var(--son);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift-flap-top {
+    transition: none !important;
+  }
+}
+
+:root[data-reduced="1"] .lift-flap-top {
+  transition: none !important;
+}

@@ -1,0 +1,82 @@
+[
+ {
+  "file": "point.webp",
+  "box": [
+   0,
+   0,
+   332,
+   340
+  ],
+  "id": "point"
+ },
+ {
+  "file": "camera.webp",
+  "box": [
+   20,
+   344,
+   356,
+   692
+  ],
+  "id": "camera"
+ },
+ {
+  "file": "sticker.webp",
+  "box": [
+   344,
+   0,
+   656,
+   340
+  ],
+  "id": "sticker"
+ },
+ {
+  "file": "sit.webp",
+  "box": [
+   372,
+   344,
+   688,
+   692
+  ],
+  "id": "sit"
+ },
+ {
+  "file": "brush.webp",
+  "box": [
+   664,
+   0,
+   1036,
+   340
+  ],
+  "id": "brush"
+ },
+ {
+  "file": "wave.webp",
+  "box": [
+   704,
+   340,
+   996,
+   696
+  ],
+  "id": "wave"
+ },
+ {
+  "file": "joy.webp",
+  "box": [
+   1008,
+   300,
+   1336,
+   692
+  ],
+  "id": "joy"
+ },
+ {
+  "file": "hello.webp",
+  "box": [
+   1052,
+   0,
+   1332,
+   248
+  ],
+  "id": "hello"
+ }
+]

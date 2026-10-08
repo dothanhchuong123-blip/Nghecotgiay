@@ -1,0 +1,42 @@
+.devmenu-panel {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  z-index: 9999;
+}
+
+.devmenu-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.devmenu-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.devmenu-link:hover {
+  text-decoration: underline;
+}
+
+.devmenu-link-active {
+  font-weight: bold;
+  color: #000;
+}
+
+.dev-not-built {
+  padding: 24px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  color: #222;
+}

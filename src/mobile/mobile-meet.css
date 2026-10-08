@@ -1,0 +1,326 @@
+/* Phone page for Gặp áo: one flat paper diorama, then big readable cards */
+.mm-root {
+  position: fixed;
+  top: 116px;
+  bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  left: 0;
+  right: 0;
+  z-index: 4;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 8px 12px 150px;
+  background-color: var(--desk);
+  box-sizing: border-box;
+}
+
+.mm-stage-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(42, 33, 27, 0.35);
+  background: var(--card);
+}
+
+.mm-stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  touch-action: pan-y;
+}
+
+.mm-floor,
+.mm-back {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.mm-floor {
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.mm-back {
+  top: 0;
+  width: 100%;
+  height: auto;
+  max-height: 470px;
+  object-fit: cover;
+}
+
+.mm-layer {
+  position: absolute;
+  transform: translate(var(--dx, 0), var(--dy, 0));
+  transition: transform 160ms ease-out;
+  filter: drop-shadow(0 6px 5px rgba(42, 33, 27, 0.35));
+  pointer-events: none;
+}
+
+.mm-rise {
+  animation: mmRise 520ms cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
+  transform-origin: 50% 100%;
+}
+
+@keyframes mmRise {
+  from {
+    opacity: 0;
+    transform: translate(var(--dx, 0), 40px) scaleY(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translate(var(--dx, 0), var(--dy, 0)) scaleY(1);
+  }
+}
+
+.mm-fg {
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+  width: 590px;
+  height: 120px;
+  pointer-events: none;
+}
+
+.mm-card,
+.mm-block {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 10px;
+  color: var(--ink);
+  background-color: var(--card);
+  background-image: url("/book/tex/giay-do.webp");
+  background-size: 256px;
+  box-shadow: var(--thick);
+}
+
+.mm-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--son);
+}
+
+.mm-title {
+  margin: 4px 0 6px;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.mm-aka {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.mm-aka span {
+  font-weight: 700;
+}
+
+.mm-lead {
+  margin: 12px 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.mm-period {
+  display: inline-block;
+  padding: 6px 16px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  background-color: var(--son);
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+
+.mm-h {
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.mm-block {
+  padding-bottom: 14px;
+}
+
+.mm-parts {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin: 0 -16px;
+  padding: 2px 16px 8px;
+  scrollbar-width: none;
+}
+
+.mm-parts::-webkit-scrollbar {
+  display: none;
+}
+
+.mm-part {
+  flex: 0 0 150px;
+  height: 224px;
+  scroll-snap-align: start;
+  padding: 84px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.32;
+  background-color: transparent;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 4px 0 rgba(42, 33, 27, 0.22));
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mm-part:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+
+.mm-part:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.mm-part b {
+  font-family: var(--font-head);
+  font-size: 15px;
+  color: var(--son);
+}
+
+.mm-colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mm-color {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.mm-color i {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(42, 33, 27, 0.25);
+}
+
+.mm-occs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mm-occ {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 12px;
+  font: 700 15px var(--font-ui);
+  color: var(--ink);
+  background: #fffaf0;
+  border: 2px solid rgba(42, 33, 27, 0.18);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.mm-occ img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.mm-occ em {
+  font-style: normal;
+  font-weight: 800;
+}
+
+.mm-occ.is-ok em {
+  color: #2f7a46;
+}
+
+.mm-occ.is-caution em {
+  color: #b5471a;
+}
+
+.mm-occ.is-on {
+  border-color: var(--son);
+  background: #fff;
+}
+
+.mm-note {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.mm-note.is-caution {
+  border-left: 4px solid #b5471a;
+}
+
+.mm-note.is-ok {
+  border-left: 4px solid #2f7a46;
+}
+
+.mm-note-hint {
+  color: var(--ink-2);
+  font-size: 14px;
+  background: transparent;
+  padding-left: 0;
+}
+
+.mm-cta {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  min-height: 56px;
+  font: 800 18px var(--font-head);
+  color: #fff;
+  background-color: var(--son);
+  background-size: 100% 100%;
+  border: none;
+  border-radius: 6px;
+  box-shadow: var(--thick);
+  cursor: pointer;
+}
+
+/* The 3D book sleeps under the flat page; Nghê and the bubble stay above it */
+html.mm-on .scene {
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .mm-root {
+    display: none;
+  }
+}
+
+/* This page carries its own advice note, so Nghê's bubble stays quiet and she sits smaller */
+@media (max-width: 767px) {
+  html.mm-on .desk-bubble {
+    display: none;
+  }
+
+  html.mm-on .desk-nghe {
+    height: 84px;
+  }
+}

@@ -1,0 +1,87 @@
+/* Puppet Nghê in the design frame (z-index 3) */
+
+.paper-nghe-puppet {
+  position: absolute;
+  right: 22px;
+  bottom: 92px;
+  z-index: 3;
+  height: 170px;
+  filter: drop-shadow(5px 8px 6px rgba(0, 0, 0, 0.4));
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.paper-nghe-puppet:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.paper-nghe-part-wrapper {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.paper-nghe-part-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.paper-nghe-split-pin {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.4));
+  z-index: 5;
+}
+
+/* Fallback flat image if rig art is missing */
+.paper-nghe-fallback {
+  position: absolute;
+  right: 22px;
+  bottom: 92px;
+  height: 170px;
+  filter: drop-shadow(5px 8px 6px rgba(0, 0, 0, 0.4));
+  z-index: 3;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.paper-nghe-fallback:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.paper-nghe-fallback img {
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 767px) {
+  .paper-nghe-puppet,
+  .paper-nghe-fallback {
+    position: fixed;
+    right: 12px;
+    bottom: 68px;
+    height: 110px;
+    z-index: 5;
+  }
+}

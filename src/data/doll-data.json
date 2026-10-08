@@ -1,0 +1,215 @@
+{
+ "TRAD_PIECES": [
+  {
+   "id": "quan-lua",
+   "name": "Quần lụa trắng",
+   "note_vi": "Quần lụa trắng ống rộng truyền thống, mặc cùng áo dài, áo ngũ thân, áo tấc."
+  },
+  {
+   "id": "quan-den",
+   "name": "Quần đen",
+   "note_vi": "Quần đen ống rộng truyền thống Nam Bộ, mặc cùng áo bà ba."
+  },
+  {
+   "id": "vay-den",
+   "name": "Váy đụp đen",
+   "note_vi": "Váy đụp đen dài chấm gót, lớp nền bên trong của áo tứ thân Bắc Bộ."
+  },
+  {
+   "id": "xiem",
+   "name": "Xiêm",
+   "note_vi": "Xiêm quây lụa phủ ngoài quần hoặc mặc trong áo Nhật Bình, giao lĩnh."
+  },
+  {
+   "id": "yem",
+   "name": "Yếm đào",
+   "note_vi": "Áo yếm lót che ngực cổ truyền, mặc bên trong áo tứ thân."
+  },
+  {
+   "id": "that-lung",
+   "name": "Thắt lưng lụa",
+   "note_vi": "Dải lụa mềm buộc ngang eo giữ vạt áo, buông hai múi trước bụng."
+  },
+  {
+   "id": "ao-lot-trang",
+   "name": "Áo lót trắng",
+   "note_vi": "Áo lót trắng cổ đứng mặc bên trong áo ngũ thân, áo the."
+  },
+  {
+   "id": "ao-lot-giao",
+   "name": "Áo lót giao lĩnh",
+   "note_vi": "Áo lót cổ chéo màu trắng mặc bên trong áo giao lĩnh."
+  },
+  {
+   "id": "ao-dai-lot",
+   "name": "Áo dài lót",
+   "note_vi": "Áo dài lót cổ đứng mặc bên trong áo Nhật Bình."
+  },
+  {
+   "id": "khan-vanh",
+   "name": "Khăn vành",
+   "note_vi": "Khăn vành dây quấn nhiều vòng quanh đầu của hoàng tộc, mệnh phụ triều Nguyễn."
+  }
+ ],
+ "COMPANIONS": {
+  "nu": {
+   "ao-dai": [
+    "quan-lua"
+   ],
+   "ao-ngu-than": [
+    "quan-lua",
+    "khan-van"
+   ],
+   "ao-tac": [
+    "quan-lua",
+    "khan-van"
+   ],
+   "ao-tu-than": [
+    "vay-den",
+    "yem",
+    "that-lung",
+    "khan-mo-qua"
+   ],
+   "ao-ba-ba": [
+    "quan-den",
+    "khan-ran"
+   ],
+   "ao-nhat-binh": [
+    "xiem",
+    "ao-dai-lot",
+    "khan-vanh"
+   ],
+   "ao-giao-linh": [
+    "xiem",
+    "ao-lot-giao"
+   ],
+   "ao-the": [
+    "quan-lua",
+    "ao-lot-trang",
+    "khan-van"
+   ],
+   "ao-vien-linh": [
+    "quan-lua"
+   ]
+  },
+  "nam": {
+   "ao-dai": [
+    "quan-lua"
+   ],
+   "ao-ngu-than": [
+    "quan-lua",
+    "khan-xep"
+   ],
+   "ao-tac": [
+    "quan-lua",
+    "khan-xep"
+   ],
+   "ao-the": [
+    "quan-lua",
+    "ao-lot-trang",
+    "khan-xep"
+   ],
+   "ao-tu-than": [
+    "quan-lua",
+    "ao-lot-trang",
+    "khan-xep"
+   ],
+   "ao-ba-ba": [
+    "quan-den",
+    "khan-ran"
+   ],
+   "ao-vien-linh": [
+    "quan-lua"
+   ],
+   "ao-nhat-binh": [
+    "quan-lua"
+   ],
+   "ao-giao-linh": [
+    "quan-lua",
+    "ao-lot-giao"
+   ]
+  }
+ },
+ "PIECE_SIDE": {
+  "ao-croptop": "nu",
+  "chan-vay-xep-ly": "nu",
+  "chan-vay-bo": "nu",
+  "khan-van": "nu",
+  "khan-mo-qua": "nu",
+  "non-quai-thao": "nu",
+  "tram-cai-toc": "nu",
+  "khuyen-ngoc": "nu",
+  "vay-den": "nu",
+  "yem": "nu",
+  "khan-vanh": "nu",
+  "khan-xep": "nam",
+  "ao-the": "nam",
+  "ao-vien-linh": "nam",
+  "ao-khoac-bo": "both",
+  "ao-vest": "both",
+  "ao-ni-mu": "both",
+  "ao-len-cai-cuc": "both",
+  "ao-bomber": "both",
+  "ao-varsity": "both",
+  "ao-khoac-da": "both",
+  "ao-mang-to": "both",
+  "so-mi-oversize": "both",
+  "ao-thun-trang": "both",
+  "ao-co-lo": "both",
+  "quan-bo-ong-rong": "both",
+  "quan-tay": "both",
+  "quan-cargo": "both",
+  "quan-ong-loe": "both",
+  "giay-luoi": "both",
+  "bot-co-cao": "both",
+  "giay-cao-co": "both",
+  "giay-de-tho": "both",
+  "giay-bup-be": "both",
+  "mu-luoi-trai": "both",
+  "mu-tai-beo": "both",
+  "mu-beret": "both",
+  "mu-len": "both",
+  "tai-nghe": "both",
+  "tui-deo-cheo": "both",
+  "balo": "both",
+  "tui-bao-tu": "both",
+  "that-lung-ban-to": "both",
+  "non-la": "both",
+  "khan-ran": "both",
+  "guoc-moc": "both",
+  "hai-theu": "both",
+  "giay-the-thao": "both",
+  "tui-vai": "both",
+  "kinh-mat": "both",
+  "vong-co": "both",
+  "quat-giay": "both",
+  "vong-tay-bac": "both",
+  "thao-dai": "both",
+  "o-giay": "both",
+  "quan-lua": "both",
+  "quan-den": "both",
+  "xiem": "both",
+  "that-lung": "both",
+  "ao-lot-trang": "both",
+  "ao-lot-giao": "both",
+  "ao-dai-lot": "both",
+  "ao-dai": "both",
+  "ao-ngu-than": "both",
+  "ao-tac": "both",
+  "ao-tu-than": "nu",
+  "ao-ba-ba": "both",
+  "ao-nhat-binh": "nu",
+  "ao-giao-linh": "both"
+ },
+ "NAM_OF": {
+  "ao-tu-than": "ao-the",
+  "ao-nhat-binh": "ao-vien-linh",
+  "ao-dai": "ao-dai",
+  "ao-ngu-than": "ao-ngu-than",
+  "ao-tac": "ao-tac",
+  "ao-ba-ba": "ao-ba-ba",
+  "ao-giao-linh": "ao-giao-linh",
+  "ao-the": "ao-the",
+  "ao-vien-linh": "ao-vien-linh"
+ }
+}

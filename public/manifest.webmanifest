@@ -1,0 +1,13 @@
+{
+  "name": "Nghê Cót · Giấy",
+  "short_name": "Nghê Giấy",
+  "lang": "vi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2E8D5",
+  "theme_color": "#A2231E",
+  "icons": [
+    { "src": "/icons/giay-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/giay-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

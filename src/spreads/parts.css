@@ -1,0 +1,476 @@
+/* Parts spread styles */
+
+/* ----------------------------------------------------
+   Left Page: Doll, Tabs Board, Magnifier Lens
+---------------------------------------------------- */
+
+.parts-page {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+}
+
+.parts-floor {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.parts-casts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.parts-die-cut {
+  display: block;
+  filter: var(--die);
+  user-select: none;
+  pointer-events: none;
+}
+
+.parts-doll-stand {
+  transform-style: preserve-3d;
+}
+
+.parts-doll-box {
+  transform-style: preserve-3d;
+  user-select: none;
+}
+
+/* Pinned flap on the doll */
+.pflap {
+  position: absolute;
+  width: 40px;
+  height: 34px;
+  margin: -4px 0 0 -20px;
+  transform-origin: 50% 0;
+  transform: translateZ(2px) rotateX(var(--lift, 0deg));
+  transition: transform 0.45s cubic-bezier(0.3, 1.5, 0.5, 1);
+  background-color: #FBF7EE;
+  border-radius: 2px 2px 6px 6px;
+  box-shadow: 0 2px 0 rgba(42, 33, 27, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.pflap::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1.5px dashed rgba(180, 48, 43, 0.45);
+  border-radius: 1px 1px 4px 4px;
+  pointer-events: none;
+}
+
+.pflap.selected {
+  --lift: 70deg;
+  background-color: var(--son);
+}
+
+.pflap.selected::after {
+  border-color: #ffffff;
+}
+
+.pflap:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* Brass pin (hinge) */
+.parts-pin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #F3D98A, #C9A13B 55%, #7A5A1E);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  transform: translateZ(4px);
+  z-index: 12;
+}
+
+/* Tab Board */
+.parts-tabs-board {
+  width: 100%;
+  height: 100%;
+  background-color: #8E6A43;
+  background-image: var(--board-img, url(/book/tex/bia-kraft.webp));
+  background-blend-mode: multiply;
+  background-size: cover;
+  border-radius: 4px;
+  padding: 16px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  box-shadow: var(--thick);
+}
+
+.parts-tab-slot {
+  position: relative;
+  height: 42px;
+  margin-left: 12px;
+}
+
+.parts-tab-slot::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 6px;
+  bottom: 6px;
+  width: 14px;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.parts-pull-tab {
+  position: relative;
+  width: 150px;
+  height: 42px;
+  background: url(/book/mech/pull-tab.webp) left center / auto 100% no-repeat;
+  color: #ffffff;
+  font: 700 14px/42px var(--font-ui);
+  padding: 0 0 0 16px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transform: translateX(-4px);
+  transition: transform 0.35s cubic-bezier(0.3, 1.6, 0.5, 1);
+  box-sizing: border-box;
+  z-index: 2;
+  border-radius: 0 4px 4px 0;
+}
+
+.parts-pull-tab.selected {
+  transform: translateX(34px);
+}
+
+.parts-pull-tab:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* Magnifier Lens */
+.parts-lens-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.parts-lens-circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #FBF7EE;
+  box-shadow: inset 0 0 0 7px #FBF7EE, inset 0 0 0 9px var(--nghe), 0 2px 0 rgba(42, 33, 27, 0.2);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.parts-lens-inner {
+  position: absolute;
+  inset: 9px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #FBF7EE;
+}
+
+.parts-lens-img {
+  position: absolute;
+  max-width: none;
+  max-height: none;
+  pointer-events: none;
+  transition: left 0.35s cubic-bezier(0.3, 1.5, 0.5, 1), top 0.35s cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+
+.parts-lens-label {
+  margin-top: 8px;
+  font: 800 13px var(--font-head);
+  color: #ffffff;
+  background-color: var(--ink);
+  padding: 3px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  box-shadow: 0 1px 2px rgba(42, 33, 27, 0.2);
+}
+
+/* ----------------------------------------------------
+   Right Page: Title Card, LiftFlap Card, With Sheet
+---------------------------------------------------- */
+
+.parts-right-page {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+  --up: 1;
+}
+
+/* Thin red frame from prompt 12 */
+.parts-red-frame {
+  position: absolute;
+  inset: 18px;
+  border: 2px solid rgba(180, 48, 43, 0.55);
+  outline: 1px solid rgba(180, 48, 43, 0.35);
+  outline-offset: 5px;
+  transform: translateZ(0.3px);
+  pointer-events: none;
+}
+
+/* 2. The title card */
+.parts-title-card {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 66px 40px 30px;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: var(--thick);
+}
+
+.parts-eyebrow {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--son);
+}
+
+.parts-aka-line {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--ink-2);
+  margin-top: 4px;
+}
+
+.parts-part-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--son);
+  margin: 10px 0 12px;
+}
+
+.parts-role-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.parts-role-label {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--son);
+  flex-shrink: 0;
+}
+
+.parts-role-desc {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+/* 3. The flap card */
+.parts-flap-stand {
+  transform-style: preserve-3d;
+}
+
+.parts-flap-top-card {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 22px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+}
+
+.parts-flap-base-card {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 22px;
+  box-sizing: border-box;
+  position: relative;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.parts-flap-heading {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+}
+
+.parts-flap-heading-son {
+  color: var(--son);
+}
+
+.parts-flap-heading-white {
+  color: #ffffff;
+}
+
+.parts-flap-body {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.parts-flap-body-ink {
+  color: var(--ink);
+}
+
+.parts-flap-body-white {
+  color: #ffffff;
+}
+
+/* 4. "Mặc cùng" with sheet */
+.parts-with-card {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 16px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.parts-with-heading {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--son);
+  margin: 0 0 2px 0;
+}
+
+.parts-with-hint {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--ink-2);
+  margin: 0 0 8px 0;
+}
+
+.parts-with-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.parts-companion-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 118px;
+  width: 70px;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.parts-companion-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.parts-companion-tape {
+  position: relative;
+  width: 30px;
+  height: 12px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+  margin-bottom: 2px;
+  pointer-events: none;
+}
+
+.parts-companion-img-wrap {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parts-companion-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff) drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff);
+  pointer-events: none;
+}
+
+.parts-companion-name {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.25;
+  color: var(--ink-2);
+  text-align: center;
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pflap,
+  .parts-pull-tab,
+  .parts-lens-img,
+  .parts-companion-btn {
+    transition: none !important;
+  }
+}
+
+:root[data-reduced="1"] .pflap,
+:root[data-reduced="1"] .parts-pull-tab,
+:root[data-reduced="1"] .parts-lens-img,
+:root[data-reduced="1"] .parts-companion-btn {
+  transition: none !important;
+}

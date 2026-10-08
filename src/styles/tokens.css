@@ -1,0 +1,12 @@
+:root {
+  --do: #F4ECDD; --do-2: #EADFCB; --card: #FFFDF8; --kraft: #B98E5E; --kraft-dk: #8E6A43;
+  --ink: #2A211B; --ink-2: #6A5B4D; --son: #B4302B; --son-dk: #7E1F1A; --cham: #2C3E63;
+  --nghe: #C9A13B; --sen: #E9A7A0; --la: #6F8F5B; --desk: #9EC0B0;
+  --thick: 0 3px 0 rgba(42,33,27,.18);
+  --lift: 0 14px 26px -10px rgba(42,33,27,.35);
+  --die: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff) drop-shadow(0 1.5px 0 #fff)
+         drop-shadow(0 -1.5px 0 #fff) drop-shadow(0 3px 0 rgba(42,33,27,.18))
+         drop-shadow(10px 14px 10px rgba(42,33,27,.30));
+  --font-head: "Bricolage Grotesque", "Be Vietnam Pro", sans-serif;
+  --font-ui: "Be Vietnam Pro", system-ui, sans-serif;
+}

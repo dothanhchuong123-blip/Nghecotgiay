@@ -1,0 +1,86 @@
+{
+ "CITIES": [
+  {
+   "id": "ha-noi",
+   "name": "Hà Nội",
+   "lat": 21.03,
+   "lon": 105.85,
+   "region": "Bắc"
+  },
+  {
+   "id": "hai-phong",
+   "name": "Hải Phòng",
+   "lat": 20.86,
+   "lon": 106.68,
+   "region": "Bắc"
+  },
+  {
+   "id": "hue",
+   "name": "Huế",
+   "lat": 16.46,
+   "lon": 107.59,
+   "region": "Trung"
+  },
+  {
+   "id": "da-nang",
+   "name": "Đà Nẵng",
+   "lat": 16.05,
+   "lon": 108.2,
+   "region": "Trung"
+  },
+  {
+   "id": "da-lat",
+   "name": "Đà Lạt",
+   "lat": 11.94,
+   "lon": 108.44,
+   "region": "Trung"
+  },
+  {
+   "id": "tp-hcm",
+   "name": "TP. Hồ Chí Minh",
+   "lat": 10.78,
+   "lon": 106.7,
+   "region": "Nam"
+  },
+  {
+   "id": "can-tho",
+   "name": "Cần Thơ",
+   "lat": 10.03,
+   "lon": 105.78,
+   "region": "Nam"
+  }
+ ],
+ "SKY_NAME": {
+  "nang": "Nắng",
+  "may": "Nhiều mây",
+  "mua": "Mưa",
+  "giong": "Dông",
+  "suong": "Sương mù"
+ },
+ "LEVELS": {
+  "1": {
+   "level": 1,
+   "name": "Chuẩn cổ phục",
+   "remixLevel": 15,
+   "vibeId": "hoai-co",
+   "glaze": "nước sơn gỗ son vàng",
+   "line": "Giữ phom dáng truyền thống, chỉ một điểm nhấn nhỏ."
+  },
+  "2": {
+   "level": 2,
+   "name": "Giao thoa",
+   "remixLevel": 50,
+   "vibeId": "hoc-duong",
+   "glaze": "men lam Chu Đậu, khăn thổ cẩm",
+   "line": "Một món hiện đại làm lớp phối, dáng áo vẫn nhận ra."
+  },
+  "3": {
+   "level": 3,
+   "name": "Đường phố",
+   "remixLevel": 85,
+   "vibeId": "duong-pho",
+   "glaze": "nước sơn phố, đội mũ bảo hiểm",
+   "line": "Khoác, lồng đồ hiện đại với áo; phối giao thoa mạnh tay."
+  }
+ }
+}

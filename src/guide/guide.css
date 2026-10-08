@@ -1,0 +1,249 @@
+/* Guide tour overlay & popup styles */
+
+.guide-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: auto;
+}
+
+/* Full backdrop dim when target element is not found */
+.guide-dim-full {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 12, 6, 0.62);
+  pointer-events: auto;
+}
+
+/* Hole spotlight landing on the real button with 10px margin around */
+.guide-hole {
+  position: fixed;
+  border-radius: 14px;
+  box-shadow: 0 0 0 9999px rgba(20, 12, 6, 0.62);
+  outline: 2px dashed #C9A13B;
+  outline-offset: 2px;
+  animation: guide-pulse 1.8s ease-in-out infinite;
+  pointer-events: none;
+  box-sizing: border-box;
+  transition: left 0.22s ease-out, top 0.22s ease-out, width 0.22s ease-out, height 0.22s ease-out;
+}
+
+@keyframes guide-pulse {
+  0%, 100% {
+    outline-color: rgba(201, 161, 59, 1);
+    outline-offset: 2px;
+  }
+  50% {
+    outline-color: rgba(255, 215, 0, 0.35);
+    outline-offset: 5px;
+  }
+}
+
+/* 340px cream card with 3px ink border & hard shadow 6px 7px 0 ink */
+.guide-card {
+  position: fixed;
+  width: 340px;
+  max-width: calc(100vw - 32px);
+  background-color: var(--card, #FFFDF8);
+  border: 3px solid var(--ink, #2A211B);
+  box-shadow: 6px 7px 0 var(--ink, #2A211B);
+  border-radius: 12px;
+  padding: 22px 20px 18px;
+  box-sizing: border-box;
+  z-index: 201;
+  pointer-events: auto;
+  animation: guide-card-spring 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: left 0.22s ease-out, top 0.22s ease-out;
+}
+
+@keyframes guide-card-spring {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Peeking mascot pose over top right corner */
+.guide-card-peek {
+  position: absolute;
+  top: -46px;
+  right: 14px;
+  height: 64px;
+  width: auto;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 2px 0 rgba(42, 33, 27, 0.18));
+}
+
+/* Step counter "Bước i/n" */
+.guide-card-step {
+  font-family: var(--font-head);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--son, #B4302B);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+/* Title */
+.guide-card-title {
+  font-family: var(--font-head);
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--ink, #2A211B);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+/* Description text */
+.guide-card-text {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink, #2A211B);
+  margin: 0 0 18px;
+}
+
+/* Bottom area with dots and action buttons */
+.guide-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Dots row */
+.guide-card-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.guide-card-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--do-2, #EADFCB);
+  border: 1px solid var(--ink-2, #6A5B4D);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.guide-card-dot.is-active {
+  width: 20px;
+  border-radius: 4px;
+  background-color: var(--son, #B4302B);
+  border-color: var(--ink, #2A211B);
+}
+
+.guide-card-dot:focus-visible {
+  outline: 2px solid var(--son, #B4302B);
+  outline-offset: 2px;
+}
+
+/* Actions footer */
+.guide-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guide-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* General button */
+.guide-btn {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-btn:focus-visible {
+  outline: 2px solid var(--son, #B4302B);
+  outline-offset: 2px;
+}
+
+/* "Bỏ qua" button */
+.guide-btn-skip {
+  background: transparent;
+  border: none;
+  color: var(--ink-2, #6A5B4D);
+  font-weight: 500;
+  text-decoration: underline;
+  padding: 4px 2px;
+  transition: color 0.15s ease;
+}
+
+.guide-btn-skip:hover {
+  color: var(--ink, #2A211B);
+}
+
+/* "←" back button */
+.guide-btn-back {
+  background: var(--do, #F4ECDD);
+  color: var(--ink, #2A211B);
+  border: 2px solid var(--ink, #2A211B);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 700;
+  box-shadow: 0 2px 0 rgba(42, 33, 27, 0.18);
+  transition: transform 0.1s ease;
+}
+
+.guide-btn-back:hover {
+  background: var(--do-2, #EADFCB);
+}
+
+.guide-btn-back:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(42, 33, 27, 0.18);
+}
+
+/* "Tiếp →" and "Xong!" button */
+.guide-btn-next {
+  background: var(--son, #B4302B);
+  color: #ffffff;
+  border: 2px solid var(--ink, #2A211B);
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 0 var(--ink, #2A211B);
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+.guide-btn-next:hover {
+  background: var(--son-dk, #7E1F1A);
+}
+
+.guide-btn-next:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 var(--ink, #2A211B);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .guide-hole,
+  .guide-card {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+:root[data-reduced="1"] .guide-hole,
+:root[data-reduced="1"] .guide-card {
+  animation: none !important;
+  transition: none !important;
+}

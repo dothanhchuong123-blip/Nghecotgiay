@@ -1,0 +1,548 @@
+.lich-wall {
+  position: absolute;
+  left: 166px;
+  top: 64px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: left 0.4s ease;
+  pointer-events: auto;
+}
+
+.lich-wall.is-cover {
+  left: 260px;
+}
+
+@media (max-width: 767px) {
+  .lich-wall {
+    display: none !important;
+  }
+}
+
+.design-frame-mobile .lich-wall {
+  display: none !important;
+}
+
+@keyframes lich-swing {
+  0% {
+    transform: rotate(-1.5deg);
+  }
+  50% {
+    transform: rotate(1.5deg);
+  }
+  100% {
+    transform: rotate(-1.5deg);
+  }
+}
+
+.lich-wall-pad {
+  width: 104px;
+  height: 150px;
+  background-image: url(/book/calendar/lich-bloc.webp);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  padding: 24px 8px 10px 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  transform-origin: 50% 8px;
+  animation: lich-swing 4s ease-in-out infinite;
+  box-shadow: var(--thick);
+}
+
+.lich-wall-pad:hover {
+  animation-duration: 1.5s;
+}
+
+.lich-wall-pad:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.lich-month {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--ink-2);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.lich-day {
+  font-family: var(--font-head);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 44px;
+  color: var(--son);
+  margin: 1px 0 0 0;
+}
+
+.lich-weekday {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--ink);
+  margin: 1px 0 2px 0;
+}
+
+.lich-wx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.lich-wx-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+.lich-wx-temp {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  color: var(--ink-2);
+}
+
+.lich-wall-pill {
+  margin-top: 8px;
+  background-color: var(--son);
+  color: var(--card);
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  box-shadow: var(--thick);
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.lich-wall-pill:hover {
+  background-color: var(--son-dk);
+  transform: translateY(-1px);
+}
+
+.lich-wall-pill.is-dark {
+  background-color: var(--ink);
+  color: var(--card);
+}
+
+.lich-wall-pill.is-dark:hover {
+  background-color: #1a1410;
+  transform: translateY(-1px);
+}
+
+.lich-wall-pill:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.lich-pad-wrapper {
+  position: relative;
+  width: 104px;
+  height: 150px;
+}
+
+@keyframes lich-fly-off {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(120px, 260px) rotate(70deg);
+    opacity: 0;
+  }
+}
+
+.lich-flying-sheet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 104px;
+  height: 150px;
+  background-image: url(/book/calendar/lich-bloc.webp);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 24px 8px 10px 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+  box-shadow: var(--thick);
+  z-index: 10;
+  animation: lich-fly-off 700ms cubic-bezier(0.2, 0.7, 0.4, 1) forwards;
+}
+
+/* Modal Dim Veil */
+@keyframes today-veil-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.today-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background-color: rgba(42, 33, 27, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  animation: today-veil-fade 0.2s ease-out;
+}
+
+/* Modal Card with Spring */
+@keyframes today-spring-in {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  65% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  85% {
+    transform: scale(0.985);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.today-card {
+  position: relative;
+  width: 374px;
+  max-width: calc(100vw - 32px);
+  min-height: 436px;
+  background-image: url(/book/calendar/lich-bloc.webp);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 24px 28px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--thick), var(--lift);
+  animation: today-spring-in 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  user-select: none;
+}
+
+/* Close Button */
+.today-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--card);
+  color: var(--ink);
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--thick);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  z-index: 3;
+}
+
+.today-close-btn:hover {
+  background-color: var(--do-2);
+  transform: scale(1.05);
+}
+
+.today-close-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* Date Display */
+.today-month-year {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-2);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.today-day {
+  font-family: var(--font-head);
+  font-size: 74px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--son);
+  margin: 2px 0 0 0;
+}
+
+.today-weekday {
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.today-lunar {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-2);
+  margin-bottom: 16px;
+}
+
+/* Cities Chips */
+.today-cities {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.today-chip {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(42, 33, 27, 0.18);
+  background-color: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: var(--thick);
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.today-chip:hover {
+  background-color: var(--do-2);
+  transform: translateY(-1px);
+}
+
+.today-chip:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.today-chip.is-active {
+  background-color: var(--son);
+  color: #fff;
+  border-color: var(--son);
+}
+
+.today-chip.is-active:hover {
+  background-color: var(--son-dk);
+}
+
+/* Weather Line & Status */
+.today-wx-section {
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.today-wx-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.today-wx-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.today-wx-text {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.today-wx-status {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+/* Manual Weather Chips */
+.today-manual-chips {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.today-manual-chip {
+  font-size: 11px;
+  padding: 3px 10px;
+  background-color: var(--do-2);
+}
+
+/* Countdown */
+.today-countdown {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--son);
+  background-color: rgba(180, 48, 43, 0.08);
+  border: 1px dashed var(--son);
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin: 6px 0 16px 0;
+  max-width: 90%;
+}
+
+/* Big Red Outfit Button */
+.today-outfit-btn {
+  margin-top: 4px;
+  background-color: var(--son);
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 800;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  border: none;
+  box-shadow: var(--thick);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  letter-spacing: 0.02em;
+}
+
+.today-outfit-btn:hover {
+  background-color: var(--son-dk);
+  transform: translateY(-1px);
+}
+
+.today-outfit-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* Guide peeking at bottom right */
+.today-guide-peek {
+  position: absolute;
+  right: -24px;
+  bottom: -20px;
+  width: 88px;
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 0 rgba(42, 33, 27, 0.18));
+  z-index: 2;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .lich-wall {
+    transition: none !important;
+  }
+  .lich-wall-pad {
+    animation: none !important;
+    transform: none !important;
+  }
+  .lich-wall-pill {
+    transition: none !important;
+    transform: none !important;
+  }
+  .today-veil {
+    animation: none !important;
+  }
+  .today-card {
+    animation: none !important;
+    transform: none !important;
+  }
+  .today-close-btn,
+  .today-chip,
+  .today-outfit-btn {
+    transition: none !important;
+    transform: none !important;
+  }
+  .lich-flying-sheet {
+    animation: none !important;
+    display: none !important;
+  }
+}
+
+:root[data-reduced="1"] .lich-wall {
+  transition: none !important;
+}
+
+:root[data-reduced="1"] .lich-wall-pad {
+  animation: none !important;
+  transform: none !important;
+}
+
+:root[data-reduced="1"] .lich-wall-pill {
+  transition: none !important;
+  transform: none !important;
+}
+
+:root[data-reduced="1"] .lich-flying-sheet {
+  animation: none !important;
+  display: none !important;
+}
+
+:root[data-reduced="1"] .today-veil {
+  animation: none !important;
+}
+
+:root[data-reduced="1"] .today-card {
+  animation: none !important;
+  transform: none !important;
+}
+
+:root[data-reduced="1"] .today-close-btn,
+:root[data-reduced="1"] .today-chip,
+:root[data-reduced="1"] .today-outfit-btn {
+  transition: none !important;
+  transform: none !important;
+}

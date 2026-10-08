@@ -1,0 +1,317 @@
+.topbar {
+  height: 64px;
+  padding: 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-seal {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  transform: rotate(-3deg);
+  box-shadow: var(--thick);
+  user-select: none;
+  display: block;
+}
+
+.topbar-brand {
+  background-color: var(--do);
+  background-image: url(/icons/do-label.webp);
+  background-position: center;
+  background-size: cover;
+  padding: 6px 14px;
+  border-radius: 3px;
+  transform: rotate(-1deg);
+  box-shadow: var(--thick);
+  display: inline-flex;
+  align-items: center;
+}
+
+.topbar-app-name {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-side-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.topbar-side-chip {
+  position: absolute;
+  top: 100%;
+  margin-top: 5px;
+  white-space: nowrap;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--ink-2);
+  background-color: var(--card);
+  border: 1px solid rgba(42, 33, 27, 0.12);
+  padding: 2px 10px;
+  border-radius: 999px;
+  box-shadow: 0 2px 0 rgba(42, 33, 27, 0.12);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.topbar-side-switch {
+  background-color: var(--card);
+  padding: 4px;
+  border-radius: 999px;
+  box-shadow: var(--thick), var(--lift);
+  display: flex;
+  align-items: center;
+}
+
+.topbar-side-btn {
+  padding: 6px 16px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.topbar-side-btn-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.topbar-side-btn-active {
+  background-color: var(--son);
+  color: #fff;
+}
+
+.topbar-side-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.topbar-guide-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFD75A;
+  border: none;
+  box-shadow: var(--thick);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--ink);
+  transition: transform 120ms ease, background-color 150ms ease;
+}
+
+.topbar-guide-btn:hover {
+  transform: translateY(-1px);
+}
+
+.topbar-guide-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.topbar-sound-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--card);
+  border: none;
+  box-shadow: var(--thick);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--ink);
+  transition: transform 120ms ease, background-color 150ms ease, color 150ms ease;
+}
+
+.topbar-sound-btn[aria-pressed="true"],
+.topbar-sound-btn.sound-on {
+  background-color: var(--son);
+  color: var(--card);
+}
+
+.topbar-sound-btn:hover {
+  transform: translateY(-1px);
+}
+
+.topbar-sound-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.topbar-replay-btn {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background-color: var(--card);
+  border: none;
+  box-shadow: var(--thick);
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: transform 120ms ease;
+}
+
+.topbar-replay-btn:disabled,
+.topbar-replay-btn.is-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.topbar-replay-btn:hover {
+  transform: translateY(-1px);
+}
+
+.topbar-replay-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+:root[data-reduced="1"] .topbar-sound-btn,
+:root[data-reduced="1"] .topbar-guide-btn,
+:root[data-reduced="1"] .topbar-replay-btn,
+:root[data-reduced="1"] .topbar-side-btn {
+  transform: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topbar-sound-btn,
+  .topbar-guide-btn,
+  .topbar-replay-btn,
+  .topbar-side-btn {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    height: 56px;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  .topbar-left {
+    gap: 8px;
+  }
+
+  .topbar-seal {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topbar-brand {
+    padding: 4px 8px;
+  }
+
+  .topbar-app-name {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .topbar-right {
+    gap: 6px;
+  }
+
+  .topbar-side-switch {
+    padding: 2px;
+    height: 44px;
+    box-sizing: border-box;
+  }
+
+  .topbar-side-btn {
+    padding: 0 10px;
+    height: 40px;
+    min-height: 40px;
+    min-width: 44px;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topbar-guide-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 20px;
+  }
+
+  .topbar-sound-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 18px;
+  }
+
+  .topbar-replay-btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .topbar-replay-label {
+    display: none;
+  }
+}
+
+/* Phones: no room for the name beside the controls; the seal stands in for it */
+@media (max-width: 480px) {
+  .topbar-brand {
+    display: none;
+  }
+}

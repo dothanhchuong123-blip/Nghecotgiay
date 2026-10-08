@@ -1,0 +1,257 @@
+{
+  "app": {
+    "name": "Nghê Cót · Giấy",
+    "edition": "phiên bản giấy",
+    "tagline": "Sách nổi Việt phục: mở ra, kéo thẻ, lật nắp, xoay bánh giấy."
+  },
+  "cover": {
+    "open": "Mở sách",
+    "hint": "Chạm vào một chiếc áo trên đèn kéo quân để mở chương của nó",
+    "skip": "Vào thẳng sách"
+  },
+  "chapters": {
+    "ready": [
+      "ao-giao-linh",
+      "ao-ngu-than",
+      "ao-dai",
+      "ao-tac",
+      "ao-tu-than",
+      "ao-ba-ba",
+      "ao-nhat-binh"
+    ],
+    "soonTitle": "Sắp ra mắt",
+    "soonLine": "Chương này còn đang được cắt giấy. Nghê hẹn bạn lần sau nhé!"
+  },
+  "side": {
+    "label": "Phái",
+    "nu": "Nữ",
+    "nam": "Nam",
+    "only": "Áo này chỉ có bản {side}"
+  },
+  "spreads": {
+    "meet": "Gặp áo",
+    "parts": "Cấu tạo",
+    "story": "Chuyện áo",
+    "compare": "Đừng nhầm",
+    "mix": "Phối đồ"
+  },
+  "spreadPage": "Trang {n}",
+  "hints": {
+    "meet": "Di chuột hoặc nghiêng máy để nhìn sâu vào từng lớp giấy",
+    "parts": "Nhấc mảnh giấy trên áo hoặc kéo thẻ đỏ để xem từng chi tiết",
+    "story": "Xoay bánh giấy để đi qua từng thời",
+    "compare": "Kéo thẻ đỏ ở mép sách để đổi áo, nhấc từng mảnh để so",
+    "mix": "Chọn món trong ngăn kéo, xoay mặt trống để đổi mức phối"
+  },
+  "parts": {
+    "pull": "Kéo",
+    "role": "Vai trò",
+    "detail": "Chi tiết",
+    "avoid": "Tránh nhầm",
+    "roles": {
+      "collar": "Định hình thức áo và vẻ đoan trang quanh khuôn mặt",
+      "closure": "Giữ vạt áo kín đáo, đúng cách cài của từng loại áo",
+      "sleeves": "Cho biết áo dùng để làm việc hay để dự lễ (tay chẽn hay tay thụng)",
+      "hem": "Tạo dáng đứng của áo; số thân, số tà là dấu hiệu nhận ra từng loại áo",
+      "worn_with": "Hoàn thiện cả bộ, từ quần lụa, áo lót đến khăn đội đầu"
+    },
+    "avoid_text": {
+      "collar": "May cổ quá rộng, trễ nải, hoặc cài vạt ngược chiều so với áo mẫu",
+      "closure": "Dùng khuy kiểu khác, như cúc tàu thắt nút, không đúng cách cài của áo",
+      "sleeves": "Đổi tay áo thành kiểu bó sát hiện đại làm mất phom tay truyền thống",
+      "hem": "Xẻ tà quá cao lên eo (giống sườn xám) hoặc cắt tà cụt",
+      "worn_with": "Mặc cùng quần bó hiện đại hoặc thiếu lớp áo lót bên trong"
+    },
+    "lens": "Kính lúp",
+    "lift": "Nhấc lên",
+    "withSheet": "Mặc cùng",
+    "withHint": "Chạm để mặc hoặc cởi"
+  },
+  "story": {
+    "turn": "Xoay",
+    "source": "Nguồn",
+    "now": "Hôm nay"
+  },
+  "compare": {
+    "pull": "Kéo",
+    "viet": "Việt phục",
+    "notViet": "Không phải Việt phục",
+    "diff": "Khác ở đâu?",
+    "otherSide": "Trang này đang dùng ví dụ của bản {side}",
+    "liftHint": "Nhấc từng mảnh để so",
+    "flapHint": "nhấc ↑"
+  },
+  "mix": {
+    "drawer": "Ngăn kéo",
+    "groups": {
+      "over": "Áo khoác",
+      "under": "Áo trong",
+      "bottom": "Quần, váy",
+      "feet": "Giày dép",
+      "head": "Trên đầu",
+      "carry": "Túi",
+      "jewel": "Trang sức",
+      "waist": "Thắt lưng"
+    },
+    "colors": "Màu áo",
+    "drum": "Mặt trống",
+    "reset": "Mặc lại từ đầu",
+    "nghePick": "Nghê phối giúp",
+    "checking": "Nghê đang ngắm…",
+    "offline": "Nghê đang nghỉ mạng, đây là lời khuyên Nghê viết sẵn.",
+    "ok": "Phối đẹp",
+    "warn": "Nên xem lại",
+    "block": "Không phối được",
+    "blockedTap": "Món này che mất nét của áo, Nghê không cho mặc cùng.",
+    "jump": "Phối ngay",
+    "sheet": "Tờ sticker",
+    "wearing": "đang mặc",
+    "vibes": "Gu của bạn",
+    "vibeHint": "Chọn một gu, Nghê xếp món hợp gu lên đầu tờ sticker",
+    "score": "Nghê chấm",
+    "scoreUnit": "điểm",
+    "scoreLines": {
+      "high": "Đỉnh nóc kịch trần! Áo vẫn ra áo, phối vẫn ra phối.",
+      "mid": "Ổn áp đó! Chỉnh thêm một chút là chuẩn bài.",
+      "low": "Hơi lạc trôi rồi, nét áo đang bị che mất. Thử lại nhé!"
+    },
+    "lucky": "Bốc thăm",
+    "luckyHint": "Chạm để Nghê gấp mở, dừng ở ô nào phối kiểu đó",
+    "luckyDirs": [
+      "Đông",
+      "Tây",
+      "Nam",
+      "Bắc"
+    ],
+    "card": "In thẻ khoe",
+    "cardMaking": "Nghê đang in thẻ…",
+    "cardSaved": "Thẻ đã lưu vào máy, khoe liền đi!",
+    "cardFooter": "Nghê Cót · Giấy",
+    "levelNotHere": "Áo này chỉ phối ở mức trang trọng",
+    "zones": {
+      "collar": "cổ áo",
+      "closure": "đường cài",
+      "sleeves": "tay áo",
+      "ta": "tà áo",
+      "hem": "gấu áo",
+      "waist": "thắt lưng",
+      "inner": "lớp áo trong"
+    },
+    "issues": {
+      "R1": "{piece} đang che {zone}, nét riêng của áo bị mất.",
+      "R2": "Mức {level} mà nhiều món hiện đại quá, bớt một món nhé.",
+      "R4": "Áo tay thụng không khoác thêm áo ngoài được, tay áo sẽ bị đè.",
+      "R5skirt": "Chân váy chỉ hợp với áo tứ thân hoặc áo bà ba.",
+      "R5robe": "Áo lễ phục nên giữ quần, váy truyền thống đi kèm.",
+      "R3": "Áo khoác lửng giữa chừng sẽ cắt ngang tà áo. Chọn lớp ngắn hoặc dài hẳn nhé.",
+      "R6": "Áo lễ phục này hiếm khi phối ở mức {level}, dễ bị hiểu lệch nét áo."
+    },
+    "stars": {
+      "hon": "Giữ hồn áo",
+      "mau": "Hợp màu",
+      "mix": "Dám mix"
+    },
+    "worldHint": {
+      "here": {
+        "1": "Chuẩn cổ phục",
+        "2": "Giao thoa",
+        "3": "Đường phố"
+      },
+      "lines": {
+        "1": "Bộ này hơi lạc ở {from} ({fromScore}). Qua **Chuẩn cổ phục** nó được **{toScore}** điểm đó!",
+        "2": "Bộ này chưa tới ở {from} ({fromScore}). Qua **Giao thoa** nó được **{toScore}** điểm nè!",
+        "3": "Bộ này chưa hợp ở {from} ({fromScore}). Qua **Đường phố** nó lên **{toScore}** điểm luôn!"
+      },
+      "go": "Qua xem",
+      "close": "Để sau"
+    },
+    "recolor": {
+      "title": "Đổi màu món đồ",
+      "for": "Món",
+      "reset": "Màu gốc",
+      "suggest": "Nghê gợi ý màu",
+      "suggestSay": "Nghê đã chọn màu hợp với áo, xem thử nhé!",
+      "empty": "Mặc thêm món hiện đại để đổi màu cho nó.",
+      "best": "Hợp nhất"
+    },
+    "almost": "Gần được rồi"
+  },
+  "nghe": {
+    "hello": "Nghê chào bạn! Nghê cũng làm bằng giấy, lật trang nào Nghê theo trang đó.",
+    "idle": [
+      "Kéo thử cái thẻ đỏ kia xem!",
+      "Nghê thích nghe tiếng giấy sột soạt.",
+      "Mỗi chiếc áo có một câu chuyện, Nghê kể cho nghe nhé?"
+    ]
+  },
+  "back": {
+    "title": "Bản 3D đang phát triển",
+    "line": "Nghê Cót còn một xưởng 3D: Nghê lên dây cót và in Thẻ Mộc trên bàn gỗ. Bản đó vẫn đang được làm tiếp.",
+    "pin": "Ảnh chụp bản 3D"
+  },
+  "settings": {
+    "sound": "Tiếng giấy",
+    "motion": "Giảm chuyển động"
+  },
+  "a11y": {
+    "prev": "Trang trước",
+    "next": "Trang sau",
+    "close": "Gập sách",
+    "chapter": "Chương {name}"
+  },
+  "system": {
+    "loading": "Nghê đang gấp giấy…",
+    "tiltAsk": "Cho phép nghiêng máy để nhìn sâu vào trang giấy",
+    "tiltOn": "Nghiêng máy để nhìn sâu hơn",
+    "artMissing": "Hình này chưa có",
+    "rotate": "Xoay dọc máy để đọc sách nhé"
+  },
+  "meet": {
+    "aka": "còn gọi",
+    "tags": "Nhận ra ngay",
+    "occ": "Mặc đi đâu?",
+    "ok": "Hợp",
+    "caution": "Cân nhắc",
+    "cta": "Phối đồ áo này →",
+    "sources": "Nguồn",
+    "replay": "Gập / mở lại"
+  },
+  "chat": {
+    "open": "Hỏi Nghê",
+    "title": "Sổ tay của Nghê",
+    "placeholder": "Hỏi Nghê về chiếc áo này…",
+    "send": "Gửi",
+    "suggest": {
+      "where": "Áo này mặc đi đâu?",
+      "story": "Kể chuyện áo này đi",
+      "mix": "Phối giúp Nghê một bộ"
+    },
+    "acted": "Nghê đã mặc thêm: {piece}",
+    "thinking": "Nghê đang lật sách…",
+    "offline": "Nghê đang nghỉ mạng, thử lại sau nhé.",
+    "close": "Gập sổ"
+  },
+  "photo": {
+    "button": "Nhờ Nghê chụp",
+    "needKey": "Nghê cần chìa khoá Gemini có trả phí của bạn để chụp ảnh. Trò chuyện thì không cần.",
+    "making": "Nghê đang chụp…",
+    "done": "Ảnh của bạn đây!",
+    "save": "Lưu ảnh",
+    "toCard": "Đưa lên thẻ khoe",
+    "fallback": "Chưa có chìa khoá: đây là thẻ búp bê của bạn.",
+    "fail": "Nghê chụp chưa được: {why}",
+    "why": {
+      "key": "chìa khoá không dùng được",
+      "quota": "hết lượt, thử lại sau",
+      "net": "mạng chập chờn"
+    }
+  },
+  "key": {
+    "title": "Chìa khoá Gemini",
+    "label": "Dán chìa khoá API của bạn",
+    "note": "Chìa khoá đi thẳng từ trình duyệt tới Google, không qua máy chủ của app, và bị quên khi bạn đóng tab.",
+    "use": "Dùng chìa khoá này",
+    "remove": "Bỏ chìa khoá",
+    "have": "Đang dùng chìa khoá của bạn"
+  }
+}

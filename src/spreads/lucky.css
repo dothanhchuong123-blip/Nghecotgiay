@@ -1,0 +1,180 @@
+/* Paper fortune teller ("đông tây nam bắc") overlay */
+
+.lucky-overlay {
+  position: absolute;
+  left: 425px;
+  top: 440px;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.lucky-teller {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  box-shadow: var(--thick), var(--lift);
+  user-select: none;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.lucky-teller.folding-away {
+  transform: scale(0.6);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lucky-triangle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+/* North / Top: polygon(0 0, 100% 0, 50% 50%) */
+.lucky-triangle-north {
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+  background-color: var(--card);
+}
+
+/* East / Right: polygon(100% 0, 100% 100%, 50% 50%) */
+.lucky-triangle-east {
+  clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+  background-color: var(--do-2);
+}
+
+/* South / Bottom: polygon(100% 100%, 0 100%, 50% 50%) */
+.lucky-triangle-south {
+  clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+  background-color: var(--card);
+}
+
+/* West / Left: polygon(0 100%, 0 0, 50% 50%) */
+.lucky-triangle-west {
+  clip-path: polygon(0 100%, 0 0, 50% 50%);
+  background-color: var(--do-2);
+}
+
+/* Fold lines across the creases */
+.lucky-fold-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.lucky-dir-label {
+  position: absolute;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.lucky-dir-label.highlighted {
+  color: var(--son);
+  font-weight: 800;
+}
+
+/* Direction label positions */
+.lucky-dir-label-north {
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lucky-dir-label-north.highlighted {
+  transform: translateX(-50%) scale(1.25);
+}
+
+.lucky-dir-label-east {
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lucky-dir-label-east.highlighted {
+  transform: translateY(-50%) scale(1.25);
+}
+
+.lucky-dir-label-south {
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lucky-dir-label-south.highlighted {
+  transform: translateX(-50%) scale(1.25);
+}
+
+.lucky-dir-label-west {
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lucky-dir-label-west.highlighted {
+  transform: translateY(-50%) scale(1.25);
+}
+
+/* Hint under the fortune teller */
+.lucky-hint {
+  margin-top: 20px;
+  padding: 6px 14px;
+  background-color: var(--card);
+  box-shadow: var(--thick);
+  border-radius: 4px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-2);
+  text-align: center;
+  max-width: 250px;
+  user-select: none;
+  animation: luckyFadeIn 0.2s ease;
+}
+
+@keyframes luckyFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lucky-teller {
+    transition: none;
+  }
+  .lucky-hint {
+    animation: none;
+  }
+}
+
+:root[data-reduced="1"] .lucky-teller {
+  transition: none;
+}
+
+:root[data-reduced="1"] .lucky-hint {
+  animation: none;
+}

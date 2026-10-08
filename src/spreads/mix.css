@@ -1,0 +1,1680 @@
+/* Mix spread styles (spread 4 / Trang 5) */
+
+.mix-page {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+}
+
+.mix-floor {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.mix-casts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mix-die-cut {
+  display: block;
+  filter: var(--die);
+  user-select: none;
+  pointer-events: none;
+}
+
+.mix-back-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  filter: var(--die);
+}
+
+/* ----------------------------------------------------
+   Left Page: Back card, Doll, Drum, Ticket
+---------------------------------------------------- */
+
+.mix-doll-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Patch Layer (doll badges) */
+@keyframes patch-slap {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(2.2);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(1);
+    opacity: 1;
+  }
+}
+
+.mix-patch-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.mix-patch-item {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  left: calc(var(--fx) * 100%);
+  top: calc(var(--fy) * 100%);
+  transform: translate(-50%, -50%) rotate(var(--rot, 0deg));
+  pointer-events: auto;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 3px 0 rgba(42, 33, 27, 0.18));
+  touch-action: none;
+}
+
+.mix-patch-item.slap {
+  animation: patch-slap 380ms cubic-bezier(0.18, 0.89, 0.32, 1.25) forwards;
+}
+
+.mix-patch-item:active {
+  cursor: grabbing;
+  filter: drop-shadow(0 6px 4px rgba(42, 33, 27, 0.25));
+  z-index: 20;
+}
+
+.mix-patch-item:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.mix-drum-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.mix-drum-face-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none;
+}
+
+.mix-drum-face-container:active {
+  cursor: grabbing;
+}
+
+.mix-drum-face-container:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.mix-drum-face {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: var(--die);
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.mix-drum-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  pointer-events: none;
+  filter: var(--die);
+  z-index: 5;
+}
+
+/* Three level labels in a column just right of the drum (left = drum width + 8px, top 30px, 64px, 98px) */
+.mix-drum-levels {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 0;
+  width: auto;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.mix-drum-level-pill {
+  position: absolute;
+  left: 0;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #ffffff;
+  background-color: var(--ink);
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  user-select: none;
+  transition: background-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+}
+
+.mix-drum-level-pill.top-1 {
+  top: 30px;
+}
+
+.mix-drum-level-pill.top-2 {
+  top: 64px;
+}
+
+.mix-drum-level-pill.top-3 {
+  top: 98px;
+}
+
+.mix-drum-level-pill.active {
+  background-color: var(--son);
+}
+
+.mix-drum-level-pill.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.mix-drum-level-pill:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* ----------------------------------------------------
+   Đèn kéo quân (Lantern - replaces Drum)
+---------------------------------------------------- */
+
+.lantern {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
+  user-select: none;
+}
+
+.lantern-body {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 30px;
+  aspect-ratio: 756 / 1103;
+  transform: translateX(-50%);
+  transform-style: preserve-3d;
+  filter: var(--die) drop-shadow(3px 5px 0 rgba(42, 33, 27, 0.22));
+  cursor: pointer;
+  touch-action: none;
+  transition: transform 0.15s ease;
+}
+
+.lantern-body:hover {
+  transform: translateX(-50%) translateY(-3px);
+}
+
+.lantern-body:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+@keyframes lantern-flip {
+  0% {
+    transform: translateX(-50%) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(-50%) rotateY(88deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateY(0deg);
+  }
+}
+
+.lantern.flipping .lantern-body,
+.lantern-body.flipping {
+  animation: lantern-flip 560ms steps(7) forwards;
+  pointer-events: none;
+}
+
+.lantern-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+.lantern-window {
+  position: absolute;
+  left: 33.5%;
+  top: 20%;
+  width: 33.5%;
+  height: 53.5%;
+  overflow: hidden;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.lantern-reel {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: max-content;
+  align-items: center;
+  animation: lantern-reel-spin 14s steps(40) infinite;
+  will-change: transform;
+}
+
+@keyframes lantern-reel-spin {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.lantern-figure {
+  height: 42%;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) blur(0.4px);
+  opacity: 0.6;
+  flex-shrink: 0;
+  margin: 0 4px;
+  pointer-events: none;
+}
+
+.lantern-tag {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ink);
+  color: #ffffff;
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(42, 33, 27, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lantern-reel {
+    animation: none !important;
+  }
+  .lantern.flipping .lantern-body,
+  .lantern-body.flipping {
+    animation: none !important;
+  }
+}
+
+[data-reduced="1"] .lantern-reel {
+  animation: none !important;
+}
+
+[data-reduced="1"] .lantern.flipping .lantern-body,
+[data-reduced="1"] .lantern-body.flipping {
+  animation: none !important;
+}
+
+/* Score ticket */
+.mix-ticket {
+  width: 100%;
+  height: 100%;
+  background-color: var(--card);
+  box-sizing: border-box;
+  padding: 14px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--thick);
+  border-radius: 4px;
+  mask-image: radial-gradient(circle 9px at 0 50%, transparent 9px, #000 9.5px),
+              radial-gradient(circle 9px at 100% 50%, transparent 9px, #000 9.5px);
+  mask-composite: intersect;
+  -webkit-mask-image: radial-gradient(circle 9px at 0 50%, transparent 9px, #000 9.5px),
+                      radial-gradient(circle 9px at 100% 50%, transparent 9px, #000 9.5px);
+  -webkit-mask-composite: destination-in;
+}
+
+.mix-ticket-label {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--son);
+}
+
+.mix-ticket-score {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--ink);
+  margin: 4px 0 2px;
+}
+
+.mix-ticket-unit {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  color: var(--ink-2);
+}
+
+.mix-ticket-stamp {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1;
+  border: 2px solid var(--son);
+  color: var(--son);
+  padding: 3px 7px;
+  transform: rotate(-8deg);
+  border-radius: 3px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* ----------------------------------------------------
+   Right Page: Sticker Sheet, Color Dots, 3 Action Buttons
+---------------------------------------------------- */
+
+.mix-right-page {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+  --up: 1;
+}
+
+.mix-red-frame {
+  position: absolute;
+  inset: 18px;
+  border: 2px solid rgba(180, 48, 43, 0.55);
+  outline: 1px solid rgba(180, 48, 43, 0.35);
+  outline-offset: 5px;
+  transform: translateZ(0.3px);
+  pointer-events: none;
+}
+
+/* Sticker sheet stand */
+.mix-sheet {
+  width: 100%;
+  height: 100%;
+  background: url(/book/mech/sticker-sheet.webp) center center / 100% 100% no-repeat;
+  padding: 18px 22px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--thick);
+  border-radius: 4px;
+}
+
+/* Mix steps list */
+.mix-steps {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.mix-step {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11.5px;
+  line-height: 1.2;
+  background: rgba(42, 33, 27, 0.05);
+  color: var(--ink);
+  box-sizing: border-box;
+  user-select: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mix-step-num {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  background: rgba(42, 33, 27, 0.08);
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.mix-step-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* First not-done step: next */
+.mix-step.is-next {
+  background: var(--son);
+  color: #ffffff;
+  animation: step-gold-pulse 1.4s ease-in-out infinite;
+}
+
+.mix-step.is-next .mix-step-num {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Done step */
+.mix-step.is-done {
+  background: var(--la);
+  color: #ffffff;
+}
+
+.mix-step.is-done .mix-step-num {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+@keyframes step-gold-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 161, 59, 0.65);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(201, 161, 59, 0.75), 0 0 8px 1px rgba(201, 161, 59, 0.45);
+  }
+}
+
+/* Gu tabs (Tủ chung + VIBES) */
+.mix-gu-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 8px 0 10px;
+  flex-shrink: 0;
+}
+
+.mix-today-btn {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 12.5px;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background-color: #ffd75a;
+  color: var(--ink);
+  box-shadow: 0 2px 0 #c49b1c;
+  transform: rotate(-2deg);
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.mix-today-btn:hover {
+  transform: rotate(-2deg) translateY(-1px);
+  box-shadow: 0 3px 0 #c49b1c;
+}
+
+.mix-today-btn:active {
+  transform: rotate(-2deg) translateY(1px);
+  box-shadow: 0 1px 0 #c49b1c;
+}
+
+.mix-today-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.mix-gu-tab {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 12.5px;
+  line-height: 1;
+  padding: 5px 9px;
+  border-radius: 6px;
+  border: 2px solid var(--c);
+  color: var(--c);
+  background-color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transform-origin: center center;
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.mix-gu-tab:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+
+.mix-gu-tab:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+
+.mix-gu-tab:nth-child(odd).is-selected,
+.mix-gu-tab:nth-child(odd)[aria-selected="true"] {
+  background-color: var(--c);
+  color: #ffffff;
+  transform: rotate(-1.5deg) scale(1.06);
+  z-index: 2;
+}
+
+.mix-gu-tab:nth-child(even).is-selected,
+.mix-gu-tab:nth-child(even)[aria-selected="true"] {
+  background-color: var(--c);
+  color: #ffffff;
+  transform: rotate(1.2deg) scale(1.06);
+  z-index: 2;
+}
+
+.mix-gu-tab:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.mix-gu-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+  padding: 2px 5.5px;
+  border-radius: 999px;
+  background-color: var(--c);
+  color: #ffffff;
+  margin-left: 5px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mix-gu-tab.is-selected .mix-gu-tab-count,
+.mix-gu-tab[aria-selected="true"] .mix-gu-tab-count {
+  background-color: #ffffff;
+  color: var(--c);
+}
+
+/* ----------------------------------------------------
+   World Slug Variants for Sticker Sheet (.mix-sheet)
+---------------------------------------------------- */
+
+/* Chuẩn: inner frame inset 0 0 0 6px #fff8e6, inset 0 0 0 8px #b8322a; gu tabs not tilted and round; the "next" step is a red gradient with a thin gold line. */
+.mix-sheet.w-chuan {
+  box-shadow: var(--thick), inset 0 0 0 6px #fff8e6, inset 0 0 0 8px #b8322a;
+}
+
+.mix-sheet.w-chuan .mix-gu-tab,
+.mix-sheet.w-chuan .mix-gu-tab:nth-child(odd),
+.mix-sheet.w-chuan .mix-gu-tab:nth-child(even) {
+  border-radius: 999px;
+  transform: none;
+}
+
+.mix-sheet.w-chuan .mix-gu-tab:nth-child(odd).is-selected,
+.mix-sheet.w-chuan .mix-gu-tab:nth-child(odd)[aria-selected="true"],
+.mix-sheet.w-chuan .mix-gu-tab:nth-child(even).is-selected,
+.mix-sheet.w-chuan .mix-gu-tab:nth-child(even)[aria-selected="true"] {
+  border-radius: 999px;
+  transform: none;
+}
+
+.mix-sheet.w-chuan .mix-step.is-next {
+  background: linear-gradient(180deg, #b8322a 0%, #7e1f1a 100%);
+  border: 1px solid #c9a13b;
+  box-shadow: inset 0 0 0 1px #c9a13b;
+  color: #ffffff;
+  animation: step-gold-pulse-chuan 1.4s ease-in-out infinite;
+}
+
+.mix-sheet.w-chuan .mix-step.is-next .mix-step-num {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(201, 161, 59, 0.6);
+  color: #ffffff;
+}
+
+@keyframes step-gold-pulse-chuan {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 161, 59, 0.65), inset 0 0 0 1px #c9a13b;
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(201, 161, 59, 0.75), 0 0 8px 1px rgba(201, 161, 59, 0.45), inset 0 0 0 1px #c9a13b;
+  }
+}
+
+/* Đường phố: inner frame #fffdf8 6px then #2b7570, plus a pink glow 0 0 22px rgba(255,46,136,.35); the "next" step is teal slats with pink neon text. */
+.mix-sheet.w-duong-pho {
+  box-shadow: var(--thick), 0 0 22px rgba(255, 46, 136, 0.35), inset 0 0 0 6px #fffdf8, inset 0 0 0 8px #2b7570;
+}
+
+.mix-sheet.w-duong-pho .mix-step.is-next {
+  background: repeating-linear-gradient(
+    180deg,
+    #2b7570 0 6px,
+    #1f5c58 6px 8px
+  );
+  border: 1px solid #1f5c58;
+  color: #ffffff;
+  text-shadow:
+    0 0 2px #ffffff,
+    0 0 6px #ff4fa3,
+    0 0 14px #ff2e88,
+    0 0 20px #ff007f;
+  animation: step-duong-pho-pulse 1.4s ease-in-out infinite;
+}
+
+.mix-sheet.w-duong-pho .mix-step.is-next .mix-step-label {
+  color: #ffffff;
+  text-shadow:
+    0 0 2px #ffffff,
+    0 0 6px #ff4fa3,
+    0 0 14px #ff2e88,
+    0 0 20px #ff007f;
+}
+
+.mix-sheet.w-duong-pho .mix-step.is-next .mix-step-num {
+  background: rgba(255, 46, 136, 0.28);
+  border: 1px solid #ff4fa3;
+  color: #ffffff;
+  text-shadow:
+    0 0 2px #ffffff,
+    0 0 6px #ff4fa3;
+}
+
+@keyframes step-duong-pho-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 46, 136, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(255, 46, 136, 0.65), 0 0 10px 2px rgba(255, 46, 136, 0.4);
+  }
+}
+
+/* Giao thoa: as now */
+.mix-sheet.w-giao-thoa {
+  /* as now */
+}
+
+/* Material row (gấm & plain & weave) */
+.mix-material-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  margin: -4px 0 10px;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--ink-2);
+}
+
+.mix-mat-btn {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.2;
+  padding: 4px 9px;
+  border: none;
+  border-radius: 3px;
+  background: #EFE6D2;
+  color: var(--ink);
+  box-shadow: 0 0 0 1.5px #ffffff, var(--thick);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.12s ease, background-color 0.12s ease, color 0.12s ease;
+}
+
+.mix-mat-btn.odd {
+  transform: rotate(-1deg);
+}
+
+.mix-mat-btn.even {
+  transform: rotate(1deg);
+}
+
+.mix-mat-btn:hover {
+  filter: brightness(0.97);
+}
+
+.mix-mat-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.mix-mat-btn.chosen {
+  background: var(--son);
+  color: #ffffff;
+}
+
+.mix-mat-btn.mix-weave-btn {
+  background: #2A2320;
+  color: #F4E4B8;
+}
+
+.mix-mat-btn.mix-weave-btn:hover {
+  background: #382F2C;
+}
+
+/* Stickers scroll container */
+.mix-stickers-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--son) transparent;
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 18px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 18px), transparent 100%);
+}
+
+.mix-stickers-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mix-stickers-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mix-stickers-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--son);
+  border-radius: 4px;
+}
+
+/* Stickers grid: 7 columns, gap 6px */
+.mix-stickers-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  padding-bottom: 18px;
+}
+
+.mix-sticker-btn {
+  position: relative;
+  aspect-ratio: 1;
+  background: transparent;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.mix-sticker-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.mix-sticker-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff)
+          drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff)
+          drop-shadow(0 2px 0 rgba(42, 33, 27, 0.2));
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.mix-sticker-btn:hover .mix-sticker-img {
+  transform: scale(1.06);
+}
+
+.mix-sticker-btn.is-worn .mix-sticker-img {
+  opacity: 0.28;
+}
+
+.mix-sticker-wearing {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--son);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.mix-sticker-weave {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 9.5px;
+  line-height: 1.2;
+  padding: 3px 6px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #ffffff;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  z-index: 3;
+}
+
+.mix-sticker-weave:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* Patch row in sheet under sticker grid */
+.mix-patch-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0 2px;
+  margin-top: 6px;
+  border-top: 1px dashed rgba(42, 33, 27, 0.15);
+  flex-shrink: 0;
+}
+
+.mix-patch-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 52px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.mix-patch-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 11.5px;
+  line-height: 1.1;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.mix-patch-count {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 10.5px;
+  line-height: 1.1;
+  color: var(--son);
+  margin-top: 2px;
+}
+
+.mix-patch-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.mix-patch-btn {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transform-origin: center center;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.mix-patch-btn:hover {
+  transform: scale(1.25) rotate(-6deg);
+  z-index: 2;
+}
+
+.mix-patch-btn.is-on {
+  opacity: 0.35;
+}
+
+.mix-patch-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+.mix-patch-btn-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(42, 33, 27, 0.2));
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Color dots lying flat */
+.mix-colors-row {
+  position: absolute;
+  transform: translateZ(0.5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.mix-color-dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 0 0 4px #FBF7EE, 0 3px 0 4px rgba(42, 33, 27, 0.15);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.mix-color-dot:hover {
+  transform: scale(1.06);
+}
+
+.mix-color-dot.active {
+  box-shadow: 0 0 0 4px #FBF7EE, 0 0 0 8px var(--son), 0 3px 0 8px rgba(42, 33, 27, 0.15);
+}
+
+.mix-color-dot:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 4px;
+}
+
+/* Action Buttons (Lucky, Photo, Card) */
+.mix-action-btn {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 1.15;
+  box-sizing: border-box;
+  box-shadow: var(--thick);
+  border-radius: 4px;
+  user-select: none;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.mix-action-btn-son {
+  color: var(--son);
+}
+
+.mix-action-btn-white {
+  color: #ffffff;
+}
+
+.mix-action-btn:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 2px;
+}
+
+/* ----------------------------------------------------
+   Mix Slap (Piece landing over doll's chest)
+---------------------------------------------------- */
+
+@keyframes mix-slap-anim {
+  0% {
+    transform: translate(-50%, -50%) rotate(-6deg) scale(2.4);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  16% {
+    transform: translate(-50%, -50%) rotate(-6deg) scale(0.9);
+  }
+  24% {
+    transform: translate(-50%, -50%) rotate(-6deg) scale(1.05);
+  }
+  32% {
+    transform: translate(-50%, -50%) rotate(-6deg) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) rotate(-6deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, calc(-50% - 24px)) rotate(-6deg) scale(0.96);
+    opacity: 0;
+  }
+}
+
+@keyframes mix-slap-sticker-wobble {
+  0% {
+    transform: rotate(24deg) scale(0.8);
+  }
+  24% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  32% {
+    transform: rotate(8deg) scale(1);
+  }
+  70% {
+    transform: rotate(8deg) scale(1);
+  }
+  100% {
+    transform: rotate(12deg) scale(0.95);
+  }
+}
+
+@keyframes mix-confetti-burst {
+  0% {
+    transform: translate(0, 0) scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(var(--angle)) translate(calc(var(--dist) * 0.4), 0) rotate(var(--rot)) scale(1.15);
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--angle)) translate(var(--dist), 0) rotate(calc(var(--rot) * 2)) scale(0.6);
+    opacity: 0;
+  }
+}
+
+.mix-slap {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-6deg);
+  pointer-events: none;
+  z-index: 60;
+  user-select: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: mix-slap-anim 1100ms cubic-bezier(0.18, 0.89, 0.32, 1.2) forwards;
+}
+
+/* Chuẩn: a red seal (cream text on #b8322a, 3px double gold border, 26px) */
+.mix-slap.w-chuan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b8322a;
+  color: #FAF4E8;
+  border: 3px double gold;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.15;
+  padding: 6px 16px;
+  border-radius: 4px;
+  box-shadow: 0 3px 0 rgba(42, 33, 27, 0.25);
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+/* Giao thoa: a yellow sticky note in Patrick Hand 38px */
+.mix-slap.w-giao-thoa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FEF08A;
+  color: #2A211B;
+  font-family: 'Patrick Hand', var(--font-ui), cursive;
+  font-size: 38px;
+  line-height: 1.1;
+  padding: 8px 18px;
+  border-radius: 2px 2px 8px 2px;
+  box-shadow: 0 4px 6px rgba(42, 33, 27, 0.22), 0 1px 3px rgba(42, 33, 27, 0.12);
+  text-align: center;
+}
+
+/* Đường phố: a neon word (pink text-shadow) on a small teal shutter plate, plus one STREET_SMALL sticker (64px) slapping in beside it */
+.mix-slap.w-duong-pho {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.mix-slap.w-duong-pho .mix-slap-shutter {
+  background: repeating-linear-gradient(
+    180deg,
+    #1d6b66 0px,
+    #1d6b66 6px,
+    #144d49 6px,
+    #144d49 12px
+  );
+  border: 2px solid #0d3835;
+  border-radius: 4px;
+  padding: 6px 14px;
+  box-shadow: 0 4px 0 rgba(10, 30, 28, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mix-slap.w-duong-pho .mix-slap-neon {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.15;
+  color: #ffffff;
+  text-shadow: 0 0 5px #ff2a85, 0 0 12px #ff2a85, 0 0 20px #ff007f;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.mix-slap.w-duong-pho .mix-slap-street-sticker {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff)
+          drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff)
+          drop-shadow(0 3px 0 rgba(42, 33, 27, 0.25));
+  transform: rotate(8deg);
+  animation: mix-slap-sticker-wobble 1100ms ease forwards;
+}
+
+/* Confetti wrap and bits */
+.mix-slap-confetti-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.mix-confetti-bit {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  background-color: var(--color, #ffd700);
+  box-shadow: 0 1px 2px rgba(42, 33, 27, 0.2);
+  pointer-events: none;
+  animation: mix-confetti-burst 800ms cubic-bezier(0.12, 0.85, 0.35, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mix-color-dot,
+  .mix-gu-tab,
+  .mix-today-btn,
+  .mix-vibe-btn,
+  .mix-mat-btn,
+  .mix-action-btn,
+  .mix-step,
+  .mix-patch-btn {
+    transition: none !important;
+  }
+  .mix-step.is-next,
+  .mix-sheet.w-chuan .mix-step.is-next,
+  .mix-sheet.w-duong-pho .mix-step.is-next {
+    animation: none !important;
+  }
+  .mix-patch-item.slap {
+    animation: none !important;
+  }
+  .mix-patch-btn:hover {
+    transform: none !important;
+  }
+  .mix-today-btn,
+  .mix-gu-tab,
+  .mix-gu-tab.is-selected,
+  .mix-gu-tab[aria-selected="true"] {
+    transform: none !important;
+  }
+  .mix-color-dot:hover {
+    transform: none !important;
+  }
+  .mix-slap,
+  .mix-confetti-bit,
+  .mix-slap-street-sticker {
+    animation: none !important;
+    display: none !important;
+  }
+}
+
+:root[data-reduced="1"] .mix-color-dot,
+:root[data-reduced="1"] .mix-gu-tab,
+:root[data-reduced="1"] .mix-today-btn,
+:root[data-reduced="1"] .mix-vibe-btn,
+:root[data-reduced="1"] .mix-mat-btn,
+:root[data-reduced="1"] .mix-action-btn,
+:root[data-reduced="1"] .mix-step,
+:root[data-reduced="1"] .mix-patch-btn {
+  transition: none !important;
+}
+
+:root[data-reduced="1"] .mix-patch-item.slap {
+  animation: none !important;
+}
+
+:root[data-reduced="1"] .mix-patch-btn:hover {
+  transform: none !important;
+}
+
+:root[data-reduced="1"] .mix-today-btn,
+:root[data-reduced="1"] .mix-gu-tab,
+:root[data-reduced="1"] .mix-gu-tab.is-selected,
+:root[data-reduced="1"] .mix-gu-tab[aria-selected="true"] {
+  transform: none !important;
+}
+
+:root[data-reduced="1"] .mix-step.is-next,
+:root[data-reduced="1"] .mix-sheet.w-chuan .mix-step.is-next,
+:root[data-reduced="1"] .mix-sheet.w-duong-pho .mix-step.is-next {
+  animation: none !important;
+}
+
+:root[data-reduced="1"] .mix-color-dot:hover {
+  transform: none !important;
+}
+
+:root[data-reduced="1"] .mix-slap,
+:root[data-reduced="1"] .mix-confetti-bit,
+:root[data-reduced="1"] .mix-slap-street-sticker {
+  animation: none !important;
+  display: none !important;
+}
+
+/* ----------------------------------------------------
+   Score ticket: three small stars + score pop
+---------------------------------------------------- */
+.mix-ticket {
+  padding: 12px 8px 10px;
+}
+
+.mix-ticket-score {
+  animation: mix-score-pop 0.45s cubic-bezier(0.2, 1.6, 0.4, 1) both;
+}
+
+@keyframes mix-score-pop {
+  0% { transform: scale(0.7); }
+  100% { transform: scale(1); }
+}
+
+.mix-ticket-stamp.is-mid {
+  border-color: #b8801f;
+  color: #8a5a0f;
+}
+
+.mix-ticket-stamp.is-high {
+  border-color: #2f7d6b;
+  color: #2f7d6b;
+}
+
+.mix-ticket-stars {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mix-ticket-star {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  align-items: center;
+  gap: 4px;
+  text-align: left;
+}
+
+.mix-ticket-star-name {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 1;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.mix-ticket-star-bar {
+  height: 5px;
+  background: rgba(42, 33, 27, 0.12);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mix-ticket-star-fill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+  background: var(--son);
+}
+.mix-ticket-star-fill.is-mau { background: #2f7d6b; }
+.mix-ticket-star-fill.is-mix { background: #d6a21f; }
+
+/* ----------------------------------------------------
+   Nghê's cross-world bubble (sits left of the ticket)
+---------------------------------------------------- */
+.mix-hint {
+  position: absolute;
+  right: calc(100% + 10px);
+  bottom: 6px;
+  width: 196px;
+  box-sizing: border-box;
+  padding: 10px 12px 9px;
+  background: #fffaf0;
+  border: 2px solid var(--son);
+  border-radius: 14px 14px 4px 14px;
+  box-shadow: 0 3px 0 rgba(42, 33, 27, 0.18);
+  font-family: var(--font-ui);
+  color: var(--ink);
+  animation: mix-hint-in 0.35s cubic-bezier(0.2, 1.5, 0.4, 1) both;
+  z-index: 5;
+}
+
+.mix-hint::after {
+  content: '';
+  position: absolute;
+  right: -9px;
+  bottom: 14px;
+  width: 14px;
+  height: 14px;
+  background: #fffaf0;
+  border-right: 2px solid var(--son);
+  border-top: 2px solid var(--son);
+  transform: rotate(45deg);
+}
+
+.mix-hint-text {
+  margin: 0 12px 6px 0;
+  font-size: 12.5px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.mix-hint-text b {
+  color: var(--son);
+  font-weight: 800;
+}
+
+.mix-hint-go {
+  border: none;
+  background: var(--son);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.mix-hint-go:hover { filter: brightness(1.08); }
+
+.mix-hint-close {
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--ink-2);
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+@keyframes mix-hint-in {
+  0% { opacity: 0; transform: translateY(8px) scale(0.92); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* ----------------------------------------------------
+   Recolour worn pieces (lying flat under the colour dots)
+---------------------------------------------------- */
+.mix-recolor {
+  position: absolute;
+  transform: translateZ(0.5px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 10px;
+  background: rgba(251, 247, 238, 0.82);
+  border: 1.5px dashed rgba(180, 48, 43, 0.45);
+  border-radius: 10px;
+}
+
+.mix-recolor-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  flex-wrap: wrap;
+}
+
+.mix-recolor-title {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--son);
+  white-space: nowrap;
+}
+
+.mix-recolor-empty {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.mix-recolor-pieces {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.mix-recolor-piece {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.mix-recolor-piece img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mix-recolor-piece.is-on {
+  border-color: var(--son);
+}
+
+.mix-recolor-chip {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(42, 33, 27, 0.25);
+}
+
+.mix-recolor-suggest {
+  border: none;
+  background: var(--son);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mix-recolor-suggest:hover { filter: brightness(1.08); }
+
+.mix-recolor-swatches {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mix-recolor-dot,
+.mix-recolor-reset {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px #fbf7ee, 0 2px 0 3px rgba(42, 33, 27, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.mix-recolor-dot:hover,
+.mix-recolor-reset:hover { transform: scale(1.08); }
+
+.mix-recolor-dot.is-on,
+.mix-recolor-reset.is-on {
+  box-shadow: 0 0 0 3px #fbf7ee, 0 0 0 6px var(--son);
+}
+
+.mix-recolor-reset {
+  background: #fff;
+  color: var(--ink-2);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.mix-recolor-best {
+  position: absolute;
+  top: -9px;
+  right: -7px;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.mix-recolor-dot:focus-visible,
+.mix-recolor-reset:focus-visible,
+.mix-recolor-piece:focus-visible,
+.mix-recolor-suggest:focus-visible,
+.mix-hint-go:focus-visible,
+.mix-hint-close:focus-visible {
+  outline: 2px solid var(--son);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mix-ticket-score,
+  .mix-hint { animation: none; }
+  .mix-ticket-star-fill { transition: none; }
+}
+[data-reduced="1"] .mix-ticket-score,
+[data-reduced="1"] .mix-hint { animation: none; }
+
+.mix-today-btn.mix-weave-open-btn {
+  background-color: #2a2320;
+  color: #f4e4b8;
+  box-shadow: 0 2px 0 #000;
+  transform: rotate(1.5deg);
+}
+.mix-today-btn.mix-weave-open-btn:hover {
+  background-color: #382f2c;
+  transform: rotate(1.5deg) translateY(-1px);
+}
+

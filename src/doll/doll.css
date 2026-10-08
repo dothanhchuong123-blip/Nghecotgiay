@@ -1,0 +1,20 @@
+.paper-doll {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.paper-doll-canvas {
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  filter: var(--die);
+}
+
+.gam-layer-canvas {
+  position: absolute;
+  pointer-events: none;
+  display: block;
+}

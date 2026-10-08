@@ -1,0 +1,370 @@
+/* Phone page for Phối đồ: the paper doll on top, a thumb tray of stickers below */
+.mx-root {
+  position: fixed;
+  top: 104px;
+  bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--desk);
+  box-sizing: border-box;
+}
+
+.mx-top {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 6px 12px 8px;
+  text-align: center;
+}
+
+.mx-doll {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 8px 8px rgba(42, 33, 27, 0.4));
+}
+
+.mx-score {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fffaf0;
+  color: var(--ink);
+  box-shadow: var(--thick);
+  transform: rotate(6deg);
+  line-height: 1;
+}
+
+.mx-score b {
+  font: 800 24px var(--font-head);
+}
+
+.mx-score span {
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.mx-score.band-high b {
+  color: #2f7a46;
+}
+
+.mx-score.band-mid b {
+  color: #b07a12;
+}
+
+.mx-score.band-low b {
+  color: #b5471a;
+}
+
+.mx-advice {
+  margin: 6px auto 0;
+  max-width: 340px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--ink);
+  background: rgba(255, 250, 240, 0.92);
+  border-radius: 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.mx-tray {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 12px 12px 150px;
+  color: var(--ink);
+  background-color: var(--card);
+  background-image: url("/book/tex/giay-do.webp");
+  background-size: 256px;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -6px 16px rgba(42, 33, 27, 0.35);
+}
+
+.mx-label {
+  margin: 12px 0 6px;
+  font: 800 14px var(--font-head);
+  color: var(--son);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.mx-label:first-child {
+  margin-top: 0;
+}
+
+.mx-targets {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.mx-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 0 6px;
+  scrollbar-width: none;
+}
+
+.mx-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.mx-chip {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 0 14px;
+  font: 700 14px var(--font-ui);
+  color: var(--ink);
+  background: #fffaf0;
+  border: 2px solid rgba(42, 33, 27, 0.18);
+  border-radius: 999px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.mx-chip.small {
+  min-height: 34px;
+  padding: 0 11px;
+  font-size: 13px;
+}
+
+.mx-chip.on {
+  color: #fff;
+  background: var(--son);
+  border-color: var(--son);
+}
+
+.mx-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.mx-sticker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px 6px;
+  min-height: 112px;
+  font: 600 12px/1.2 var(--font-ui);
+  color: var(--ink);
+  text-align: center;
+  background: #fffaf0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 rgba(42, 33, 27, 0.18);
+  cursor: pointer;
+}
+
+.mx-sticker img {
+  width: 100%;
+  height: 72px;
+  object-fit: contain;
+}
+
+.mx-sticker.worn {
+  border-color: var(--son);
+  background: #fff;
+}
+
+.mx-sticker.worn::after {
+  content: '✓';
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 800 12px var(--font-ui);
+  color: #fff;
+  background: var(--son);
+}
+
+.mx-sticker.blocked {
+  opacity: 0.45;
+}
+
+.mx-sticker.shake {
+  animation: mxShake 360ms linear;
+}
+
+@keyframes mxShake {
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.mx-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mx-dot {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px rgba(42, 33, 27, 0.3);
+  cursor: pointer;
+}
+
+.mx-dot.on {
+  box-shadow: 0 0 0 3px var(--son);
+}
+
+.mx-dot.orig {
+  background: #fffaf0;
+  font: 700 18px var(--font-ui);
+  color: var(--ink);
+}
+
+.mx-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.mx-btn {
+  flex: 1;
+  min-height: 52px;
+  font: 800 16px var(--font-head);
+  color: #fff;
+  background: var(--son);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--thick);
+  cursor: pointer;
+}
+
+.mx-btn.ghost {
+  flex: 0 0 38%;
+  color: var(--ink);
+  background: #fffaf0;
+}
+
+.mx-btn:disabled {
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .mx-root {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  html.mm-on .desk-bubble {
+    display: none;
+  }
+}
+
+/* The world switch takes the chapter tabs' place on this page; Nghê shrinks so she hides less */
+@media (max-width: 767px) {
+  html.mx-on .chapter-tabs {
+    visibility: hidden;
+  }
+
+  html.mx-on .desk-nghe {
+    height: 70px;
+  }
+}
+
+.mx-weave {
+  margin-top: 12px;
+  min-height: 44px;
+  padding: 0 16px;
+  font: 700 15px var(--font-ui);
+  color: var(--ink);
+  background: #fffaf0;
+  border: 2px dashed var(--son);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.mx-btn.alt {
+  color: var(--ink);
+  background: #fffaf0;
+  border: 2px solid var(--son);
+  box-shadow: none;
+}
+
+/* The fortune teller opens in the middle of the phone screen */
+@media (max-width: 767px) {
+  .lucky-overlay {
+    position: fixed;
+    left: 50%;
+    top: 44%;
+    z-index: 60;
+    box-shadow: 0 0 0 100vmax rgba(42, 20, 15, 0.55);
+    border-radius: 12px;
+  }
+}
+
+/* The paper lantern wheel stands beside the doll */
+.mx-lantern {
+  position: absolute;
+  left: 6px;
+  top: 14px;
+  width: 92px;
+  height: 138px;
+  z-index: 2;
+}
+
+.mx-doll {
+  margin-left: 46px;
+}
+
+.mx-tray {
+  position: relative;
+}
+
+.mx-tray::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 90px;
+  height: 22px;
+  margin-left: -45px;
+  background: url("/book/ui/tape.webp") center / 100% 100% no-repeat;
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+
+.mx-lantern .lantern-tag-sep,
+.mx-lantern .lantern-tag-hint {
+  display: none;
+}
+
+.mx-lantern .lantern-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+}
