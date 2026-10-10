@@ -1,117 +1,247 @@
 # Nghê Cót · Giấy
 
-> Cuốn sách giấy nổi (pop-up book) tương tác để học về **Cổ phục Việt Nam (Việt phục)**, có chú **Nghê giấy** đồng hành, chấm đồ và trả lời câu hỏi.
+> Sách giấy nổi pop-up tương tác tìm hiểu và phối đồ **Cổ phục Việt Nam (Việt phục)**, đồng hành cùng chú **Nghê giấy AI** — chấm điểm bản phối, đối thoại văn hóa, gửi thư ảnh thực cảnh và bốc quẻ thẻ bài.
 
-Đây là phiên bản **Giấy** của dự án *Nghê Cót*, một bài dự thi **AI Arena Vietnam 2026** (chủ đề *Việt phục Remix*). Mọi thứ trên màn hình đều làm bằng giấy: giấy cắt, giấy dán, giấy gấp, tem, băng keo, mép giấy xé.
+🔗 **Trải nghiệm trực tuyến:** [nghecotgiay.ai.studio](https://nghecotgiay.ai.studio)
 
-## Có gì trong sách
+---
 
-- **Chín áo, chín chương**: mỗi chương là một cổ phục, có trang giấy nổi, bộ phận, dòng thời gian và nguồn trích dẫn.
-- **Gặp áo**: những mảnh giấy dựng đứng trên mặt sách, bấm vào để xem từng bộ phận của áo.
-- **Phối đồ**: búp bê giấy mặc thử áo xưa phối với đồ hiện đại (35 bộ có sẵn, có chấm điểm, gợi ý màu).
-- **Đừng nhầm**: so sánh các cặp áo dễ lẫn.
-- **Nữ / Nam**: chuyển giữa hai búp bê giấy.
-- **Hỏi Nghê**: trò chuyện với Nghê bằng tiếng Việt, giọng Gen Z, Nghê chỉ trả lời từ kho dữ liệu của sách.
-- **Thiệp**: lưu bộ phối thành tấm thiệp để chia sẻ.
-- Dùng được trên **máy tính** và **điện thoại** (bố cục riêng cho điện thoại), có âm thanh giấy và hỗ trợ giảm chuyển động.
+## Tổng quan dự án
 
-## Công nghệ
+**Nghê Cót · Giấy** là phiên bản nghệ thuật thủ công của dự án *Nghê Cót*, tham dự cuộc thi **AI Arena Vietnam 2026** với chủ đề *Việt phục Remix*.
 
-| Phần | Dùng |
-|---|---|
-| Giao diện | React 19, TypeScript, Vite 8 |
-| Kiểu dáng, chuyển động | Tailwind CSS 4, CSS riêng từng phần, `motion` |
-| Máy chủ | Express (một tệp `server.ts`) |
-| AI | Google Gemini qua `@google/genai`, gọi **phía máy chủ** (khóa không lộ ra trình duyệt) |
+Toàn bộ thế giới thị giác được xây dựng từ ngôn ngữ chất liệu giấy truyền thống: nghệ thuật cắt dán, nếp gấp pop-up, tem bưu chính, mép xé thủ công cùng bảng màu và nét khắc mộc bản lấy cảm hứng từ dòng tranh dân gian Hàng Trống.
 
-## Chạy trên máy
+```
+       ┌────────────────────────────────────────────────────────┐
+       │                  NGHÊ CÓT · GIẤY                       │
+       │   [ Sách Khám Phá ]  ⇄  [ Nghê AI ]  ⇄  [ Phòng Phối ] │
+       └────────────────────────────────────────────────────────┘
 
-Cần **Node.js 20+**.
+```
 
+---
+
+## Tính năng nổi bật
+
+### 1. Cuốn sách giấy nổi tương tác
+
+* **Bìa sách & Đèn kéo quân:** Xoay đèn kéo quân để chọn từng kiểu áo hoặc bấm **Phối ngay** để vào phòng thử đồ.
+* **7 chương cổ phục hiện hữu:** Áo Giao lĩnh, Ngũ thân, Áo dài, Áo tấc, Tứ thân, Bà ba, Nhật bình *(Áo the và Viên lĩnh đang trong lộ trình hoàn thiện)*.
+* **Cấu trúc trang đôi đa lớp:**
+* **Gặp áo:** Khối giấy nổi 3D đa tầng (depth parallax) phản hồi theo góc di chuột hoặc cảm biến con quay hồi chuyển trên di động.
+* **Cấu tạo:** Tương tác kéo thẻ đỏ, bóc lớp giấy để giải phẫu chi tiết cổ áo, đường cài khuy, tà áo, tay áo và phụ kiện đi kèm.
+* **Chuyện áo:** Bánh xoay niên biểu (volvelle disk) tái hiện bối cảnh lịch sử qua từng triều đại kèm thư tịch dẫn chứng.
+* **Đừng nhầm:** Bảng đối chiếu trực quan phân biệt cổ phục Việt với trang phục các nền văn hóa lân cận dễ gây nhầm lẫn.
+* **Búp bê giấy:** Dễ dàng hoán chuyển giữa búp bê mẫu Nam và Nữ.
+
+
+
+### 2. Phòng phối đồ & Hệ thống chấm điểm
+
+* **3 không gian biểu đạt:** Gạt cần cơ học chuyển đổi giữa *Chuẩn cổ phục*, *Giao thoa* và *Đường phố* — kéo theo sự thay đổi của căn phòng, chất liệu giấy nền và tạo hình chú Nghê.
+* **6 định hình phong cách:** *Đường phố, Tối giản, Hoài cổ Hà Nội, Học đường thanh lịch, Lễ hội rực rỡ, Mộc mạc thôn quê*.
+* **Tủ đồ & Sticker:** Thử nghiệm kết hợp trang phục truyền thống với phụ kiện đương đại; hỗ trợ đổi màu y phục theo bảng màu Nghê gợi ý.
+* **Hệ thống luật chấm Nghê:** Đánh giá thang điểm 100 và hệ thống 3 sao (*Giữ hồn áo*, *Hợp màu*, *Dám mix*). Cơ chế tự động cảnh báo các phụ kiện che khuất chi tiết cốt lõi của áo và đề xuất không gian phù hợp hơn (chi tiết tại `docs/MIX-RULES.md`).
+* **Trò chơi dân gian & Nghệ thuật tạo tác:**
+* **Bốc thăm Đông-Tây-Nam-Bắc:** Chú Nghê gấp giấy mở quẻ định hướng ngẫu hứng bộ phối.
+* **Đan giấy Hàng Trống:** Tự tay đan các nan giấy thành hoa văn dệt và ướm trực tiếp lên nhân vật.
+
+
+* **Thư viện phối sẵn & Xuất thẻ:** 35 bộ trang phục hoàn chỉnh sẵn có; cho phép kết xuất thẻ ảnh lưu niệm để chia sẻ mạng xã hội.
+
+### 3. Góc bàn tương tác & Trợ lý Nghê AI
+
+* **Lịch hôm nay:** Tích hợp dữ liệu thời tiết thời gian thực (Hà Nội, Huế, Đà Nẵng, TP.HCM), âm lịch và lễ tiết truyền thống để gợi ý trang phục theo ngày. Hỗ trợ chọn thủ công 4 trạng thái thời tiết.
+* **Đối thoại cùng Nghê:** Trò chuyện tự nhiên bằng tiếng Việt với giọng điệu Gen Z hóm hỉnh. Nghê hoạt động theo nguyên tắc tri thức đóng (closed-domain) — chỉ trả lời dựa trên tư liệu của chương sách đang mở và hỗ trợ thay đồ tự động cho búp bê qua lệnh trò chuyện.
+* **Xem ngoài đời (Lookbook AI):** Thư giấy bay từ phong bì mở ra kho 97 bộ ảnh minh họa thực cảnh (toàn thân, cận cảnh chi tiết và poster phong cách) đối chiếu theo tỷ lệ tương đồng với trang phục người dùng vừa phối.
+* **Hộp thẻ Nghê & Hòm thư lưu trữ:** Thu thập và lưu lại 35 thẻ bài bộ phối cùng các lá thư đối thoại trước đó trong phiên làm việc.
+* **Nhờ Nghê chụp (AI Photo Studio):** Chuyển thể bộ búp bê giấy thành tác phẩm mô hình giấy nghệ thuật ngoài đời thực qua công nghệ sinh ảnh.
+
+### 4. Tối ưu hóa trải nghiệm (UX/A11y)
+
+* **Thích ứng thiết bị:** Tối ưu hóa giao diện riêng cho điện thoại và máy tính để bàn, tích hợp màn chờ định hướng khi xoay màn hình.
+* **Hiệu ứng xúc giác & Âm thanh:** Tùy chọn bật/tắt âm thanh sột soạt của giấy mộc, lưu trạng thái lựa chọn cho các lần truy cập sau.
+* **Hỗ trợ tiếp cận:** Hỗ trợ phím tắt điều hướng lật trang (`←` / `→`) và chế độ Giảm chuyển động (Reduced Motion) thân thiện với thị giác.
+
+---
+
+## Kiến trúc công nghệ
+
+| Phân hệ | Công nghệ chủ đạo | Vai trò |
+| --- | --- | --- |
+| **Frontend** | React 19, TypeScript, Vite 8 | Xây dựng lõi ứng dụng và quản lý luồng trạng thái |
+| **Giao diện & Chuyển động** | Tailwind CSS 4, CSS Modules, Motion | Tạo hình thủ công, hiệu ứng nếp gấp giấy và chuyển động vật lý |
+| **Backend** | Express (`server.ts`) | Máy chủ trung gian xử lý nghiệp vụ và bảo vệ API keys |
+| **Logic chấm điểm & Chat** | Gemini `gemini-3.1-flash-lite` (`@google/genai`) | Xử lý ngôn ngữ tự nhiên phía máy chủ, độ trễ thấp |
+| **Chụp ảnh mô hình** | Gemini `gemini-3.1-flash-image` | Tạo ảnh mô hình giấy trực tiếp từ trình duyệt người dùng (BYOK) |
+| **Dữ liệu khí hậu** | [Open-Meteo API](https://open-meteo.com) | Cung cấp dữ liệu thời tiết theo địa phương (bộ nhớ đệm 30 phút) |
+
+---
+
+## Cài đặt & Khởi chạy cục bộ
+
+### Yêu cầu môi trường
+
+* **Node.js** phiên bản 20.0.0 trở lên.
+* **npm** hoặc trình quản lý gói tương đương.
+
+### Các bước thiết lập
+
+1. **Sao chép mã nguồn và cài đặt thư viện:**
 ```bash
+git clone https://github.com/your-username/nghe-cot-giay.git
+cd nghe-cot-giay
 npm install
+
+```
+
+
+2. **Cấu hình biến môi trường:**
+Tạo tệp cấu hình từ mẫu có sẵn:
+```bash
 cp .env.example .env
-```
-
-Mở `.env` và điền khóa Gemini:
 
 ```
-GEMINI_API_KEY=khoa_cua_ban
+
+
+Chỉnh sửa tệp `.env` với khóa API Gemini của bạn:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
 PORT=3000
+
 ```
 
-Chạy chế độ phát triển (Express + Vite chung một cổng):
 
+3. **Khởi chạy môi trường phát triển:**
+Chế độ phát triển tích hợp cả Vite HMR và máy chủ Express trên cùng một cổng:
 ```bash
 npm run dev
+
 ```
 
-Rồi mở http://localhost:3000.
 
-Không có khóa Gemini thì sách vẫn đọc được bình thường; chỉ phần Nghê nhận xét và trò chuyện là không hoạt động.
+Truy cập ứng dụng tại: `http://localhost:3000`
 
-## Đóng gói và chạy thật
+> **Lưu ý:** Nếu không cấu hình khóa `GEMINI_API_KEY`, ứng dụng vẫn vận hành trơn tru các tính năng sách pop-up và phối đồ cơ bản; Nghê sẽ tự động chuyển sang chế độ chấm điểm bằng tập lời khuyên dựng sẵn và tạm ngừng chức năng trò chuyện trực tiếp.
+
+---
+
+## Đóng gói & Triển khai
 
 ```bash
-npm run build   # dựng dist/ và gói server.ts thành server.js
-npm start       # chạy node server.js
+# Biên dịch mã nguồn frontend vào dist/ và đóng gói server.ts -> server.js
+npm run build
+
+# Khởi chạy máy chủ sản xuất
+npm start
+
 ```
 
-Các lệnh khác:
+### Danh mục lệnh hỗ trợ
 
-| Lệnh | Việc làm |
-|---|---|
-| `npm run lint` | Kiểm tra kiểu TypeScript (`tsc --noEmit`) |
-| `npm run preview` | Xem bản đã dựng bằng Vite |
-| `npm run clean` | Xóa `dist/` và `server.js` |
+| Lệnh | Chức năng |
+| --- | --- |
+| `npm run lint` | Kiểm tra tính toàn vẹn kiểu dữ liệu (`tsc --noEmit`) |
+| `npm run preview` | Khởi chạy bản xem trước của gói dựng qua Vite |
+| `npm run clean` | Dọn dẹp thư mục `dist/` và tệp đầu ra `server.js` |
 
-## API
+---
 
-Hai điểm cuối, đều là `POST` và đều có giới hạn thời gian:
+## Thiết kế API Backend
 
-| Đường dẫn | Việc làm |
-|---|---|
-| `/api/nghe` | Nghê chấm bộ phối: nhận các món và lỗi, trả **một câu** tiếng Việt (tối đa 25 chữ) |
-| `/api/nghe-chat` | Nghê trả lời câu hỏi (tối đa 60 chữ), chỉ dùng dữ liệu của chương đang đọc; có thể trả về `action` để thay đồ trên búp bê |
+Máy chủ Express cung cấp hai điểm cuối nội bộ chuẩn `POST` với cơ chế kiểm soát thời gian chờ (timeout limit):
+
+### 1. Chấm điểm phối đồ — `POST /api/nghe`
+
+* **Đầu vào:** Danh danh trang phục, phụ kiện phối kèm, điểm số, số sao, gợi ý phối màu và danh sách cảnh báo vi phạm quy tắc.
+* **Đầu ra:** Nhận xét độc bản từ chú Nghê bằng tiếng Việt (giới hạn tối đa 25 từ).
+* **Kiểm soát:** Ngắt kết nối và trả mã lỗi `504 Gateway Timeout` nếu vượt quá ngưỡng xử lý 10 giây.
+
+### 2. Trò chuyện văn hóa — `POST /api/nghe-chat`
+
+* **Đầu vào:** Câu hỏi của người dùng kèm lược sử ngữ cảnh 6 câu gần nhất và tập dữ liệu tri thức của chương sách hiện tại.
+* **Đầu ra:** Phản hồi cô đọng (tối đa 60 từ) và tùy chọn đính kèm lệnh `action` để thao tác trang phục trên búp bê.
+* **Bảo mật:** Lọc bỏ mọi mã lệnh không nằm trong cơ sở dữ liệu định sẵn; hoàn toàn không lưu trữ lịch sử câu hỏi của người dùng vào bộ nhớ máy chủ.
+
+---
+
+## Cơ chế bảo mật khóa API người dùng (BYOK)
+
+Đối với tính năng **Nhờ Nghê chụp** (sinh ảnh mô hình bằng `gemini-3.1-flash-image`), ứng dụng áp dụng mô hình **Bring Your Own Key (BYOK)** nhằm bảo vệ tài nguyên máy chủ và đảm bảo quyền riêng tư:
+
+```
+[ Trình duyệt người dùng ] ──(sessionStorage)──► [ Gọi trực tiếp Google Gemini API ]
+             │
+             └── (Không đi qua máy chủ Nghê Cót) ──X── [ Express Server ]
+
+```
+
+* Khóa cá nhân chỉ được nhập tại giao diện *Hòm thư của Nghê*.
+* Khóa được lưu tạm thời trong `sessionStorage` của phiên duyệt web hiện tại, bị xóa hoàn toàn khi đóng tab.
+* Luồng dữ liệu đi trực tiếp từ client tới máy chủ Google, không gửi hay lưu trữ tại bất kỳ máy chủ trung gian nào.
+* Trường hợp không nhập khóa, hệ thống sẽ gửi tặng phiên bản búp bê giấy minh họa tĩnh.
+
+---
+
+## Công cụ hỗ trợ phát triển (DevTools)
+
+Nhấn tổ hợp phím **Shift + D** hoặc gắn tham số `?dev=` vào thanh địa chỉ để kích hoạt bảng kiểm định chuyên dụng:
+
+| Tham số | Mục đích sử dụng |
+| --- | --- |
+| `?dev=art` | Kiểm tra và rà soát tài nguyên hình vẽ giấy còn thiếu trong hệ thống |
+| `?dev=kit` | Thử nghiệm các module linh kiện giấy độc lập (nếp gập, băng keo, tem thư) |
+| `?dev=engine` | Tinh chỉnh thông số vật lý và chuyển động khung hình |
+| `?dev=doll` | Kiểm tra thứ tự xếp lớp hiển thị (z-index) và khớp nối trên búp bê giấy |
+
+---
 
 ## Cấu trúc thư mục
 
-```
+```text
 .
-├── server.ts            # Express + hai API Gemini + phục vụ giao diện
+├── server.ts              # Máy chủ Express, điều phối API Gemini và phân phối static
 ├── index.html
-├── public/              # Toàn bộ ảnh giấy (book/, doll/, popcard/, mech/, icons/)
+├── public/
+│   ├── book/              # Tài nguyên đồ họa giấy: bìa sách, phông nền, tem, Nghê
+│   ├── doll/              # Đồ họa búp bê mẫu Nam/Nữ và manifest cấu hình
+│   ├── looks/             # 97 bộ ảnh thực cảnh (toàn thân, cận cảnh, poster)
+│   ├── popcard/           # Đồ họa thiệp nổi đa lớp của từng loại áo
+│   └── mech/, icons/      # Biểu tượng và linh kiện cơ học
 ├── docs/
-│   ├── BUILD-RULES.md   # Luật dựng: đọc trước mỗi bước
-│   └── MIX-RULES.md     # Luật chấm điểm Phối đồ
+│   ├── BUILD-RULES.md     # Quy chuẩn kỹ thuật và nguyên tắc dựng giao diện
+│   └── MIX-RULES.md       # Ma trận luật phối đồ và cơ chế tính điểm
 └── src/
-    ├── data/            # Kho dữ liệu của chủ dự án (chỉ đọc)
-    ├── book/            # Cuốn sách: bìa, trang, thẻ chương, thanh trên
-    ├── spreads/         # Từng trang đôi: Gặp áo, Phối đồ, Đừng nhầm...
-    ├── doll/            # Búp bê giấy và ghép lớp đồ
-    ├── mix/             # Chấm điểm, màu, gợi ý phối đồ
-    ├── nghe/            # Chú Nghê: bàn Nghê, trò chuyện, in thiệp
-    ├── paper/           # Linh kiện giấy: tem, băng keo, mép xé, nắp lật
-    ├── mobile/          # Bố cục điện thoại
-    ├── share/           # Tạo thiệp chia sẻ
-    └── dev/             # Công cụ kiểm tra khi phát triển (mở bằng ?dev)
+    ├── data/              # Cơ sở dữ liệu tĩnh (Read-only single source of truth)
+    ├── book/              # Khung hiển thị sách: bìa, lật trang, điều hướng chương
+    ├── spreads/           # Chi tiết các trang đôi: Gặp áo, Cấu tạo, Chuyện áo, Đừng nhầm...
+    ├── doll/              # Xử lý búp bê giấy: ghép lớp đồ họa, hòa sắc, phủ vân vải
+    ├── mix/               # Thuật toán chấm điểm, logic chọn gu, đan giấy Hàng Trống
+    ├── world/             # Bộ điều khiển 3 thế giới và cơ chế cần gạt
+    ├── today/             # Widget lịch: tích hợp thời tiết, lịch âm và gợi ý ngày
+    ├── preview/           # Phân hệ thư Lookbook và thuật toán so khớp độ tương đồng
+    ├── cards/             # Hệ thống rút và quản lý hộp thẻ Nghê
+    ├── nghe/              # Module AI: hội thoại, tạo ảnh và quản lý khóa người dùng
+    ├── guide/             # Hướng dẫn tương tác lần đầu (Onboarding tour)
+    ├── share/             # Xử lý kết xuất ảnh thẻ chia sẻ
+    ├── audio/             # Trình quản lý âm thanh tương tác giấy
+    ├── boot/              # Màn hình chờ khởi tạo và hiệu ứng đổi hướng hiển thị
+    ├── paper/             # Thư viện thành phần giấy: mép xé, băng dán, nắp mở lật
+    ├── mobile/            # Bố cục giao diện chuyên biệt cho màn hình cảm ứng di động
+    └── dev/               # Bảng công cụ kiểm định trong môi trường phát triển
+
 ```
 
-## Nguyên tắc nội dung
+---
 
-- **Một nguồn sự thật**: mọi danh sách áo, màu, bộ phận, mốc thời gian và trích dẫn đều đọc từ `src/data/*.json`, không viết cứng trong mã.
-- **Mọi chữ trên màn hình là tiếng Việt**, lấy nguyên văn từ `copy-giay.json` hoặc `kb.json`.
-- **Nghê không bịa**: lời Nghê chỉ dựa trên dữ liệu được đưa vào. Nếu dữ liệu không có, Nghê nói thật là chưa biết.
-- **Ảnh thiếu thì để trống**: không dùng hình giả; chỉ ghi `[art missing] <đường dẫn>` ở console.
+## Nguyên tắc thiết kế & Tuyên bố nội dung
 
-Chi tiết xem `docs/BUILD-RULES.md` và `src/data/README.md`.
+* **Nguồn sự thật duy nhất (Single Source of Truth):** Toàn bộ dữ liệu về phục trang, màu sắc, niên đại và thư tịch cổ được chuẩn hóa tập trung tại `src/data/*.json`.
+* **Bảo tồn ngôn ngữ:** 100% văn bản giao diện sử dụng tiếng Việt chuẩn mực, truy xuất thống nhất qua `copy-giay.json` và `kb.json`.
+* **Trực quan minh bạch:** Không sử dụng hình ảnh thế chỗ không xác định. Nếu phát hiện tệp đồ họa bị khuyết, hệ thống để trống tự nhiên và thông báo qua log console dạng `[art missing] <path>`.
+* **Trung thực tri thức AI:** Lời thoại của Nghê được kiểm soát nghiêm ngặt theo nguồn dữ liệu đưa vào, từ chối suy diễn hoặc bịa đặt dữ liệu lịch sử chưa được kiểm chứng.
+* **Tôn vinh mỹ thuật dân gian:** Các mô thức hoa văn Hàng Trống được vẽ mới hoàn toàn dựa trên tinh thần và bảng màu truyền thống, không can thiệp sao chép nguyên bản từ các tác phẩm di sản đã có.
 
-## Sử dụng AI trong dự án
+---
 
-- Giao diện được dựng trên **Google AI Studio** và tinh chỉnh bằng các trợ lý lập trình AI.
-- Hình giấy do AI tạo ra rồi chọn lọc, chỉnh tay.
-- Lời của Nghê do **Gemini** sinh trong lúc chạy, bị ràng buộc bởi kho dữ liệu và lời nhắc hệ thống trong `server.ts`.
-
-## Phiên bản liên quan
-
-**Nghê Cót · Mộc** là bản 3D (bàn thợ, mộc bản) của cùng dự án. Hai bản chia sẻ cùng ý tưởng và cùng chú Nghê, khác chất liệu: gỗ và giấy.
