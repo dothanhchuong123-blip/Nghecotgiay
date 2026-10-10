@@ -82,6 +82,7 @@ export default function LookMail({ letter, onClose }: LookMailProps) {
 
   // A = photo, B = close-up, C = poster; a face whose picture failed is dropped
   const [failed, setFailed] = useState<Record<string, boolean>>({});
+  const [frameOk, setFrameOk] = useState(true);
   const faces = useMemo<FaceKey[]>(() => {
     const list: FaceKey[] = [];
     if (!failed[look.files.A]) list.push('A');
@@ -356,7 +357,7 @@ export default function LookMail({ letter, onClose }: LookMailProps) {
                     : undefined
                 }
               >
-                <div className={`lm-flip${flipOut ? ' is-out' : ''}`}>
+                <div className={`lm-flip${flipOut ? ' is-out' : ''}${frameOk ? '' : ' no-frame'}`}>
                   {face === 'C' ? (
                     <div className="lm-poster-face">
                       <img key={faceSrc!} src={faceSrc!} alt={line1} className="lm-poster" onError={() => markFailed(faceSrc!)} />
@@ -378,7 +379,9 @@ export default function LookMail({ letter, onClose }: LookMailProps) {
                           <p className="lm-nophoto">{P.fallback}</p>
                         )}
                       </div>
-                      <img src="/book/mailbox/M5.webp" alt="" className="lm-frame" draggable={false} />
+                      {frameOk && (
+                        <img src="/book/mailbox/M5.webp" alt="" className="lm-frame" draggable={false} onError={() => setFrameOk(false)} />
+                      )}
                     </>
                   )}
                 </div>

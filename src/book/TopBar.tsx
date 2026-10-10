@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { COPY, SCENES, NAM_OF } from '../data';
 import { useStore, Side } from '../state';
 import { go } from './turn';
 import { useSound, toggleSound } from '../audio/paper';
 import { openGuide } from '../guide/Guide';
+import { reducedChoice, setReducedChoice, useReducedMotion } from '../paper/motion';
 import './topbar.css';
 
 export interface TopBarProps {
@@ -77,6 +78,15 @@ export default function TopBar({
     } else {
       toggleSound();
     }
+  };
+
+  // "Giảm chuyển động": on = calm pages everywhere; it also shows on when the device already asks for less motion
+  const reduced = useReducedMotion();
+  const [, setChoice] = useState(reducedChoice);
+  const handleMotionClick = () => {
+    const next = !reducedChoice();
+    setReducedChoice(next);
+    setChoice(next);
   };
 
   const handleGuideClick = () => {
@@ -153,6 +163,32 @@ export default function TopBar({
           onClick={handleSoundClick}
         >
           ♪
+        </button>
+
+        {/* Reduce motion button */}
+        <button
+          type="button"
+          className="topbar-sound-btn topbar-motion-btn"
+          aria-label={COPY.settings.motion}
+          title={COPY.settings.motion}
+          aria-pressed={reduced}
+          onClick={handleMotionClick}
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            {reduced ? (
+              <>
+                <path d="M4 8h16" />
+                <path d="M4 12h16" />
+                <path d="M4 16h16" />
+              </>
+            ) : (
+              <>
+                <path d="M3 8c2.5-2.5 4.5 2.5 7 0s4.5 2.5 7 0 2.5 0 4 0" />
+                <path d="M3 12c2.5-2.5 4.5 2.5 7 0s4.5 2.5 7 0 2.5 0 4 0" />
+                <path d="M3 16c2.5-2.5 4.5 2.5 7 0s4.5 2.5 7 0 2.5 0 4 0" />
+              </>
+            )}
+          </svg>
         </button>
 
         {/* Replay button */}

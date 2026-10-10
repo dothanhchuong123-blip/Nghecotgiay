@@ -1,10 +1,38 @@
 import { useEffect, useState } from 'react';
 
+const CHOICE_KEY = 'nghe-giay-reduced';
+const CHOICE_EVENT = 'nghe-reduced-change';
+
+/** The visitor's own "Giảm chuyển động" choice from the top bar, kept on this device. */
+export function reducedChoice(): boolean {
+  try {
+    return window.localStorage.getItem(CHOICE_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
+/** Turns reduced motion on or off for the whole app (on top of the device setting). */
+export function setReducedChoice(on: boolean): void {
+  try {
+    if (on) window.localStorage.setItem(CHOICE_KEY, '1');
+    else window.localStorage.removeItem(CHOICE_KEY);
+  } catch {
+    /* storage blocked: the choice lasts until the page reloads */
+  }
+  memoryChoice = on;
+  isReducedMotion();
+  window.dispatchEvent(new Event(CHOICE_EVENT));
+}
+
+let memoryChoice: boolean | null = null;
+
 export function isReducedMotion(): boolean {
   if (typeof window === 'undefined') return false;
   const urlParam = new URLSearchParams(window.location.search).get('reduced');
   const isReduced =
     urlParam === '1' ||
+    (memoryChoice ?? reducedChoice()) ||
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (typeof document !== 'undefined') {
     if (isReduced) {
@@ -32,7 +60,11 @@ export function useReducedMotion(): boolean {
     };
 
     mediaQuery.addEventListener('change', update);
-    return () => mediaQuery.removeEventListener('change', update);
+    window.addEventListener(CHOICE_EVENT, update);
+    return () => {
+      mediaQuery.removeEventListener('change', update);
+      window.removeEventListener(CHOICE_EVENT, update);
+    };
   }, []);
 
   return reduced;
