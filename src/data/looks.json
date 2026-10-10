@@ -1,0 +1,2052 @@
+[
+ {
+  "id": "nu-ao-tu-than-l1",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-tu-than",
+  "gid": "ao-tu-than",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO TỨ THÂN",
+  "sub": "Hội xuân Kinh Bắc",
+  "files": {
+   "A": "/looks/nu-ao-tu-than-l1/A.webp",
+   "B": "/looks/nu-ao-tu-than-l1/B.webp",
+   "C": "/looks/nu-ao-tu-than-l1/C.webp"
+  },
+  "thumb": "/looks/nu-ao-tu-than-l1/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tu-than-l2",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-tu-than",
+  "gid": "ao-tu-than",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "chan-vay-xep-ly",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "TỨ THÂN × XẾP LY",
+  "sub": "Làng gốm Bát Tràng",
+  "files": {
+   "A": "/looks/nu-ao-tu-than-l2/A.webp",
+   "B": "/looks/nu-ao-tu-than-l2/B.webp",
+   "C": "/looks/nu-ao-tu-than-l2/C.webp"
+  },
+  "thumb": "/looks/nu-ao-tu-than-l2/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tu-than-l3",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-tu-than",
+  "gid": "ao-tu-than",
+  "level": 3,
+  "vibe": null,
+  "worn": [],
+  "colorId": "xanh-luc-ngoc",
+  "title": "TỨ THÂN ĐI CHỢ",
+  "sub": "Chợ phiên sáng",
+  "files": {
+   "A": "/looks/nu-ao-tu-than-l3/A.webp",
+   "B": "/looks/nu-ao-tu-than-l3/B.webp",
+   "C": "/looks/nu-ao-tu-than-l3/C.webp"
+  },
+  "thumb": "/looks/nu-ao-tu-than-l3/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-l1",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": 1,
+  "vibe": null,
+  "worn": [],
+  "colorId": "do-son",
+  "title": "ÁO DÀI ĐỎ",
+  "sub": "Hồ Gươm, buổi sớm",
+  "files": {
+   "A": "/looks/nu-ao-dai-l1/A.webp",
+   "B": "/looks/nu-ao-dai-l1/B.webp",
+   "C": "/looks/nu-ao-dai-l1/C.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-l1/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-l2",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "giay-luoi",
+   "quan-tay"
+  ],
+  "colorId": "do-son",
+  "title": "ÁO DÀI × QUẦN TÂY",
+  "sub": "Có công mài sắt, có ngày nên kim",
+  "files": {
+   "A": "/looks/nu-ao-dai-l2/A.webp",
+   "B": "/looks/nu-ao-dai-l2/B.webp",
+   "C": "/looks/nu-ao-dai-l2/C.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-l2/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-l3",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": 3,
+  "vibe": null,
+  "worn": [
+   "giay-cao-co",
+   "quan-bo-ong-rong"
+  ],
+  "colorId": "do-son",
+  "title": "ÁO DÀI × QUẦN BÒ",
+  "sub": "Bưu điện Sài Gòn",
+  "files": {
+   "A": "/looks/nu-ao-dai-l3/A.webp",
+   "B": "/looks/nu-ao-dai-l3/B.webp",
+   "C": "/looks/nu-ao-dai-l3/C.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-l3/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-l1",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO NGŨ THÂN",
+  "sub": "Nhà vườn xứ Huế",
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-l1/A.webp",
+   "B": "/looks/nu-ao-ngu-than-l1/B.webp",
+   "C": "/looks/nu-ao-ngu-than-l1/C.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-l1/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-l2",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-len-cai-cuc",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "NGŨ THÂN × LEN",
+  "sub": "Cà phê nhà cổ phố cổ",
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-l2/A.webp",
+   "B": "/looks/nu-ao-ngu-than-l2/B.webp",
+   "C": "/looks/nu-ao-ngu-than-l2/C.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-l2/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-l3",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": 3,
+  "vibe": null,
+  "worn": [
+   "giay-luoi",
+   "quan-tay"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "NGŨ THÂN × QUẦN TÂY",
+  "sub": "Cầu Long Biên",
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-l3/A.webp",
+   "B": "/looks/nu-ao-ngu-than-l3/B.webp",
+   "C": "/looks/nu-ao-ngu-than-l3/C.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-l3/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tac-l1",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO TẤC",
+  "sub": "Ngày Tết nhà cũ",
+  "files": {
+   "A": "/looks/nu-ao-tac-l1/A.webp",
+   "B": "/looks/nu-ao-tac-l1/B.webp",
+   "C": "/looks/nu-ao-tac-l1/C.webp"
+  },
+  "thumb": "/looks/nu-ao-tac-l1/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tac-l2",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-thun-trang",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "TẤC × THUN TRẮNG",
+  "sub": "Làng lụa Vạn Phúc",
+  "files": {
+   "A": "/looks/nu-ao-tac-l2/A.webp",
+   "B": "/looks/nu-ao-tac-l2/B.webp",
+   "C": "/looks/nu-ao-tac-l2/C.webp"
+  },
+  "thumb": "/looks/nu-ao-tac-l2/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-l1",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO BÀ BA",
+  "sub": "Chợ nổi Cái Răng",
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-l1/A.webp",
+   "B": "/looks/nu-ao-ba-ba-l1/B.webp",
+   "C": "/looks/nu-ao-ba-ba-l1/C.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-l1/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-l2",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "giay-luoi",
+   "so-mi-oversize"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "BÀ BA × SƠ MI",
+  "sub": "Bến Tre, sông nước",
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-l2/A.webp",
+   "B": "/looks/nu-ao-ba-ba-l2/B.webp",
+   "C": "/looks/nu-ao-ba-ba-l2/C.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-l2/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-l3",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": 3,
+  "vibe": null,
+  "worn": [
+   "chan-vay-xep-ly",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "BÀ BA × VÁY XẾP LY",
+  "sub": "Chợ hoa đêm Sài Gòn",
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-l3/A.webp",
+   "B": "/looks/nu-ao-ba-ba-l3/B.webp",
+   "C": "/looks/nu-ao-ba-ba-l3/C.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-l3/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-nhat-binh-l1",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-nhat-binh",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO NHẬT BÌNH",
+  "sub": "Đại Nội Huế",
+  "files": {
+   "A": "/looks/nu-ao-nhat-binh-l1/A.webp",
+   "B": "/looks/nu-ao-nhat-binh-l1/B.webp",
+   "C": "/looks/nu-ao-nhat-binh-l1/C.webp"
+  },
+  "thumb": "/looks/nu-ao-nhat-binh-l1/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-nhat-binh-l2",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-nhat-binh",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-thun-trang",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "NHẬT BÌNH × THUN TRẮNG",
+  "sub": "Lăng Tự Đức",
+  "files": {
+   "A": "/looks/nu-ao-nhat-binh-l2/A.webp",
+   "B": "/looks/nu-ao-nhat-binh-l2/B.webp",
+   "C": "/looks/nu-ao-nhat-binh-l2/C.webp"
+  },
+  "thumb": "/looks/nu-ao-nhat-binh-l2/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-giao-linh-l1",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO GIAO LĨNH",
+  "sub": "Chùa Một Cột",
+  "files": {
+   "A": "/looks/nu-ao-giao-linh-l1/A.webp",
+   "B": "/looks/nu-ao-giao-linh-l1/B.webp",
+   "C": "/looks/nu-ao-giao-linh-l1/C.webp"
+  },
+  "thumb": "/looks/nu-ao-giao-linh-l1/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-giao-linh-l2",
+  "kind": "preset",
+  "side": "nu",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-thun-trang",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "GIAO LĨNH × THUN TRẮNG",
+  "sub": "Hoàng thành Thăng Long",
+  "files": {
+   "A": "/looks/nu-ao-giao-linh-l2/A.webp",
+   "B": "/looks/nu-ao-giao-linh-l2/B.webp",
+   "C": "/looks/nu-ao-giao-linh-l2/C.webp"
+  },
+  "thumb": "/looks/nu-ao-giao-linh-l2/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-l1",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": 1,
+  "vibe": null,
+  "worn": [],
+  "colorId": "do-son",
+  "title": "ÁO DÀI NAM",
+  "sub": "Chợ hoa Tết",
+  "files": {
+   "A": "/looks/nam-ao-dai-l1/A.webp",
+   "B": "/looks/nam-ao-dai-l1/B.webp",
+   "C": "/looks/nam-ao-dai-l1/C.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-l1/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-l2",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "giay-luoi",
+   "quan-tay"
+  ],
+  "colorId": "do-son",
+  "title": "ÁO DÀI × QUẦN TÂY",
+  "sub": "Nhà hát Lớn",
+  "files": {
+   "A": "/looks/nam-ao-dai-l2/A.webp",
+   "B": "/looks/nam-ao-dai-l2/B.webp",
+   "C": "/looks/nam-ao-dai-l2/C.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-l2/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-l3",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": 3,
+  "vibe": null,
+  "worn": [
+   "giay-cao-co",
+   "quan-bo-ong-rong"
+  ],
+  "colorId": "do-son",
+  "title": "ÁO DÀI × QUẦN BÒ",
+  "sub": "Phố bích hoạ Phùng Hưng",
+  "files": {
+   "A": "/looks/nam-ao-dai-l3/A.webp",
+   "B": "/looks/nam-ao-dai-l3/B.webp",
+   "C": "/looks/nam-ao-dai-l3/C.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-l3/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-l1",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO NGŨ THÂN NAM",
+  "sub": "Làng cổ Đường Lâm",
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-l1/A.webp",
+   "B": "/looks/nam-ao-ngu-than-l1/B.webp",
+   "C": "/looks/nam-ao-ngu-than-l1/C.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-l1/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-l2",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-len-cai-cuc",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "NGŨ THÂN × LEN",
+  "sub": "Phố sách Hà Nội",
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-l2/A.webp",
+   "B": "/looks/nam-ao-ngu-than-l2/B.webp",
+   "C": "/looks/nam-ao-ngu-than-l2/C.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-l2/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-l3",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": 3,
+  "vibe": null,
+  "worn": [
+   "giay-luoi",
+   "quan-tay"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "NGŨ THÂN × QUẦN TÂY",
+  "sub": "Hội An, giờ đèn",
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-l3/A.webp",
+   "B": "/looks/nam-ao-ngu-than-l3/B.webp",
+   "C": "/looks/nam-ao-ngu-than-l3/C.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-l3/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-the-l1",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-tu-than",
+  "gid": "ao-the",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO THE",
+  "sub": "Quốc Tử Giám, bia tiến sĩ",
+  "files": {
+   "A": "/looks/nam-ao-the-l1/A.webp",
+   "B": "/looks/nam-ao-the-l1/B.webp",
+   "C": "/looks/nam-ao-the-l1/C.webp"
+  },
+  "thumb": "/looks/nam-ao-the-l1/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-the-l2",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-tu-than",
+  "gid": "ao-the",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-vest"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO THE × VEST",
+  "sub": "Tiệm may phố Hàng Gai",
+  "files": {
+   "A": "/looks/nam-ao-the-l2/A.webp",
+   "B": "/looks/nam-ao-the-l2/B.webp",
+   "C": "/looks/nam-ao-the-l2/C.webp"
+  },
+  "thumb": "/looks/nam-ao-the-l2/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tac-l1",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO TẤC NAM",
+  "sub": "Giỗ Tổ Hùng Vương",
+  "files": {
+   "A": "/looks/nam-ao-tac-l1/A.webp",
+   "B": "/looks/nam-ao-tac-l1/B.webp",
+   "C": "/looks/nam-ao-tac-l1/C.webp"
+  },
+  "thumb": "/looks/nam-ao-tac-l1/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tac-l2",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-thun-trang",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "TẤC × THUN TRẮNG",
+  "sub": "Chùa Trấn Quốc, hoàng hôn",
+  "files": {
+   "A": "/looks/nam-ao-tac-l2/A.webp",
+   "B": "/looks/nam-ao-tac-l2/B.webp",
+   "C": "/looks/nam-ao-tac-l2/C.webp"
+  },
+  "thumb": "/looks/nam-ao-tac-l2/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-l1",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO BÀ BA NAM",
+  "sub": "Rừng tràm Trà Sư",
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-l1/A.webp",
+   "B": "/looks/nam-ao-ba-ba-l1/B.webp",
+   "C": "/looks/nam-ao-ba-ba-l1/C.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-l1/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-l2",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "giay-luoi",
+   "so-mi-oversize"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "BÀ BA × SƠ MI",
+  "sub": "Làng hoa Sa Đéc",
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-l2/A.webp",
+   "B": "/looks/nam-ao-ba-ba-l2/B.webp",
+   "C": "/looks/nam-ao-ba-ba-l2/C.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-l2/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-l3",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": 3,
+  "vibe": null,
+  "worn": [
+   "giay-cao-co",
+   "quan-bo-ong-rong"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "BÀ BA × QUẦN BÒ",
+  "sub": "Chợ Bến Thành",
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-l3/A.webp",
+   "B": "/looks/nam-ao-ba-ba-l3/B.webp",
+   "C": "/looks/nam-ao-ba-ba-l3/C.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-l3/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-giao-linh-l1",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO GIAO LĨNH NAM",
+  "sub": "Đền Lý Bát Đế",
+  "files": {
+   "A": "/looks/nam-ao-giao-linh-l1/A.webp",
+   "B": "/looks/nam-ao-giao-linh-l1/B.webp",
+   "C": "/looks/nam-ao-giao-linh-l1/C.webp"
+  },
+  "thumb": "/looks/nam-ao-giao-linh-l1/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-giao-linh-l2",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-thun-trang",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "GIAO LĨNH × THUN TRẮNG",
+  "sub": "Cột cờ Hà Nội",
+  "files": {
+   "A": "/looks/nam-ao-giao-linh-l2/A.webp",
+   "B": "/looks/nam-ao-giao-linh-l2/B.webp",
+   "C": "/looks/nam-ao-giao-linh-l2/C.webp"
+  },
+  "thumb": "/looks/nam-ao-giao-linh-l2/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-vien-linh-l1",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-vien-linh",
+  "level": 1,
+  "vibe": null,
+  "worn": [
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "ÁO VIÊN LĨNH",
+  "sub": "Lăng Minh Mạng, Huế",
+  "files": {
+   "A": "/looks/nam-ao-vien-linh-l1/A.webp",
+   "B": "/looks/nam-ao-vien-linh-l1/B.webp",
+   "C": "/looks/nam-ao-vien-linh-l1/C.webp"
+  },
+  "thumb": "/looks/nam-ao-vien-linh-l1/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-vien-linh-l2",
+  "kind": "preset",
+  "side": "nam",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-vien-linh",
+  "level": 2,
+  "vibe": null,
+  "worn": [
+   "ao-thun-trang",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": "VIÊN LĨNH × THUN TRẮNG",
+  "sub": "Chùa Thiên Mụ",
+  "files": {
+   "A": "/looks/nam-ao-vien-linh-l2/A.webp",
+   "B": "/looks/nam-ao-vien-linh-l2/B.webp",
+   "C": "/looks/nam-ao-vien-linh-l2/C.webp"
+  },
+  "thumb": "/looks/nam-ao-vien-linh-l2/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-toi-gian",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "giay-luoi",
+   "khuyen-ngoc",
+   "quan-tay"
+  ],
+  "colorId": "trang-nga",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-dai-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-hoc-duong",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "tui-vai",
+   "giay-luoi",
+   "chan-vay-xep-ly"
+  ],
+  "colorId": "hong-dao",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-dai-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-duong-pho",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "kinh-mat",
+   "giay-the-thao",
+   "tui-deo-cheo"
+  ],
+  "colorId": "xanh-thien-thanh",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-dai-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-hoai-co",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "o-giay",
+   "non-la"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-dai-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-dai-le-hoi",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "khan-van",
+   "vong-co"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-dai-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nu-ao-dai-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-toi-gian",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "quan-tay",
+   "ao-co-lo",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-hoc-duong",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "quan-tay",
+   "tui-vai",
+   "giay-bup-be"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-duong-pho",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "kinh-mat",
+   "quan-bo-ong-rong",
+   "tai-nghe"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-hoai-co",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "ao-len-cai-cuc",
+   "guoc-moc"
+  ],
+  "colorId": "nau-song",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ngu-than-le-hoi",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "khan-van",
+   "vong-co"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ngu-than-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ngu-than-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tac-toi-gian",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "quan-tay",
+   "ao-co-lo",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tac-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tac-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tac-hoc-duong",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "tui-vai",
+   "chan-vay-xep-ly",
+   "giay-luoi"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tac-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tac-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tac-duong-pho",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "kinh-mat",
+   "tui-deo-cheo",
+   "giay-de-tho"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tac-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tac-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tac-hoai-co",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "o-giay",
+   "khan-van"
+  ],
+  "colorId": "vang-nghe",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tac-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tac-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tac-le-hoi",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "khan-van",
+   "khuyen-ngoc"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tac-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tac-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-giao-linh-toi-gian",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "giay-luoi",
+   "khuyen-ngoc",
+   "quan-tay"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-giao-linh-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nu-ao-giao-linh-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-giao-linh-hoc-duong",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "tui-vai",
+   "non-la",
+   "giay-luoi"
+  ],
+  "colorId": "trang-nga",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-giao-linh-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nu-ao-giao-linh-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-giao-linh-duong-pho",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "kinh-mat",
+   "tai-nghe",
+   "giay-cao-co"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-giao-linh-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nu-ao-giao-linh-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-giao-linh-hoai-co",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "quat-giay",
+   "guoc-moc",
+   "mu-beret"
+  ],
+  "colorId": "vang-nghe",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-giao-linh-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nu-ao-giao-linh-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-giao-linh-le-hoi",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "quat-giay",
+   "hai-theu",
+   "non-quai-thao"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-giao-linh-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nu-ao-giao-linh-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-toi-gian",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "ao-thun-trang",
+   "giay-luoi",
+   "vong-co"
+  ],
+  "colorId": "den-tuyen",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-hoc-duong",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "tui-vai",
+   "mu-tai-beo",
+   "giay-bup-be"
+  ],
+  "colorId": "xanh-thien-thanh",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-duong-pho",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "kinh-mat",
+   "mu-tai-beo",
+   "giay-cao-co"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-hoai-co",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "o-giay",
+   "guoc-moc",
+   "tram-cai-toc"
+  ],
+  "colorId": "nau-song",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-ba-ba-le-hoi",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "khan-van",
+   "hai-theu"
+  ],
+  "colorId": "vang-nghe",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-ba-ba-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nu-ao-ba-ba-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tu-than-hoai-co",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tu-than",
+  "gid": "ao-tu-than",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "o-giay",
+   "guoc-moc"
+  ],
+  "colorId": "nau-song",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tu-than-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tu-than-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tu-than-le-hoi",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tu-than",
+  "gid": "ao-tu-than",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "khan-van",
+   "khuyen-ngoc"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tu-than-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tu-than-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-tu-than-toi-gian",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-tu-than",
+  "gid": "ao-tu-than",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "khuyen-ngoc",
+   "ao-co-lo",
+   "giay-de-tho"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-tu-than-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nu-ao-tu-than-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-nhat-binh-hoai-co",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-nhat-binh",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "guoc-moc",
+   "mu-beret"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-nhat-binh-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nu-ao-nhat-binh-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-nhat-binh-le-hoi",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-nhat-binh",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "khan-van",
+   "vong-co"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-nhat-binh-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nu-ao-nhat-binh-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nu-ao-nhat-binh-toi-gian",
+  "kind": "gu",
+  "side": "nu",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-nhat-binh",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "quan-tay",
+   "vong-co",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nu-ao-nhat-binh-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nu-ao-nhat-binh-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-toi-gian",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "vong-co",
+   "giay-luoi",
+   "ao-mang-to"
+  ],
+  "colorId": "trang-nga",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-dai-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-hoc-duong",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "tui-vai",
+   "ao-vest",
+   "mu-beret"
+  ],
+  "colorId": "vang-hoang-yen",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-dai-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-duong-pho",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "giay-the-thao",
+   "tui-bao-tu",
+   "tai-nghe"
+  ],
+  "colorId": "xanh-thien-thanh",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-dai-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-hoai-co",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "ao-len-cai-cuc",
+   "non-la",
+   "quat-giay"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-dai-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-dai-le-hoi",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-dai",
+  "gid": "ao-dai",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "hai-theu",
+   "thao-dai"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-dai-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nam-ao-dai-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-toi-gian",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "quan-tay",
+   "ao-mang-to",
+   "mu-len"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-hoc-duong",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "quan-tay",
+   "so-mi-oversize",
+   "mu-beret"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-duong-pho",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "quan-bo-ong-rong",
+   "ao-khoac-bo",
+   "giay-the-thao"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-hoai-co",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "ao-len-cai-cuc",
+   "mu-beret"
+  ],
+  "colorId": "nau-song",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ngu-than-le-hoi",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ngu-than",
+  "gid": "ao-ngu-than",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "thao-dai",
+   "hai-theu"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ngu-than-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ngu-than-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tac-toi-gian",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "ao-co-lo",
+   "vong-co",
+   "mu-len"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tac-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tac-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tac-hoc-duong",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "quan-tay",
+   "balo",
+   "mu-len"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tac-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tac-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tac-duong-pho",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "tui-deo-cheo",
+   "giay-de-tho",
+   "mu-len"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tac-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tac-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tac-hoai-co",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "non-la",
+   "bot-co-cao"
+  ],
+  "colorId": "vang-nghe",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tac-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tac-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tac-le-hoi",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tac",
+  "gid": "ao-tac",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "hai-theu",
+   "thao-dai"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tac-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tac-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-giao-linh-toi-gian",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "vong-co",
+   "giay-luoi",
+   "mu-beret"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-giao-linh-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nam-ao-giao-linh-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-giao-linh-hoc-duong",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "tui-vai",
+   "quan-tay",
+   "non-la"
+  ],
+  "colorId": "trang-nga",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-giao-linh-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nam-ao-giao-linh-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-giao-linh-duong-pho",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "tai-nghe",
+   "giay-cao-co",
+   "tui-deo-cheo"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-giao-linh-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nam-ao-giao-linh-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-giao-linh-hoai-co",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "non-la",
+   "quat-giay",
+   "guoc-moc"
+  ],
+  "colorId": "vang-nghe",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-giao-linh-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nam-ao-giao-linh-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-giao-linh-le-hoi",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-giao-linh",
+  "gid": "ao-giao-linh",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "hai-theu",
+   "thao-dai",
+   "quat-giay"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-giao-linh-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nam-ao-giao-linh-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-toi-gian",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "vong-co",
+   "ao-thun-trang",
+   "giay-luoi"
+  ],
+  "colorId": "den-tuyen",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-hoc-duong",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "hoc-duong",
+  "worn": [
+   "tui-vai",
+   "mu-tai-beo",
+   "so-mi-oversize"
+  ],
+  "colorId": "xanh-thien-thanh",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-hoc-duong/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-hoc-duong/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-duong-pho",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "duong-pho",
+  "worn": [
+   "mu-tai-beo",
+   "giay-cao-co",
+   "tui-bao-tu"
+  ],
+  "colorId": "xanh-cham",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-duong-pho/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-duong-pho/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-hoai-co",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "non-la",
+   "quat-giay"
+  ],
+  "colorId": "nau-song",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-ba-ba-le-hoi",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-ba-ba",
+  "gid": "ao-ba-ba",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "hai-theu",
+   "thao-dai",
+   "quat-giay"
+  ],
+  "colorId": "vang-nghe",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-ba-ba-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nam-ao-ba-ba-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tu-than-hoai-co",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tu-than",
+  "gid": "ao-the",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "guoc-moc",
+   "mu-beret"
+  ],
+  "colorId": "nau-song",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tu-than-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tu-than-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tu-than-le-hoi",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tu-than",
+  "gid": "ao-the",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "o-giay",
+   "vong-co",
+   "hai-theu"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tu-than-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tu-than-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-tu-than-toi-gian",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-tu-than",
+  "gid": "ao-the",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "vong-co",
+   "ao-co-lo",
+   "giay-de-tho"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-tu-than-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nam-ao-tu-than-toi-gian/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-nhat-binh-hoai-co",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-vien-linh",
+  "level": null,
+  "vibe": "hoai-co",
+  "worn": [
+   "kinh-mat",
+   "guoc-moc",
+   "non-la"
+  ],
+  "colorId": "tim-hue",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-nhat-binh-hoai-co/A.webp"
+  },
+  "thumb": "/looks/nam-ao-nhat-binh-hoai-co/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-nhat-binh-le-hoi",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-vien-linh",
+  "level": null,
+  "vibe": "le-hoi",
+  "worn": [
+   "vong-co",
+   "o-giay",
+   "hai-theu"
+  ],
+  "colorId": "do-son",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-nhat-binh-le-hoi/A.webp"
+  },
+  "thumb": "/looks/nam-ao-nhat-binh-le-hoi/A-thumb.webp"
+ },
+ {
+  "id": "nam-ao-nhat-binh-toi-gian",
+  "kind": "gu",
+  "side": "nam",
+  "chapter": "ao-nhat-binh",
+  "gid": "ao-vien-linh",
+  "level": null,
+  "vibe": "toi-gian",
+  "worn": [
+   "vong-co",
+   "quan-tay",
+   "giay-luoi"
+  ],
+  "colorId": "xanh-luc-ngoc",
+  "title": null,
+  "sub": null,
+  "files": {
+   "A": "/looks/nam-ao-nhat-binh-toi-gian/A.webp"
+  },
+  "thumb": "/looks/nam-ao-nhat-binh-toi-gian/A-thumb.webp"
+ }
+]

@@ -253,5 +253,19 @@
     "use": "Dùng chìa khoá này",
     "remove": "Bỏ chìa khoá",
     "have": "Đang dùng chìa khoá của bạn"
+  },
+  "preview": {
+    "button": "Xem ngoài đời",
+    "opening": "Nghê đang mở thư…",
+    "exact": "Người thật mặc đúng bộ này",
+    "near": "Bộ gần giống nhất: cùng áo, cùng gu {vibe}",
+    "nearNoVibe": "Bộ gần giống nhất: cùng áo",
+    "ai": "Ảnh minh hoạ do AI tạo",
+    "tryYours": "Muốn thấy đúng bộ của bạn? Bấm Nhờ Nghê chụp.",
+    "flip": "Lật thẻ",
+    "toPhoto": "Xem toàn thân",
+    "toDetail": "Xem chi tiết",
+    "toPoster": "Xem poster",
+    "close": "Gập thư"
   }
 }

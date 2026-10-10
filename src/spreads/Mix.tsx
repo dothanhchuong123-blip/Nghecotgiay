@@ -20,6 +20,8 @@ import {
   Preset,
   HT_COPY,
 } from '../data';
+import { closestLook, lookById, LookEntry } from '../preview/closest';
+import LookMail from '../preview/LookMail';
 import { useStore, Side, setCollage, CollageLevel, setVibe, setWeaveOpen } from '../state';
 import { useGarment } from '../book/useGarment';
 import Stand, { Cast } from '../paper/Stand';
@@ -325,6 +327,26 @@ export function MixLeft({ chapter, side }: MixProps) {
     return castRefs.current[key];
   }
 
+  const [mailLook, setMailLook] = useState<{
+    look: LookEntry;
+    exact: boolean;
+  } | null>(null);
+
+  const vibeName = state.vibe ? (vibeById(state.vibe)?.name ?? null) : null;
+
+  const handlePreviewClick = () => {
+    const res = closestLook({
+      side: currentSide,
+      gid: gidOf(currentChapter, currentSide),
+      colorId,
+      vibe: state.vibe,
+      worn,
+    });
+    if (res) {
+      setMailLook(res);
+    }
+  };
+
   const outfitParams = useMemo(
     () => ({
       chapter: currentChapter,
@@ -422,6 +444,13 @@ export function MixLeft({ chapter, side }: MixProps) {
         y: 690,
         w: 118,
         h: 188,
+      },
+      preview: {
+        x: 208,
+        y: 690,
+        w: 164,
+        h: 96,
+        d: 0.26,
       },
     },
   };
@@ -727,6 +756,38 @@ export function MixLeft({ chapter, side }: MixProps) {
     ),
   });
 
+  leftStands.push({
+    id: 'preview',
+    y: P.L.preview.y,
+    castConfig: {
+      x: P.L.preview.x,
+      y: P.L.preview.y,
+      w: P.L.preview.w,
+    },
+    render: () => (
+      <Stand
+        key="preview"
+        noCast
+        castRef={getCastRef('preview')}
+        x={P.L.preview.x}
+        y={P.L.preview.y}
+        w={P.L.preview.w}
+        h={P.L.preview.h}
+        d={P.L.preview.d}
+        tabs={[50, P.L.preview.w - 70]}
+      >
+        <button
+          type="button"
+          className="mix-action-btn mix-action-btn-son"
+          style={{ backgroundImage: `url("${STAGE.paper.smallCard}")` }}
+          onClick={handlePreviewClick}
+        >
+          {COPY.preview.button}
+        </button>
+      </Stand>
+    ),
+  });
+
   // Sort far first (ascending y)
   leftStands.sort((a, b) => a.y - b.y);
 
@@ -757,6 +818,16 @@ export function MixLeft({ chapter, side }: MixProps) {
 
       {/* Stands */}
       {leftStands.map((item) => item.render())}
+
+      {/* LookMail */}
+      {mailLook && (
+        <LookMail
+          look={mailLook.look}
+          exact={mailLook.exact}
+          vibeName={vibeName}
+          onClose={() => setMailLook(null)}
+        />
+      )}
     </div>
   );
 }
@@ -812,6 +883,12 @@ export function MixRight({ chapter, side }: MixProps) {
   const [makingPhoto, setMakingPhoto] = useState(isPhotoMaking());
   const [makingCard, setMakingCard] = useState(false);
   const [cardMade, setCardMade] = useState(false);
+  const [mailLook, setMailLook] = useState<{
+    look: LookEntry;
+    exact: boolean;
+  } | null>(null);
+
+  const vibeName = state.vibe ? (vibeById(state.vibe)?.name ?? null) : null;
 
   useEffect(() => {
     setCardMade(false);
@@ -1021,17 +1098,21 @@ export function MixRight({ chapter, side }: MixProps) {
     if (immediate || isReducedMotion()) {
       setWorn(() => targetPieces);
       triggerSwap();
-      return;
+    } else {
+      setWorn(() => []);
+      triggerSwap();
+
+      if (targetPieces.length > 0) {
+        queueRef.current = [...targetPieces];
+        setTimeout(() => {
+          startNextPeel();
+        }, 60);
+      }
     }
 
-    setWorn(() => []);
-    triggerSwap();
-
-    if (targetPieces.length > 0) {
-      queueRef.current = [...targetPieces];
-      setTimeout(() => {
-        startNextPeel();
-      }, 60);
+    const look = lookById(preset.id);
+    if (look) {
+      setMailLook({ look, exact: true });
     }
   };
 
@@ -2047,6 +2128,16 @@ export function MixRight({ chapter, side }: MixProps) {
           side={currentSide}
           onClose={() => setLuckyOpen(false)}
           onApplyPreset={handleApplyPreset}
+        />
+      )}
+
+      {/* LookMail */}
+      {mailLook && (
+        <LookMail
+          look={mailLook.look}
+          exact={mailLook.exact}
+          vibeName={vibeName}
+          onClose={() => setMailLook(null)}
         />
       )}
     </div>

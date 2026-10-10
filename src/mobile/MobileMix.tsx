@@ -12,8 +12,12 @@ import {
   pieceName,
   modernById,
   accessoryById,
+  vibeById,
   Manifest,
+  Preset,
 } from '../data';
+import { closestLook, lookById, LookEntry } from '../preview/closest';
+import LookMail from '../preview/LookMail';
 import { useStore, setWeaveOpen } from '../state';
 import PaperDoll from '../doll/PaperDoll';
 import PatchLayer from '../mix/PatchLayer';
@@ -55,6 +59,25 @@ export default function MobileMix() {
   const [making, setMaking] = useState(false);
   const [luckyOpen, setLuckyOpen] = useState(false);
   const [photoBusy, setPhotoBusy] = useState(isPhotoMaking());
+  const [mailLook, setMailLook] = useState<{
+    look: LookEntry;
+    exact: boolean;
+  } | null>(null);
+
+  const vibeName = state.vibe ? (vibeById(state.vibe)?.name ?? null) : null;
+
+  const handlePreviewClick = () => {
+    const res = closestLook({
+      side,
+      gid: gidOf(chapter, side),
+      colorId,
+      vibe: state.vibe,
+      worn,
+    });
+    if (res) {
+      setMailLook(res);
+    }
+  };
 
   useEffect(() => subscribePhotoMaking(setPhotoBusy), []);
   const [colorTarget, setColorTarget] = useState<string | null>(null);
@@ -157,11 +180,16 @@ export default function MobileMix() {
     triggerSwap();
   }
 
-  function applyPreset(preset: { level: number; base_color_id: string; pieceIds?: string[] | null }) {
+  function applyPreset(preset: Preset) {
     setLevel(preset.level);
     setColorId(preset.base_color_id);
     setWorn(() => preset.pieceIds || []);
     triggerSwap();
+
+    const look = lookById(preset.id);
+    if (look) {
+      setMailLook({ look, exact: true });
+    }
   }
 
   async function makeCard() {
@@ -369,6 +397,15 @@ export default function MobileMix() {
           </button>
         </div>
         <div className="mx-actions">
+          <button
+            type="button"
+            className="mx-btn alt"
+            onClick={handlePreviewClick}
+          >
+            {COPY.preview.button}
+          </button>
+        </div>
+        <div className="mx-actions">
           <button type="button" className="mx-btn ghost" onClick={reset}>
             {COPY.mix.reset}
           </button>
@@ -385,6 +422,14 @@ export default function MobileMix() {
           onApplyPreset={(preset) => applyPreset(preset)}
         />
       ) : null}
+      {mailLook && (
+        <LookMail
+          look={mailLook.look}
+          exact={mailLook.exact}
+          vibeName={vibeName}
+          onClose={() => setMailLook(null)}
+        />
+      )}
     </div>
   );
 }
