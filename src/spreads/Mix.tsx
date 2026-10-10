@@ -20,8 +20,10 @@ import {
   Preset,
   HT_COPY,
 } from '../data';
-import { closestLook, lookById, LookEntry } from '../preview/closest';
-import LookMail from '../preview/LookMail';
+import { closestLooks } from '../preview/closest';
+import { sendLetter } from '../preview/mailbox';
+import { openCardBox, subscribeWear, takeWear } from '../cards/deck';
+import { CARD_COPY } from '../cards/copy';
 import { useStore, Side, setCollage, CollageLevel, setVibe, setWeaveOpen } from '../state';
 import { useGarment } from '../book/useGarment';
 import Stand, { Cast } from '../paper/Stand';
@@ -31,7 +33,6 @@ import { PATCHES, usePatches, addPatch } from '../mix/patches';
 import WeaveCard from '../mix/WeaveCard';
 import Lantern from './Lantern';
 import Drum from './Drum';
-import Lucky from './Lucky';
 import { say } from '../nghe/say';
 import { snap, whoosh } from '../audio/paper';
 import { scheduleAdvice, cancelAdvice, evaluateOutfit, fallbackFor } from '../mix/advice';
@@ -327,24 +328,19 @@ export function MixLeft({ chapter, side }: MixProps) {
     return castRefs.current[key];
   }
 
-  const [mailLook, setMailLook] = useState<{
-    look: LookEntry;
-    exact: boolean;
-  } | null>(null);
-
   const vibeName = state.vibe ? (vibeById(state.vibe)?.name ?? null) : null;
 
+  // Nghê sends the nearest real photos as a letter out of the desk envelope
   const handlePreviewClick = () => {
-    const res = closestLook({
+    const matches = closestLooks({
       side: currentSide,
       gid: gidOf(currentChapter, currentSide),
       colorId,
       vibe: state.vibe,
       worn,
+      level: state.collage,
     });
-    if (res) {
-      setMailLook(res);
-    }
+    sendLetter({ matches, vibeName });
   };
 
   const outfitParams = useMemo(
@@ -819,15 +815,6 @@ export function MixLeft({ chapter, side }: MixProps) {
       {/* Stands */}
       {leftStands.map((item) => item.render())}
 
-      {/* LookMail */}
-      {mailLook && (
-        <LookMail
-          look={mailLook.look}
-          exact={mailLook.exact}
-          vibeName={vibeName}
-          onClose={() => setMailLook(null)}
-        />
-      )}
     </div>
   );
 }
@@ -879,17 +866,9 @@ export function MixRight({ chapter, side }: MixProps) {
   const stuckPatches = usePatches();
   const pieceColors = usePieceColors();
 
-  const [luckyOpen, setLuckyOpen] = useState(false);
   const [makingPhoto, setMakingPhoto] = useState(isPhotoMaking());
   const [makingCard, setMakingCard] = useState(false);
   const [cardMade, setCardMade] = useState(false);
-  const [mailLook, setMailLook] = useState<{
-    look: LookEntry;
-    exact: boolean;
-  } | null>(null);
-
-  const vibeName = state.vibe ? (vibeById(state.vibe)?.name ?? null) : null;
-
   useEffect(() => {
     setCardMade(false);
   }, [currentChapter, currentSide]);
@@ -1109,12 +1088,19 @@ export function MixRight({ chapter, side }: MixProps) {
         }, 60);
       }
     }
-
-    const look = lookById(preset.id);
-    if (look) {
-      setMailLook({ look, exact: true });
-    }
   };
+
+  // A card picked in the card box ("Mặc lên búp bê") dresses the doll once this page shows its áo and side
+  const applyRef = useRef(handleApplyPreset);
+  applyRef.current = handleApplyPreset;
+  useEffect(() => {
+    const check = () => {
+      const card = takeWear(currentChapter, currentSide);
+      if (card) window.setTimeout(() => applyRef.current(card.preset, false), 160);
+    };
+    check();
+    return subscribeWear(check);
+  }, [currentChapter, currentSide]);
 
   const handleWear = (itemId: string, btnEl: HTMLElement) => {
     const targetLayer = getPieceLayer(itemId);
@@ -1826,10 +1812,10 @@ export function MixRight({ chapter, side }: MixProps) {
           style={{ backgroundImage: `url("${STAGE.paper.smallCard}")` }}
           onClick={() => {
             whoosh();
-            setLuckyOpen(true);
+            openCardBox();
           }}
         >
-          {COPY.mix.lucky}
+          {CARD_COPY.button}
         </button>
       </Stand>
     ),
@@ -2121,25 +2107,6 @@ export function MixRight({ chapter, side }: MixProps) {
         />
       )}
 
-      {/* Lucky fortune teller */}
-      {luckyOpen && (
-        <Lucky
-          chapter={currentChapter}
-          side={currentSide}
-          onClose={() => setLuckyOpen(false)}
-          onApplyPreset={handleApplyPreset}
-        />
-      )}
-
-      {/* LookMail */}
-      {mailLook && (
-        <LookMail
-          look={mailLook.look}
-          exact={mailLook.exact}
-          vibeName={vibeName}
-          onClose={() => setMailLook(null)}
-        />
-      )}
     </div>
   );
 }

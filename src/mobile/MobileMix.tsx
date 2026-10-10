@@ -16,8 +16,10 @@ import {
   Manifest,
   Preset,
 } from '../data';
-import { closestLook, lookById, LookEntry } from '../preview/closest';
-import LookMail from '../preview/LookMail';
+import { closestLooks } from '../preview/closest';
+import { sendLetter } from '../preview/mailbox';
+import { openCardBox, subscribeWear, takeWear } from '../cards/deck';
+import { CARD_COPY } from '../cards/copy';
 import { useStore, setWeaveOpen } from '../state';
 import PaperDoll from '../doll/PaperDoll';
 import PatchLayer from '../mix/PatchLayer';
@@ -29,7 +31,6 @@ import { say } from '../nghe/say';
 import { snap } from '../audio/paper';
 import { exportCard } from '../share/card';
 import { takePhoto, isPhotoMaking, subscribePhotoMaking } from '../nghe/photo';
-import Lucky from '../spreads/Lucky';
 import Lantern from '../spreads/Lantern';
 import { whoosh } from '../audio/paper';
 import { useDeskStyle } from './MobileMeet';
@@ -57,26 +58,20 @@ export default function MobileMix() {
   const [group, setGroup] = useState<string>('all');
   const [shake, setShake] = useState<string | null>(null);
   const [making, setMaking] = useState(false);
-  const [luckyOpen, setLuckyOpen] = useState(false);
   const [photoBusy, setPhotoBusy] = useState(isPhotoMaking());
-  const [mailLook, setMailLook] = useState<{
-    look: LookEntry;
-    exact: boolean;
-  } | null>(null);
-
   const vibeName = state.vibe ? (vibeById(state.vibe)?.name ?? null) : null;
 
+  // Nghê sends the nearest real photos as a letter out of the desk envelope
   const handlePreviewClick = () => {
-    const res = closestLook({
+    const matches = closestLooks({
       side,
       gid: gidOf(chapter, side),
       colorId,
       vibe: state.vibe,
       worn,
+      level: state.collage,
     });
-    if (res) {
-      setMailLook(res);
-    }
+    sendLetter({ matches, vibeName });
   };
 
   useEffect(() => subscribePhotoMaking(setPhotoBusy), []);
@@ -185,12 +180,19 @@ export default function MobileMix() {
     setColorId(preset.base_color_id);
     setWorn(() => preset.pieceIds || []);
     triggerSwap();
-
-    const look = lookById(preset.id);
-    if (look) {
-      setMailLook({ look, exact: true });
-    }
   }
+
+  // A card picked in the card box ("Mặc lên búp bê") dresses the doll once this page shows its áo and side
+  const applyRef = useRef(applyPreset);
+  applyRef.current = applyPreset;
+  useEffect(() => {
+    const check = () => {
+      const card = takeWear(chapter, side);
+      if (card) window.setTimeout(() => applyRef.current(card.preset), 160);
+    };
+    check();
+    return subscribeWear(check);
+  }, [chapter, side]);
 
   async function makeCard() {
     if (making) return;
@@ -382,10 +384,10 @@ export default function MobileMix() {
             className="mx-btn alt"
             onClick={() => {
               whoosh();
-              setLuckyOpen(true);
+              openCardBox();
             }}
           >
-            {COPY.mix.lucky}
+            {CARD_COPY.button}
           </button>
           <button
             type="button"
@@ -414,22 +416,6 @@ export default function MobileMix() {
           </button>
         </div>
       </div>
-      {luckyOpen ? (
-        <Lucky
-          chapter={chapter}
-          side={side}
-          onClose={() => setLuckyOpen(false)}
-          onApplyPreset={(preset) => applyPreset(preset)}
-        />
-      ) : null}
-      {mailLook && (
-        <LookMail
-          look={mailLook.look}
-          exact={mailLook.exact}
-          vibeName={vibeName}
-          onClose={() => setMailLook(null)}
-        />
-      )}
     </div>
   );
 }

@@ -7,7 +7,15 @@ import KeySlip, { subscribeKeySlip } from './KeySlip';
 import Print from './Print';
 import { subscribePrint, hidePrint, PrintModalState } from './photo';
 import { setCardPhoto, exportCard } from '../share/card';
+import LookMail from '../preview/LookMail';
+import MailPouch from '../preview/MailPouch';
+import { Letter, closeLetter, subscribeLetter, letterHistory, subscribeHistory } from '../preview/mailbox';
+import CardBox from '../cards/CardBox';
+import { CardBack } from '../cards/Card';
+import { openCardBox, subscribeCardBox } from '../cards/deck';
+import { CARD_COPY, POUCH_COPY } from '../cards/copy';
 import './nghedesk.css';
+import '../cards/cards.css';
 
 export default function NgheDesk() {
   const bubbleHtml = useSay();
@@ -15,6 +23,10 @@ export default function NgheDesk() {
   const [bubbleHidden, setBubbleHidden] = useState(false);
   const [slipOpen, setSlipOpen] = useState(false);
   const [slipReason, setSlipReason] = useState<string | undefined>(undefined);
+  const [pouchOpen, setPouchOpen] = useState(false);
+  const [letter, setLetter] = useState<{ n: number; letter: Letter } | null>(null);
+  const [kept, setKept] = useState(() => letterHistory().length);
+  const [boxOpen, setBoxOpen] = useState(false);
   const [printState, setPrintState] = useState<PrintModalState>({
     open: false,
     photoUrl: '',
@@ -38,6 +50,10 @@ export default function NgheDesk() {
     });
   }, []);
 
+  useEffect(() => subscribeLetter((l) => setLetter((prev) => (l ? { n: (prev?.n ?? 0) + 1, letter: l } : null))), []);
+  useEffect(() => subscribeHistory(() => setKept(letterHistory().length)), []);
+  useEffect(() => subscribeCardBox((open) => setBoxOpen(open)), []);
+
   useEffect(() => {
     return subscribePrint((state) => {
       setPrintState(state);
@@ -46,22 +62,37 @@ export default function NgheDesk() {
 
   return (
     <>
-      {/* The pocket on left desk (clicking opens or closes the slip) */}
+      {/* The envelope on the left of the desk is Nghê's mailbox: letters fly out of it,
+          and clicking it opens the pouch (past letters + the photo key) */}
       <button
         type="button"
         className="desk-pocket-btn"
-        onClick={() => {
-          setSlipOpen((prev) => !prev);
-          setSlipReason(undefined);
-        }}
-        aria-label={COPY.key.title}
-        aria-expanded={slipOpen}
+        onClick={() => setPouchOpen((prev) => !prev)}
+        aria-label={POUCH_COPY.title}
+        aria-expanded={pouchOpen}
       >
         <img
           src={STAGE.paper.pocket}
           alt=""
           className="desk-pocket"
         />
+        {kept > 0 ? <span className="desk-pocket-badge" key={kept}>{kept}</span> : null}
+      </button>
+
+      {/* The card box under it */}
+      <button type="button" className="desk-cardbox-btn" onClick={openCardBox} aria-label={CARD_COPY.open}>
+        <span className="dcb-cards" aria-hidden="true">
+          {([1, 2, 3] as const).map((w) => (
+            <span key={w} className={`nc-card w${w}`}>
+              <span className="nc-tilt">
+                <span className="nc-flip">
+                  <CardBack world={w} />
+                </span>
+              </span>
+            </span>
+          ))}
+        </span>
+        <span className="dcb-box">{CARD_COPY.button}</span>
       </button>
 
       {/* Nghê's bubble (hidden while notebook is open) */}
@@ -90,6 +121,20 @@ export default function NgheDesk() {
 
       {/* The notebook dialog */}
       {chatOpen && <Chat onClose={() => setChatOpen(false)} />}
+
+      {pouchOpen && (
+        <MailPouch
+          onClose={() => setPouchOpen(false)}
+          onOpenKey={() => {
+            setSlipReason(undefined);
+            setSlipOpen(true);
+          }}
+        />
+      )}
+
+      {letter && <LookMail key={letter.n} letter={letter.letter} onClose={closeLetter} />}
+
+      {boxOpen && <CardBox onClose={() => setBoxOpen(false)} />}
 
       {/* The KeySlip dialog */}
       {slipOpen && (

@@ -1,6 +1,5 @@
-
 .lm-overlay {
-  --u: 440px;          /* card width at print size */
+  --u: 420px;          /* card width at print size */
   --s-final: 1;        /* extra scale of the card once it has landed */
   --hs: 1.4;           /* stage height, in units of --u */
   --b-final: 0.07;     /* card bottom above the stage bottom once landed, in units of --u */
@@ -13,12 +12,12 @@
   box-sizing: border-box;
   padding: 16px;
   background: rgba(42, 33, 27, 0.66);
-  animation: lm-fade 200ms ease-out both;
+  animation: lm-fade 260ms ease-out both;
 }
 
 .lm-overlay.is-mobile {
   position: fixed;
-  --u: min(280px, calc((100vw - 32px) / 1.3));
+  --u: min(260px, calc((100vw - 32px) / 1.3), calc((100dvh - 330px) / 1.72));
   --s-final: 1.25;
   --hs: 1.72;
   --b-final: 0.09;
@@ -27,12 +26,25 @@
 
 .lm-overlay.is-closing {
   opacity: 0;
-  transition: opacity 380ms ease-in;
+  transition: opacity 360ms ease-in 820ms;
 }
+
+.lm-overlay.is-closing.is-reduced { transition-delay: 0ms; transition-duration: 150ms; }
 
 @keyframes lm-fade {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* the desk envelope is out while its letter is open */
+.desk-pocket-btn { transition: opacity 200ms ease; }
+.lm-pocket-out .desk-pocket-btn { opacity: 0; }
+.lm-pocket-ping .desk-pocket { animation: lm-wiggle 420ms ease-in-out infinite; }
+
+@keyframes lm-wiggle {
+  0%, 100% { transform: rotate(-6deg); }
+  25% { transform: rotate(-12deg) translateY(-3px); }
+  75% { transform: rotate(0deg) translateY(-3px); }
 }
 
 .lm-dialog {
@@ -45,37 +57,122 @@
   user-select: none;
 }
 
-.lm-dialog:focus-visible {
-  outline: 2px solid var(--son);
-  outline-offset: 2px;
+.lm-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
-/* ---- the stage: envelope and card share one box ---- */
+.is-mobile .lm-row {
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ---- the stage ---- */
 .lm-stage {
   position: relative;
   width: calc(var(--u) * 1.3);
   height: calc(var(--u) * var(--hs));
 }
 
-/* every envelope picture (M1 to M4b) is cropped to the same box, so they sit on top of each other */
+/* the envelope: body (back + inside), card, front pocket, flap. 1100 x 732 art */
 .lm-env {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: auto;
+  height: calc(var(--u) * 1.3 * 732 / 1100);
+  transform-origin: 50% 60%;
+}
+
+.lm-env-body,
+.lm-env-front {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
   display: block;
   pointer-events: none;
 }
 
-.lm-layer {
+.lm-env-body { z-index: 1; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.3)); }
+.lm-env-front { z-index: 3; }
+
+/* the flap hinges on the top edge of the envelope; closed it lies over the front, open it leans back */
+.lm-flap {
+  --flap: calc(var(--u) * 1.3 * 232 / 1100 * 1.75);
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: calc(var(--flap) * -1);
+  width: 100%;
+  height: var(--flap);
+  z-index: 5;
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  transform: perspective(1400px) rotateX(180deg);
   pointer-events: none;
 }
 
-.lm-z1 { z-index: 1; }   /* the open envelope: back, flap and inside */
-.lm-z3 { z-index: 3; }   /* the front pocket, drawn over the card while it is inside */
+.lm-flap.is-open { transform: perspective(1400px) rotateX(415deg); }
+.lm-flap.is-back { z-index: 0; }
+
+.lm-flap-in,
+.lm-flap-out {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.lm-flap-out { transform: rotateX(180deg); }
+
+.lm-flap-out img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 3px 2px rgba(42, 33, 27, 0.28));
+}
+
+/* the wax seal on the flap's tip; it cracks in two before the flap opens */
+.lm-seal {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: calc(var(--u) * 1.3 * 232 / 1100 * 1.75 - var(--u) * 0.075);
+  width: calc(var(--u) * 0.13);
+  height: calc(var(--u) * 0.13);
+  margin-left: calc(var(--u) * -0.065);
+  pointer-events: none;
+}
+
+.lm-seal i {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 34%, #d4473f 0%, #a8251f 55%, #7a1712 100%);
+  box-shadow: inset 0 0 0 3px rgba(122, 23, 18, 0.55), 0 2px 3px rgba(0, 0, 0, 0.35);
+}
+
+.lm-seal i:first-child { clip-path: polygon(0 0, 54% 0, 44% 38%, 56% 62%, 46% 100%, 0 100%); }
+.lm-seal i:last-child { clip-path: polygon(54% 0, 100% 0, 100% 100%, 46% 100%, 56% 62%, 44% 38%); }
+
+.lm-seal.is-cracking i:first-child { animation: lm-crack-l 320ms ease-in forwards; }
+.lm-seal.is-cracking i:last-child { animation: lm-crack-r 320ms ease-in forwards; }
+
+@keyframes lm-crack-l {
+  0% { transform: none; }
+  30% { transform: translateX(-2px) rotate(-4deg); }
+  100% { transform: translate(-18px, 40px) rotate(-40deg); opacity: 0; }
+}
+
+@keyframes lm-crack-r {
+  0% { transform: none; }
+  30% { transform: translateX(2px) rotate(4deg); }
+  100% { transform: translate(18px, 46px) rotate(36deg); opacity: 0; }
+}
 
 /* ---- the card ---- */
 .lm-card {
@@ -84,25 +181,18 @@
   left: 50%;
   bottom: calc(var(--u) * 0.034);
   width: var(--u);
-  height: calc(var(--u) * 1.261);   /* the card art is 1769 x 2231 */
+  height: calc(var(--u) * 1.261);   /* the card art is 1000 x 1261 */
   transform-origin: 50% 100%;
   perspective: 1400px;
   transition: transform 420ms ease-out;
 }
 
-.lm-card.is-front { z-index: 4; }
+.lm-card.is-front { z-index: 7; }
 
-/* hidden inside the envelope, behind the front pocket */
-.lm-card.at-hidden {
-  transform: translateX(-50%) translateY(0) scale(0.39);
-}
+.lm-card.at-hidden { transform: translateX(-50%) translateY(0) scale(0.39); }
 
-/* pulled out of the pocket: about 70% of it is above the pocket's lowest point */
-.lm-card.at-sliding {
-  transform: translateX(-50%) translateY(calc(var(--u) * -0.239)) scale(0.62);
-}
+.lm-card.at-sliding { transform: translateX(-50%) translateY(calc(var(--u) * -0.3)) scale(0.62); }
 
-/* lifted away and scaled up to print size */
 .lm-card.at-print {
   transform: translateX(-50%) translateY(calc(var(--u) * (0.034 - var(--b-final)))) scale(var(--s-final));
   transition: transform 460ms cubic-bezier(0.2, 0.9, 0.3, 1.04);
@@ -115,13 +205,12 @@
   outline-offset: 2px;
 }
 
-/* the part that turns over */
 .lm-flip {
   position: absolute;
   inset: 0;
   transform: rotateY(0deg);
   transition: transform 150ms ease-out;
-  filter: drop-shadow(0 3px 0 rgba(42, 33, 27, 0.18));
+  filter: drop-shadow(0 6px 10px rgba(42, 33, 27, 0.3));
 }
 
 .lm-flip.is-out {
@@ -129,14 +218,14 @@
   transition-timing-function: ease-in;
 }
 
-/* photo and close-up: the photo sits in the card's window, behind the card art, so the four corner mounts lie over it */
+/* photo and close-up sit in the card's window, behind the card art, so the corner mounts lie over them */
 .lm-window {
   position: absolute;
   left: 10.63%;
   top: 8.43%;
   width: 78.75%;
   height: 67.28%;
-  background: #f8f2e6;   /* the card's own paper, for the side bands next to a 4:5 photo */
+  background: #f8f2e6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,11 +240,20 @@
   object-fit: contain;
 }
 
-/* the photo develops: sepia and blur clear over 1.2 s */
+.lm-doll { object-fit: contain; width: 100%; }
+
 .lm-photo.is-developing { filter: sepia(1) blur(6px) brightness(1.15); }
 .lm-photo.is-developed { filter: none; transition: filter 1.2s ease-out; }
 
-/* the card art with its window cut out, over the photo */
+.lm-nophoto {
+  margin: 0;
+  padding: 12px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--ink-2);
+  text-align: center;
+}
+
 .lm-frame {
   position: absolute;
   inset: 0;
@@ -164,7 +262,6 @@
   pointer-events: none;
 }
 
-/* the poster: a 2:3 sheet shown whole on the card */
 .lm-poster-face {
   position: absolute;
   inset: 0;
@@ -184,6 +281,121 @@
   object-fit: contain;
 }
 
+/* ---- runner-ups ---- */
+.lm-alts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-12px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.is-mobile .lm-alts {
+  flex-direction: row;
+  transform: translateY(-8px);
+}
+
+.lm-alts.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.lm-alt {
+  position: relative;
+  width: 70px;
+  aspect-ratio: 4 / 5;
+  padding: 3px 3px 16px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--card);
+  box-shadow: 0 3px 0 rgba(42, 33, 27, 0.18);
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.lm-alt:nth-child(1) { transform: rotate(-4deg); }
+.lm-alt:nth-child(2) { transform: rotate(3deg); }
+.lm-alt:nth-child(3) { transform: rotate(-2deg); }
+.lm-alt:hover { transform: translateY(-3px) rotate(0); }
+
+.lm-alt img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lm-alt span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--ink);
+  text-align: center;
+}
+
+.lm-alt.is-current { outline: 3px solid var(--son); outline-offset: 1px; }
+
+.is-mobile .lm-alt { width: 54px; }
+
+.lm-alt:focus-visible { outline: 3px solid var(--nghe); outline-offset: 2px; }
+
+/* ---- while the pictures are still coming in ---- */
+.lm-row.is-waiting,
+.lm-meta.is-waiting {
+  visibility: hidden;
+}
+
+.lm-loading {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 26px 16px;
+  background: var(--card);
+  border-radius: 4px;
+  box-shadow: 0 3px 0 rgba(42, 33, 27, 0.18);
+  text-align: center;
+}
+
+.lm-loading-text {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.lm-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.lm-dots i {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: var(--son);
+  opacity: 0.25;
+  animation: lm-dot 900ms steps(1, end) infinite;
+}
+
+.lm-dots i:nth-child(2) { animation-delay: 300ms; }
+.lm-dots i:nth-child(3) { animation-delay: 600ms; }
+
+@keyframes lm-dot {
+  0% { opacity: 1; }
+  33.4% { opacity: 0.25; }
+}
+
 /* ---- text and buttons under the card ---- */
 .lm-meta {
   display: flex;
@@ -196,6 +408,9 @@
   pointer-events: none;
   transition: opacity 300ms ease;
 }
+
+.is-closing .lm-meta,
+.is-closing .lm-alts { opacity: 0; transition-delay: 0ms; }
 
 .lm-meta.is-visible {
   opacity: 1;
@@ -219,6 +434,13 @@
   font-weight: 700;
   font-size: 14px;
   color: var(--ink);
+}
+
+.lm-reasons {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 12.5px;
+  color: var(--la);
 }
 
 .lm-line2 {
@@ -266,18 +488,19 @@
   outline-offset: 2px;
 }
 
-/* ---- reduced motion: nothing slides or turns, only a short fade ---- */
+/* ---- reduced motion: nothing flies or turns, only a short fade ---- */
 @media (prefers-reduced-motion: reduce) {
   .lm-overlay { animation-duration: 150ms; }
-  .lm-overlay.is-closing { transition-duration: 150ms; }
-  .lm-card, .lm-flip, .lm-meta, .lm-photo { transition: none !important; animation: none !important; }
+  .lm-card, .lm-flip, .lm-meta, .lm-photo, .lm-alts { transition: none !important; animation: none !important; }
   .lm-photo { filter: none !important; }
+  .lm-dots i { animation: none; opacity: 1; }
 }
 
 :root[data-reduced="1"] .lm-overlay { animation-duration: 150ms; }
-:root[data-reduced="1"] .lm-overlay.is-closing { transition-duration: 150ms; }
 :root[data-reduced="1"] .lm-card,
 :root[data-reduced="1"] .lm-flip,
 :root[data-reduced="1"] .lm-meta,
+:root[data-reduced="1"] .lm-alts,
 :root[data-reduced="1"] .lm-photo { transition: none !important; animation: none !important; }
 :root[data-reduced="1"] .lm-photo { filter: none !important; }
+:root[data-reduced="1"] .lm-dots i { animation: none; opacity: 1; }
