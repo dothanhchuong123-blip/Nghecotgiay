@@ -176,11 +176,9 @@ export function CompareLeft({ chapter, side }: CompareProps) {
     } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
       e.preventDefault();
       setT(1);
-      snap();
     } else if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
       e.preventDefault();
       setT(0);
-      snap();
     }
   };
 

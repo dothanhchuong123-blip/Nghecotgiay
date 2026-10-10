@@ -125,8 +125,7 @@ function runFinale(): void {
   if (halfL) halfL.style.transformOrigin = `${effectiveCutX}px ${winHeight}px`;
   if (halfR) halfR.style.transformOrigin = `${effectiveCutX}px ${winHeight}px`;
 
-  // 3. Tug, 160 ms: rustle(); left half translateX 0 → -3px rotate(-.25deg) → -1px; right half the mirror.
-  rustle();
+  // 3. Tug, 160 ms: left half translateX 0 → -3px rotate(-.25deg) → -1px; right half the mirror.
   if (halfL) {
     halfL.animate(
       [

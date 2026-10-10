@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react';
 import { COPY, hasPair } from '../data';
 import { useStore, SpreadIndex } from '../state';
 import { go } from './turn';
-import { snap } from '../audio/paper';
 import './spread-tabs.css';
 
 interface SpreadDef {
@@ -70,7 +69,6 @@ export default function SpreadTabs({
     if (idx === 4) {
       setPop((p) => p + 1);
       setPopping(true);
-      snap();
       if (popTimeoutRef.current) {
         window.clearTimeout(popTimeoutRef.current);
       }
